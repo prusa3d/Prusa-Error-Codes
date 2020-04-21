@@ -19,6 +19,7 @@ class Class(IntEnum):
 
     This mapping is taken from general Prusa guidelines on errors, do not modify.
     """
+
     MECHANICAL = 1  # Mechanical failures, engines XYZ, tower
     TEMPERATURE = 2  # Temperature measurement, thermistors, heating
     ELECTRICAL = 3  # Electrical, MINDA, FINDA, Motion Controller, …
@@ -31,6 +32,7 @@ class Code:
     """
     Code class holds error code information
     """
+
     def __init__(self, cls: Class, code: int, message: Optional[str]):
         if cls.value < 0 or cls.value > 9:
             raise ValueError(f"Error class {cls.value} out of range")
@@ -93,6 +95,7 @@ class Codes:
     """
     Base class for code listing classes
     """
+
     @classmethod
     def get_codes(cls) -> Dict[str, Code]:
         """

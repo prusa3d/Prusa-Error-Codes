@@ -10,7 +10,5 @@ setup(
     packages=find_packages(exclude=["tests"]),
     url="https://gitlab.com/prusa3d/sl1/sl1-errors",
     license="GNU General Public License v3 or later (GPLv3+)",
-    classifiers=[
-        'License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)'
-    ]
+    classifiers=["License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)"],
 )
