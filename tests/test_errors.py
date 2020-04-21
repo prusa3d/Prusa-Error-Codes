@@ -47,3 +47,6 @@ class TestErrors(TestCase):
         print(sio.getvalue())
 
         self.assertRegex(sio.getvalue(), r'tr\("No problem"\);')
+
+    def test_int_conversion(self):
+        self.assertEqual(500, int(Errors.NONE))

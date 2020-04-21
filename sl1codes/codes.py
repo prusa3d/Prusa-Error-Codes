@@ -79,6 +79,15 @@ class Code:
             return NotImplemented
         return self.code == other.code
 
+    def __repr__(self):
+        return f"Code: Category: {self.category} Value: {self._code} Code: {self.code} Message: {self.message}"
+
+    def __str__(self):
+        return f"Code: {self.code} ({self.message})"
+
+    def __int__(self):
+        return self.code
+
 
 class Codes:
     """
