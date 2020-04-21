@@ -50,3 +50,9 @@ class TestErrors(TestCase):
 
     def test_int_conversion(self):
         self.assertEqual(500, int(Errors.NONE))
+
+    def test_code_lookup(self):
+        self.assertEqual(Errors.NONE, Errors.get(500))
+
+    def test_unknown_code_lookup(self):
+        self.assertEqual(Errors.UNKNOWN, Errors.get(-123))

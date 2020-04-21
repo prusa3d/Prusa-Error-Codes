@@ -61,3 +61,10 @@ class Errors(Codes):
     EXPOSURE_RESIN_TOO_LOW = Code(Class.MECHANICAL, 8, None)
     EXPOSURE_RESIN_TOO_HIGH = Code(Class.MECHANICAL, 9, None)
     EXPOSURE_WARNING_ESCALATION = Code(Class.SYSTEM, 15, None)
+
+    @classmethod
+    def get(cls, code: int):
+        try:
+            return super().get(code)
+        except KeyError:
+            return cls.UNKNOWN

@@ -96,6 +96,8 @@ class Codes:
     Base class for code listing classes
     """
 
+    _code_map: Dict[int, Code] = {}
+
     @classmethod
     def get_codes(cls) -> Dict[str, Code]:
         """
@@ -104,6 +106,12 @@ class Codes:
         :return: Member code dict
         """
         return {item: var for item, var in vars(cls).items() if isinstance(var, Code)}
+
+    @classmethod
+    def get(cls, code: int):
+        if not cls._code_map:
+            cls._code_map = {code.code: code for code in cls.get_codes().values()}
+        return cls._code_map[code]
 
     @classmethod
     def dump_json(cls, file: TextIO) -> None:
@@ -143,7 +151,7 @@ class Codes:
         file.write("// Generated error code to message mapping\n")
         file.write("static QMap<int, QString> error_messages{\n")
 
-        for _, code in cls.get_codes().items():
+        for code in cls.get_codes().values():
             if code.message:
                 file.write("\t{" + str(code.code) + ', "' + code.message + '"}\n')
 
@@ -158,7 +166,7 @@ class Codes:
         :return: None
         """
         file.write("// Generated translation string definitions for all defined error messages\n")
-        for _, code in cls.get_codes().items():
+        for code in cls.get_codes().values():
             if code.message:
                 file.write(f'tr("{code.message}");\n')
 
