@@ -2,6 +2,18 @@
 # Copyright (C) 2020 Prusa Research a.s. - www.prusa3d.com
 # SPDX-License-Identifier: GPL-3.0-or-later
 
+"""
+SL1 Warning codes
+
+
+Warning identification codes
+
+TODO: @!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!
+TODO: Big fat WARNING, these codes are not finalized. Do not copy numbers, use these values.
+TODO: There are no guidelines for warnings, yet.
+TODO: @!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!@!
+"""
+
 from enum import unique, Enum
 
 

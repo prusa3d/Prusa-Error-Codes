@@ -2,6 +2,13 @@
 # Copyright (C) 2020 Prusa Research a.s. - www.prusa3d.com
 # SPDX-License-Identifier: GPL-3.0-or-later
 
+"""
+SL1 error codes
+
+Warning: The codes has not yet been officially approved.
+"""
+
+
 from sl1codes.codes import Code, Class, unique_codes, Codes
 
 
