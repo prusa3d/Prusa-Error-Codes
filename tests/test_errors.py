@@ -46,7 +46,16 @@ class TestErrors(TestCase):
         print("C++ ts:")
         print(sio.getvalue())
 
-        self.assertRegex(sio.getvalue(), r'tr\("No problem"\);')
+        self.assertRegex(sio.getvalue(), r'QT_TR_NOOP\("No problem"\);')
+
+    def test_qml_dict_export(self):
+        sio = StringIO()
+        Errors.dump_qml_dictionary(sio)
+
+        print("QML dict:")
+        print(sio.getvalue())
+
+        self.assertRegex(sio.getvalue(), r'500: qsTr\("No problem"\)')
 
     def test_int_conversion(self):
         self.assertEqual(500, int(Errors.NONE))

@@ -64,6 +64,14 @@ class Errors(Codes):
 
     @classmethod
     def get(cls, code: int):
+        """
+        Get Code by its number
+
+        UNKNOWN Code is received on unknown code number
+
+        :param code: Code number
+        :return: Code instance
+        """
         try:
             return super().get(code)
         except KeyError:
