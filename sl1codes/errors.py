@@ -36,7 +36,9 @@ class Errors(Codes):
     GENERAL_DBUS_MAPPING_EXCEPTION = Code(Class.SYSTEM, 7, None)
     GENERAL_REPRINT_WITHOUT_HISTORY = Code(Class.SYSTEM, 8, None)
     GENERAL_MISSING_WIZARD_DATA = Code(Class.SYSTEM, 9, "The wizard did not finish successfully!")
-    GENERAL_MISSING_CALIBRATION_DATA = Code(Class.SYSTEM, 10, "The calibration did not finish successfully!")
+    GENERAL_MISSING_CALIBRATION_DATA = Code(
+        Class.SYSTEM, 10, "The calibration did not finish successfully!"
+    )
     GENERAL_MISSING_UVCALIBRATION_DATA = Code(
         Class.SYSTEM, 11, "The automatic UV LED calibration did not finish successfully!"
     )
@@ -49,6 +51,10 @@ class Errors(Codes):
     GENERAL_DOWNLOAD_FAILED = Code(Class.CONNECTIVITY, 4, None)
     GENERAL_NOT_ENOUGH_INTERNAL_SPACE = Code(Class.SYSTEM, 16, None)
     GENERAL_ADMIN_NOT_AVAILABLE = Code(Class.SYSTEM, 17, None)
+    GENERAL_FILE_NOT_FOUND = Code(Class.SYSTEM, 18, "Cannot find a file!")
+    GENERAL_INVALID_EXTENSION = Code(Class.SYSTEM, 19, "File has an invalid extension!")
+    GENERAL_FILE_ALREADY_EXISTS = Code(Class.SYSTEM, 20, "File already exists!")
+    GENERAL_INVALID_PROJECT = Code(Class.SYSTEM, 21, "The project file is invalid!")
 
     # Exposure error codes
     EXPOSURE_TILT_FAILURE = Code(Class.MECHANICAL, 10, None)
