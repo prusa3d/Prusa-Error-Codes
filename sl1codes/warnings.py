@@ -37,7 +37,7 @@ def ranged_enum(minimum: int, maximum: int):
 
 @unique
 @ranged_enum(5000, 9999)
-class WarningCode(Enum):
+class Warnings(Enum):
     """
     Warning identification codes
 
