@@ -28,7 +28,7 @@ class TestErrors(TestCase):
         print("C++ enum:")
         print(sio.getvalue())
 
-        self.assertRegex(sio.getvalue(), r"NONE = 500;")
+        self.assertRegex(sio.getvalue(), r"NONE = 500,")
 
     def test_cpp_messages_export(self):
         sio = StringIO()
