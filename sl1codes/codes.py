@@ -141,11 +141,13 @@ class Codes:
         :return: None
         """
         file.write("// Generated error code enum\n")
-        file.write("enum Errors {\n")
+        file.write("namespace ErrorCodes {\n")
+        file.write("\tenum Errors {\n")
 
         for name, code in cls.get_codes().items():
-            file.write(f"\t{name} = {code.code},\n")
+            file.write(f"\t\t{name} = {code.code},\n")
 
+        file.write("\t};\n")
         file.write("};\n")
 
     @classmethod
