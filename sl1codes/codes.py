@@ -54,6 +54,15 @@ class Code:
         return self._category.value * 100 + self._code
 
     @property
+    def sub_code(self) -> int:
+        """
+        Get error sub-code - code valid inside a category
+
+        :return: Sub-code integer value
+        """
+        return self._code
+
+    @property
     def category(self) -> Class:
         """
         Ger error category
@@ -199,6 +208,27 @@ class Codes:
         for code in cls.get_codes().values():
             if code.message:
                 file.write(f'QT_TR_NOOP("{code.message}");\n')
+
+    @classmethod
+    def dump_google_docs(cls, file: TextIO) -> None:
+        """
+        Dump textual representation of error codes suitable for copy-paste to Google Docs
+
+        :param file: Where to dump
+        :return: None
+        """
+        c2docs = {
+            Class.SYSTEM: "System errors",
+            Class.MECHANICAL: "Mechanical",
+            Class.ELECTRICAL: "Electronics",
+            Class.CONNECTIVITY: "Connectivity",
+            Class.TEMPERATURE: "Temperatures",
+        }
+
+        for name, code in cls.get_codes().items():
+            message = code.message if code.message else ""
+            category = f"{c2docs[code.category]}\t{code.category.value}"
+            file.write(f'SL1\t10\t{category}\t{code.sub_code}\t"{name}"\t"{message}"\t#10{code.code}\n')
 
 
 def unique_codes(cls):

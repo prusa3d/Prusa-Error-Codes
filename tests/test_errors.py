@@ -65,3 +65,10 @@ class TestErrors(TestCase):
 
     def test_unknown_code_lookup(self):
         self.assertEqual(Errors.UNKNOWN, Errors.get(-123))
+
+    def test_google_docs(self):
+        sio = StringIO()
+        Errors.dump_google_docs(sio)
+        print("Google docs text:")
+        print(sio.getvalue())
+        self.assertRegex(sio.getvalue(), r'SL1\t10\tSystem errors\t5\t0\t"NONE"\t"No problem"\t#10500')
