@@ -13,7 +13,19 @@ from typing import Optional, TextIO, Dict
 
 
 @unique
-class Class(IntEnum):
+class Printer(IntEnum):
+    """
+    Prusa printer code
+
+    These are USB PID codes
+    """
+
+    UNKNOWN = 0
+    SL1 = 0x000A
+
+
+@unique
+class Category(IntEnum):
     """
     Prusa error category codes
 
@@ -33,37 +45,49 @@ class Code:
     Code class holds error code information
     """
 
-    def __init__(self, cls: Class, code: int, message: Optional[str]):
-        if cls.value < 0 or cls.value > 9:
-            raise ValueError(f"Error class {cls.value} out of range")
+    def __init__(self, printer: Printer, category: Category, error: int, message: Optional[str]):
+        if printer.value < 0 or printer.value > 99:
+            raise ValueError(f"Printer class {printer} out of range")
+        if category.value < 0 or category.value > 9:
+            raise ValueError(f"Error class {category} out of range")
 
-        if code < 0 or code > 99:
-            raise ValueError(f"Error code {code} out of range")
+        if error < 0 or error > 99:
+            raise ValueError(f"Error code {error} out of range")
 
-        self._category = cls
-        self._code = code
+        self._printer = printer
+        self._category = category
+        self._error = error
         self._message = message
 
     @property
-    def code(self) -> int:
+    def code(self) -> str:
         """
-        Get error code value
+        Get error code
 
-        :return: Error code value
+        :return: Error code
         """
-        return self._category.value * 100 + self._code
-
-    @property
-    def sub_code(self) -> int:
-        """
-        Get error sub-code - code valid inside a category
-
-        :return: Sub-code integer value
-        """
-        return self._code
+        return f"#{self._printer.value:02}{self._category.value}{self._error:02}"
 
     @property
-    def category(self) -> Class:
+    def printer(self) -> Printer:
+        """
+        Get error code printer
+
+        :return: Error printer enum instance
+        """
+        return self._printer
+
+    @property
+    def error(self) -> int:
+        """
+        Get error code valid inside a category and printer
+
+        :return: error code integer value
+        """
+        return self._error
+
+    @property
+    def category(self) -> Category:
         """
         Ger error category
 
@@ -82,21 +106,18 @@ class Code:
 
     def __lt__(self, other):
         if not isinstance(other, Code):
-            return NotImplemented
+            return NotImplementedError()
         return self.code < other.code
 
     def __eq__(self, other):
         if not isinstance(other, Code):
-            return NotImplemented
+            return NotImplementedError()
         return self.code == other.code
 
     def __repr__(self):
-        return f"Code: Category: {self.category} Value: {self._code} Code: {self.code} Message: {self.message}"
+        return f"Code: {self.code} = {str(self.printer)}:{str(self.category)}:{self.error} - {self.message}"
 
     def __str__(self):
-        return f"Code: {self.code} ({self.message})"
-
-    def __int__(self):
         return self.code
 
 
@@ -105,7 +126,9 @@ class Codes:
     Base class for code listing classes
     """
 
-    _code_map: Dict[int, Code] = {}
+    _code_map: Dict[str, Code] = {}
+
+    PRINTER = Printer.UNKNOWN
 
     @classmethod
     def get_codes(cls) -> Dict[str, Code]:
@@ -117,7 +140,7 @@ class Codes:
         return {item: var for item, var in vars(cls).items() if isinstance(var, Code)}
 
     @classmethod
-    def get(cls, code: int):
+    def get(cls, code: str):
         """
         Get Code by its number
 
@@ -142,24 +165,6 @@ class Codes:
         return json.dump(obj, file, indent=True)
 
     @classmethod
-    def dump_cpp_enum(cls, file: TextIO) -> None:
-        """
-        Dump codes C++ enum representation to an open file
-
-        :param file: Where to dump
-        :return: None
-        """
-        file.write("// Generated error code enum\n")
-        file.write("namespace ErrorCodes {\n")
-        file.write("\tenum Errors {\n")
-
-        for name, code in cls.get_codes().items():
-            file.write(f"\t\t{name} = {code.code},\n")
-
-        file.write("\t};\n")
-        file.write("};\n")
-
-    @classmethod
     def dump_cpp_messages(cls, file: TextIO) -> None:
         """
         Dump code messages C++ QMap representation to an open file
@@ -169,11 +174,12 @@ class Codes:
         """
         file.write("#include <QMap>\n")
         file.write("// Generated error code to message mapping\n")
-        file.write("static QMap<int, QString> error_messages{\n")
+        file.write("static QMap<QString, QString> error_messages{\n")
 
         for code in cls.get_codes().values():
             if code.message:
-                file.write("\t{" + str(code.code) + ', "' + code.message + '"},\n')
+                # file.write('\t{"' + code.code + '", "' + code.message + '"},\n')
+                file.write(f'\t{{"{code.code}", "{code.message}"}},\n')
 
         file.write("};\n")
 
@@ -218,17 +224,17 @@ class Codes:
         :return: None
         """
         c2docs = {
-            Class.SYSTEM: "System errors",
-            Class.MECHANICAL: "Mechanical",
-            Class.ELECTRICAL: "Electronics",
-            Class.CONNECTIVITY: "Connectivity",
-            Class.TEMPERATURE: "Temperatures",
+            Category.SYSTEM: "System errors",
+            Category.MECHANICAL: "Mechanical",
+            Category.ELECTRICAL: "Electronics",
+            Category.CONNECTIVITY: "Connectivity",
+            Category.TEMPERATURE: "Temperatures",
         }
 
         for name, code in cls.get_codes().items():
             message = code.message if code.message else ""
             category = f"{c2docs[code.category]}\t{code.category.value}"
-            file.write(f'SL1\t10\t{category}\t{code.sub_code}\t"{name}"\t"{message}"\t#10{code.code}\n')
+            file.write(f'SL1\t10\t{category}\t{code.error}\t"{name}"\t"{message}"\t{code.code}\n')
 
 
 def unique_codes(cls):
@@ -241,7 +247,7 @@ def unique_codes(cls):
     used = set()
     for name, code in cls.get_codes().items():
         if code.code in used:
-            raise ValueError(f"Code {name} with value {code.code} is deficit!")
+            raise ValueError(f"Code {name} with value {code.code} is duplicate!")
         used.add(code.code)
 
     return cls

@@ -8,10 +8,10 @@ unittest:
   script:
     - export PATH="${PATH}:$(pwd)"
     - python3-coverage run -m unittest discover --failfast --verbose tests
-    - python3-coverage report --include "sl1codes*"
+    - python3-coverage report
 
 pylint:
   stage: test
   script:
     - python3 -m pylint --version
-    - python3 -m pylint --persistent=n --jobs 0 --max-line-length=120 sl1codes
+    - python3 -m pylint --persistent=n --jobs 0 --max-line-length=120 shared sl1 tests
