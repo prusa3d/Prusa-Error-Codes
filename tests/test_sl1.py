@@ -8,7 +8,7 @@
 
 import unittest
 
-from sl1.errors import Sl1Codes
+from sl1.codes import Sl1Codes
 
 
 class TestErrors(unittest.TestCase):

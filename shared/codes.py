@@ -37,6 +37,8 @@ class Category(IntEnum):
     ELECTRICAL = 3  # Electrical, MINDA, FINDA, Motion Controller, …
     CONNECTIVITY = 4  # Connectivity - Wi - Fi, LAN, Prusa Connect Cloud
     SYSTEM = 5  # System - BSOD, ...
+    BOOTLOADER = 6  #
+    WARNINGS = 7  # Category-less warnings
 
 
 @functools.total_ordering
@@ -229,6 +231,7 @@ class Codes:
             Category.ELECTRICAL: "Electronics",
             Category.CONNECTIVITY: "Connectivity",
             Category.TEMPERATURE: "Temperatures",
+            Category.WARNINGS: "Warnings",
         }
 
         for name, code in cls.get_codes().items():

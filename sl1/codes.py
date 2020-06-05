@@ -71,6 +71,16 @@ class Sl1Codes(Codes):
     GENERAL_FILE_ALREADY_EXISTS = Code(PRINTER, Category.SYSTEM, 20, "File already exists!")
     GENERAL_INVALID_PROJECT = Code(PRINTER, Category.SYSTEM, 21, "The project file is invalid!")
 
+    # Warnings
+    NONE_WARNING = Code(PRINTER, Category.WARNINGS, 0, "No warning")
+    UNKNOWN_WARNING = Code(PRINTER, Category.WARNINGS, 1, "Unknown warning")
+    EXPOSURE_AMBIENT_TOO_HOT_WARNING = Code(PRINTER, Category.WARNINGS, 2, None)
+    EXPOSURE_AMBIENT_TOO_COLD_WARNING = Code(PRINTER, Category.WARNINGS, 3, None)
+    EXPOSURE_PRINTING_DIRECTLY_WARNING = Code(PRINTER, Category.WARNINGS, 4, None)
+    EXPOSURE_PRINTER_MODEL_MISMATCH_WARNING = Code(PRINTER, Category.WARNINGS, 5, None)
+    EXPOSURE_RESIN_NOT_ENOUGH_WARNING = Code(PRINTER, Category.WARNINGS, 6, None)
+    EXPOSURE_PROJECT_SETTINGS_MODIFIED_WARNING = Code(PRINTER, Category.WARNINGS, 7, None)
+
     @classmethod
     def get(cls, code: str):
         """
