@@ -16,7 +16,7 @@ from shared.codes import Codes, unique_codes, Printer, Code, Category
 @unique_codes
 class TestCodes(Codes):
     PRINTER = Printer.UNKNOWN
-    NONE = Code(PRINTER, Category.SYSTEM, 0, "No problem")
+    NONE = Code(PRINTER, Category.SYSTEM, 0, "No problem", True)
 
 
 class TestErrors(unittest.TestCase):

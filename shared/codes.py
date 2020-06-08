@@ -46,8 +46,8 @@ class Code:
     """
     Code class holds error code information
     """
-
-    def __init__(self, printer: Printer, category: Category, error: int, message: Optional[str]):
+    # pylint: disable = too-many-arguments
+    def __init__(self, printer: Printer, category: Category, error: int, message: Optional[str], approved: bool):
         if printer.value < 0 or printer.value > 99:
             raise ValueError(f"Printer class {printer} out of range")
         if category.value < 0 or category.value > 9:
@@ -60,6 +60,7 @@ class Code:
         self._category = category
         self._error = error
         self._message = message
+        self._approved = approved
 
     @property
     def code(self) -> str:
@@ -105,6 +106,16 @@ class Code:
         :return: Error message string
         """
         return self._message
+
+    @property
+    def approved(self):
+        """
+        Whenever the message text was approved for use in production system
+
+        Unapproved tests are not supposed to be translated. This is planed to raise warnings and prevent the resulting
+        build from being used in production.
+        """
+        return self._approved
 
     def __lt__(self, other):
         if not isinstance(other, Code):
@@ -179,7 +190,7 @@ class Codes:
         file.write("static QMap<QString, QString> error_messages{\n")
 
         for code in cls.get_codes().values():
-            if code.message:
+            if code.message and code.approved:
                 # file.write('\t{"' + code.code + '", "' + code.message + '"},\n')
                 file.write(f'\t{{"{code.code}", "{code.message}"}},\n')
 
