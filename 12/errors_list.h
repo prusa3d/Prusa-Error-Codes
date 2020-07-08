@@ -4,7 +4,7 @@
 
 static constexpr uint8_t ERR_PRINTER_CODE = 12;
 
-typedef enum : int16_t {
+typedef enum : uint16_t {
     ERR_UNDEF = 0,
 
     ERR_MECHANICAL = 100,
