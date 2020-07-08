@@ -17,7 +17,7 @@ Example: 12201
 01 - specific error code: Heatbed heating failed
 
 ## Error categories
-1. Machanical - XYZ motors, tower, axis range
+1. Mechanical - XYZ motors, tower, axis range
 2. Temperature - thermistors/heating
 3. Electronics - MINDA, FINDA, Motion Controller, …
 4. Connection - Wi-Fi, LAN, Prusa Connect Cloud
