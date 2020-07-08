@@ -1,27 +1,26 @@
 # Prusa-Error-Codes
 
-## Složení chybového kódu <ErrorCode>
+## Error code format <ErrorCode>
 
-#XXYZZ
+XXYZZ
 
-\# - pro označení sekvence chybového kódu
-- XX - číslo tiskárny dle USB PID
-- Y - kategorie chyby (společné pro všechny tiskárny)
-- ZZ - číslo specifické chyby (liší se dle tiskárny)
+- XX - number of printer according to USB PID
+- Y - error category (common for all printers)
+- ZZ - specific error code
 
-Například: #12201
+Example: 12201
 
-12 - tiskárna číslo 12: Original Prusa MINI
+12 - printer number 12: Original Prusa MINI
 
-2 - kategorie chyby: chyba při měření teplot
+2 - error category: temperature error
 
-01 - číslo chyby: nahřívání podložky selhalo
+01 - specific error code: Heatbed heating failed
 
-## Kategorie chyb
-1. Mechanické - motory XYZ, tower, rozsah OS
-2. Měření teplot - termistory/nahřívání 
-3. Elektronické - MINDA, FINDA, Motion Controller, …
-4. Konektivita - Wi-Fi, LAN, Prusa Connect Cloud
-5. Systémové - BSOD, …
-6. Bootloader
+## Error categories
+1. Machanical - XYZ motors, tower, axis range
+2. Temperature - thermistors/heating
+3. Electronics - MINDA, FINDA, Motion Controller, …
+4. Connection - Wi-Fi, LAN, Prusa Connect Cloud
+5. System - FW crash, …
+6. Bootloader - FW update, USB/SD card fail
 7. Warnings
