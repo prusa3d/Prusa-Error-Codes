@@ -1,6 +1,7 @@
 // errors_list.h
 #pragma once
 #include "inttypes.h"
+#include "lang/i18n.h"
 
 static constexpr uint8_t ERR_PRINTER_CODE = 12;
 
