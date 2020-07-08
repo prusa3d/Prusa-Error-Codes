@@ -37,35 +37,35 @@ typedef struct {
 } err_t;
 
 static constexpr err_t error_list[] = {
-    { "Heating failed",
-        "Check the heatbed heater & thermistor wiring for possible damage.",
+    { N_("Heating failed"),
+        N_("Check the heatbed heater & thermistor wiring for possible damage."),
         ERR_TEMPERATURE_HEATING_BED },
 
-    { "Heating failed",
-        "Check the print head heater & thermistor wiring for possible damage.",
+    { N_("Heating failed"),
+        N_("Check the print head heater & thermistor wiring for possible damage."),
         ERR_TEMPERATURE_HEATING_NOZZLE },
 
-    { "Thermal Runaway",
-        "Check the heatbed thermistor wiring for possible damage.",
+    { N_("Thermal Runaway"),
+        N_("Check the heatbed thermistor wiring for possible damage."),
         ERR_TEMPERATURE_RUNAWAY_BED },
 
-    { "Thermal Runaway",
-        "Check the print head thermistor wiring for possible damage.",
+    { N_("Thermal Runaway"),
+        N_("Check the print head thermistor wiring for possible damage."),
         ERR_TEMPERATURE_RUNAWAY_NOZZLE },
 
-    { "MAXTEMP triggered",
-        "Check the heatbed thermistor wiring for possible damage.",
+    { N_("MAXTEMP triggered"),
+        N_("Check the heatbed thermistor wiring for possible damage."),
         ERR_TEMPERATURE_MAX_BED },
 
-    { "MAXTEMP triggered",
-        "Check the print head thermistor wiring for possible damage.",
+    { N_("MAXTEMP triggered"),
+        N_("Check the print head thermistor wiring for possible damage."),
         ERR_TEMPERATURE_MAX_NOZZLE },
 
-    { "MINTEMP triggered",
-        "Check the heatbed thermistor wiring for possible damage.",
+    { N_("MINTEMP triggered"),
+        N_("Check the heatbed thermistor wiring for possible damage."),
         ERR_TEMPERATURE_MIN_BED },
 
-    { "MINTEMP triggered",
-        "Check the print head thermistor wiring for possible damage.",
+    { N_("MINTEMP triggered"),
+        N_("Check the print head thermistor wiring for possible damage."),
         ERR_TEMPERATURE_MIN_NOZZLE },
 };
