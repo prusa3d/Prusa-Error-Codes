@@ -10,7 +10,7 @@ import json
 import unittest
 from io import StringIO
 
-from shared.codes import Codes, unique_codes, Printer, Code, Category
+from prusaerrors.shared.codes import unique_codes, Codes, Printer, Code, Category
 
 
 @unique_codes
