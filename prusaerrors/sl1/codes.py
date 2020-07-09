@@ -9,7 +9,7 @@ Warning: The codes has not yet been officially approved.
 """
 
 
-from shared.codes import Code, Category, unique_codes, Codes, Printer
+from prusaerrors.shared.codes import Code, Category, unique_codes, Codes, Printer
 
 
 @unique_codes

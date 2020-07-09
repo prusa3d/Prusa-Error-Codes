@@ -14,4 +14,4 @@ pylint:
   stage: test
   script:
     - python3 -m pylint --version
-    - python3 -m pylint --persistent=n --jobs 0 --max-line-length=120 shared sl1 tests
+    - python3 -m pylint --persistent=n --jobs 0 --max-line-length=120 prusaerrors

@@ -69,7 +69,16 @@ class Code:
 
         :return: Error code
         """
-        return f"#{self._printer.value:02}{self._category.value}{self._error:02}"
+        return f"#{self.raw_code}"
+
+    @property
+    def raw_code(self) -> str:
+        """
+        Get raw code without "#" at the beginning
+
+        :return: Error code without "#"
+        """
+        return f"{self._printer.value:02}{self._category.value}{self._error:02}"
 
     @property
     def printer(self) -> Printer:
