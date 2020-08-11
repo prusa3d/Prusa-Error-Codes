@@ -187,6 +187,24 @@ class Codes:
         return json.dump(obj, file, indent=True)
 
     @classmethod
+    def dump_cpp_enum(cls, file: TextIO) -> None:
+        """
+        Dump codes C++ enum representation to an open file
+
+        :param file: Where to dump
+        :return: None
+        """
+        file.write("// Generated error code enum\n")
+        file.write("namespace ErrorCodes {\n")
+        file.write("\tenum Errors {\n")
+
+        for name, code in cls.get_codes().items():
+            file.write(f"\t\t{name} = {code.raw_code},\n")
+
+        file.write("\t};\n")
+        file.write("};\n")
+
+    @classmethod
     def dump_cpp_messages(cls, file: TextIO) -> None:
         """
         Dump code messages C++ QMap representation to an open file
