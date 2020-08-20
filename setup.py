@@ -6,7 +6,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="prusa_errors",
-    version="2020.4.21",
+    version="2020.9.25",
     packages=find_packages(exclude=["tests"]),
     url="https://github.com/prusa3d/Prusa-Error-Codes",
     license="GNU General Public License v3 or later (GPLv3+)",
