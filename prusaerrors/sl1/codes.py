@@ -34,9 +34,52 @@ class Sl1Codes(Codes):
     EXPOSURE_TILT_FAILURE = Code(PRINTER, Category.MECHANICAL, 10, None, False)
     EXPOSURE_TOWER_FAILURE = Code(PRINTER, Category.MECHANICAL, 12, None, False)
     GENERAL_NOT_MECHANICALLY_CALIBRATED = Code(PRINTER, Category.MECHANICAL, 13, None, False)
+    TOWER_ENDSTOP_NOT_REACHED = Code(PRINTER, Category.MECHANICAL, 14, _("Failed to reach tower endstop"), False)
+    TILT_ENDSTOP_NOT_REACHED = Code(PRINTER, Category.MECHANICAL, 15, _("Failed to reach tilt endstop"), False)
+    TOWER_HOME_CHECK_FAILED = Code(PRINTER, Category.MECHANICAL, 16,
+                                   _("Tower home check failed!\n\nTower profiles need to be changed."), False)
+    TILT_HOME_CHECK_FAILED = Code(PRINTER, Category.MECHANICAL, 17,
+                                  _("Tilt home check failed!\n\nTilt profiles need to be changed."), False)
+    TOWER_AXIS_CHECK_FAILED = Code(
+        PRINTER,
+        Category.MECHANICAL,
+        18,
+        _(
+            "Tower axis check failed!\n\n"
+            "Current position: %d nm\n\n"
+            "Please check if the ballscrew can move smoothly in its entire range."
+        ),
+        False,
+    )
+    TILT_AXIS_CHECK_FAILED = Code(
+        PRINTER,
+        Category.MECHANICAL,
+        19,
+        _(
+            "Tilt axis check failed!\n\n"
+            "Current position: %d steps\n\n"
+            "Please check if the tilt can move smoothly in its entire range."
+        ),
+        False
+    )
+    DISPLAY_TEST_FAILED = Code(PRINTER, Category.MECHANICAL, 20, _("Display test failed."), False)
+    INVALID_TILT_ALIGN_POSITION = Code(PRINTER, Category.MECHANICAL, 21, _("Invalid tilt align position"), False)
+    FAN_RPM_OUT_OF_TEST_RANGE = Code(PRINTER, Category.MECHANICAL, 22, _(
+        "RPM of %(fan)s not in range!\n\n"
+        "Please check if the fan is connected correctly.\n\n"
+        "RPM data: %(rpm)s\n"
+        "Average: %(avg)s\n"
+        "Fan error: %(fanError)s"
+    ), False)
+    TOWER_BELOW_SURFACE = Code(PRINTER, Category.MECHANICAL, 23, _(
+        "Tower not at the expected position.\n\n"
+        "Is the platform and tank secured in correct position?\n\n"), False)
 
     # Temperature
     EXPOSURE_TEMP_SENSOR_FAILURE = Code(PRINTER, Category.TEMPERATURE, 5, None, False)
+    UVLED_HEAT_SINK_FAILURE = Code(
+        PRINTER, Category.TEMPERATURE, 6, _("UV LED overheating! Check proper heatsink installation."), False
+    )
 
     # Connectivity
     GENERAL_FAILED_TO_MQTT_SEND = Code(
@@ -57,6 +100,9 @@ class Sl1Codes(Codes):
     GENERAL_MOTION_CONTROLLER_EXCEPTION = Code(PRINTER, Category.ELECTRICAL, 6, None, False)
     EXPOSURE_RESIN_SENSOR_FAILURE = Code(PRINTER, Category.ELECTRICAL, 7, None, False)
     GENERAL_NOT_UV_CALIBRATED = Code(PRINTER, Category.ELECTRICAL, 8, None, False)
+    UVLED_VOLTAGE_DIFFER_TOO_MUCH = Code(PRINTER, Category.ELECTRICAL, 9,
+                                         _("UV LED voltages differ too much. Possibly LED module is broken."), False)
+    SOUND_TEST_FAILED = Code(PRINTER, Category.ELECTRICAL, 10, _("Speaker is broken"), False)
 
     # System
     NONE = Code(PRINTER, Category.SYSTEM, 0, _("No problem"), False)
@@ -96,6 +142,7 @@ class Sl1Codes(Codes):
     GENERAL_INVALID_EXTENSION = Code(PRINTER, Category.SYSTEM, 19, _("File has an invalid extension!"), False)
     GENERAL_FILE_ALREADY_EXISTS = Code(PRINTER, Category.SYSTEM, 20, _("File already exists!"), False)
     GENERAL_INVALID_PROJECT = Code(PRINTER, Category.SYSTEM, 21, _("The project file is invalid!"), False)
+    WIZARD_NOT_CANCELABLE = Code(PRINTER, Category.SYSTEM, 22, _("This wizard cannot be canceled"), False)
 
     # Warnings
     NONE_WARNING = Code(PRINTER, Category.WARNINGS, 0, _("No warning"), False)
