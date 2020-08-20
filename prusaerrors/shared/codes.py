@@ -85,7 +85,7 @@ class Code:
         """
         Get raw message with escaped characters (do not translate them)
 
-        :return: Error message with \ characters
+        :return: Error message with backslash characters
         """
         return json.dumps(self.message)
 
