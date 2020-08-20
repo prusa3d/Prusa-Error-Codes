@@ -15,6 +15,7 @@ try:
 except NameError:
     _ = lambda x: x
 
+
 @unique_codes
 class Sl1Codes(Codes):
     """
@@ -38,16 +39,20 @@ class Sl1Codes(Codes):
     EXPOSURE_TEMP_SENSOR_FAILURE = Code(PRINTER, Category.TEMPERATURE, 5, None, False)
 
     # Connectivity
-    GENERAL_FAILED_TO_MQTT_SEND = Code(PRINTER, Category.CONNECTIVITY, 1, _("Cannot send factory config to MQTT!"), False)
+    GENERAL_FAILED_TO_MQTT_SEND = Code(
+        PRINTER, Category.CONNECTIVITY, 1, _("Cannot send factory config to MQTT!"), False
+    )
     GENERAL_NOT_CONNECTED_TO_NETWORK = Code(PRINTER, Category.CONNECTIVITY, 2, None, False)
     GENERAL_CONNECTION_FAILED = Code(PRINTER, Category.CONNECTIVITY, 3, None, False)
     GENERAL_DOWNLOAD_FAILED = Code(PRINTER, Category.CONNECTIVITY, 4, None, False)
 
     # Electrical
     MOTION_CONTROLLER_WRONG_REVISION = Code(
-        PRINTER, Category.ELECTRICAL, 1,
+        PRINTER,
+        Category.ELECTRICAL,
+        1,
         _("Wrong revision of the motion controller. Please replace it or contact our support."),
-        False
+        False,
     )
     GENERAL_MOTION_CONTROLLER_EXCEPTION = Code(PRINTER, Category.ELECTRICAL, 6, None, False)
     EXPOSURE_RESIN_SENSOR_FAILURE = Code(PRINTER, Category.ELECTRICAL, 7, None, False)
@@ -56,14 +61,18 @@ class Sl1Codes(Codes):
     # System
     NONE = Code(PRINTER, Category.SYSTEM, 0, _("No problem"), False)
     UNKNOWN = Code(
-        PRINTER, Category.SYSTEM, 1,
-        _("An unexpected error has occurred :-(.\n\n"
-        "If the SL1 is printing, current job will be finished.\n\n"
-        "You can turn the printer off by pressing the front power button.\n\n"
-        "Please follow the instructions in Chapter 3.1 in the handbook to learn how to save a log file. "
-        "Please send the log to us and help us improve the printer.\n\n"
-        "Thank you!"),
-        False
+        PRINTER,
+        Category.SYSTEM,
+        1,
+        _(
+            "An unexpected error has occurred :-(.\n\n"
+            "If the SL1 is printing, current job will be finished.\n\n"
+            "You can turn the printer off by pressing the front power button.\n\n"
+            "Please follow the instructions in Chapter 3.1 in the handbook to learn how to save a log file. "
+            "Please send the log to us and help us improve the printer.\n\n"
+            "Thank you!"
+        ),
+        False,
     )
     EXPOSURE_PROJECT_FAILURE = Code(PRINTER, Category.SYSTEM, 4, None, False)
     GENERAL_CONFIG_EXCEPTION = Code(PRINTER, Category.SYSTEM, 5, _("Failed to read configuration file"), False)
