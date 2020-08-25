@@ -54,20 +54,30 @@ class Sl1Codes(Codes):
             "Current position: %d steps\n\n"
             "Please check if the tilt can move smoothly in its entire range."
         ),
-        False
+        False,
     )
     DISPLAY_TEST_FAILED = Code(PRINTER, Category.MECHANICAL, 20, _("Display test failed."), False)
     INVALID_TILT_ALIGN_POSITION = Code(PRINTER, Category.MECHANICAL, 21, _("Invalid tilt align position"), False)
-    FAN_RPM_OUT_OF_TEST_RANGE = Code(PRINTER, Category.MECHANICAL, 22, _(
-        "RPM of %(fan)s not in range!\n\n"
-        "Please check if the fan is connected correctly.\n\n"
-        "RPM data: %(rpm)s\n"
-        "Average: %(avg)s\n"
-        "Fan error: %(fanError)s"
-    ), False)
-    TOWER_BELOW_SURFACE = Code(PRINTER, Category.MECHANICAL, 23, _(
-        "Tower not at the expected position.\n\n"
-        "Is the platform and tank secured in correct position?\n\n"), False)
+    FAN_RPM_OUT_OF_TEST_RANGE = Code(
+        PRINTER,
+        Category.MECHANICAL,
+        22,
+        _(
+            "RPM of %(fan)s not in range!\n\n"
+            "Please check if the fan is connected correctly.\n\n"
+            "RPM data: %(rpm)s\n"
+            "Average: %(avg)s\n"
+            "Fan error: %(fanError)s"
+        ),
+        False,
+    )
+    TOWER_BELOW_SURFACE = Code(
+        PRINTER,
+        Category.MECHANICAL,
+        23,
+        _("Tower not at the expected position.\n\n" "Is the platform and tank secured in correct position?\n\n"),
+        False,
+    )
 
     # Temperature
     TEMP_SENSOR_FAILED = Code(PRINTER, Category.TEMPERATURE, 5, None, False)
@@ -92,21 +102,26 @@ class Sl1Codes(Codes):
     MOTION_CONTROLLER_EXCEPTION = Code(PRINTER, Category.ELECTRICAL, 6, None, False)
     RESIN_SENSOR_FAILED = Code(PRINTER, Category.ELECTRICAL, 7, None, False)
     NOT_UV_CALIBRATED = Code(PRINTER, Category.ELECTRICAL, 8, None, False)
-    UVLED_VOLTAGE_DIFFER_TOO_MUCH = Code(PRINTER, Category.ELECTRICAL, 9,
-                                         _("UV LED voltages differ too much. Possibly LED module is broken."), False)
+    UVLED_VOLTAGE_DIFFER_TOO_MUCH = Code(
+        PRINTER, Category.ELECTRICAL, 9, _("UV LED voltages differ too much. Possibly LED module is broken."), False
+    )
     SOUND_TEST_FAILED = Code(PRINTER, Category.ELECTRICAL, 10, _("Speaker is broken"), False)
 
     # System
     NONE = Code(PRINTER, Category.SYSTEM, 0, _("No problem"), False)
     UNKNOWN = Code(
-        PRINTER, Category.SYSTEM, 1,
-        _("An unexpected error has occurred :-(.\n\n"
-          "If the SL1 is printing, current job will be finished.\n\n"
-          "You can turn the printer off by pressing the front power button.\n\n"
-          "Please follow the instructions in Chapter 3.1 in the handbook to learn how to save a log file. "
-          "Please send the log to us and help us improve the printer.\n\n"
-          "Thank you!"),
-        False
+        PRINTER,
+        Category.SYSTEM,
+        1,
+        _(
+            "An unexpected error has occurred :-(.\n\n"
+            "If the SL1 is printing, current job will be finished.\n\n"
+            "You can turn the printer off by pressing the front power button.\n\n"
+            "Please follow the instructions in Chapter 3.1 in the handbook to learn how to save a log file. "
+            "Please send the log to us and help us improve the printer.\n\n"
+            "Thank you!"
+        ),
+        False,
     )
     PROJECT_FAILED = Code(PRINTER, Category.SYSTEM, 4, None, False)
     CONFIG_EXCEPTION = Code(PRINTER, Category.SYSTEM, 5, _("Failed to read configuration file"), False)
