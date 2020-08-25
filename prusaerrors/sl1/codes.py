@@ -25,10 +25,10 @@ class Sl1Codes(Codes):
     PRINTER = Printer.SL1
 
     # Mechanical
-    TILT_HOME_FAILURE = Code(PRINTER, Category.MECHANICAL, 1, None, False)
-    TOWER_HOME_FAILURE = Code(PRINTER, Category.MECHANICAL, 2, None, False)
-    TOWER_MOVE_FAILURE = Code(PRINTER, Category.MECHANICAL, 3, None, False)
-    FAN_FAILURE = Code(PRINTER, Category.MECHANICAL, 6, None, False)
+    TILT_HOME_FAILED = Code(PRINTER, Category.MECHANICAL, 1, None, False)
+    TOWER_HOME_FAILED = Code(PRINTER, Category.MECHANICAL, 2, None, False)
+    TOWER_MOVE_FAILED = Code(PRINTER, Category.MECHANICAL, 3, None, False)
+    FAN_FAILED = Code(PRINTER, Category.MECHANICAL, 6, None, False)
     RESIN_TOO_LOW = Code(PRINTER, Category.MECHANICAL, 8, None, False)
     RESIN_TOO_HIGH = Code(PRINTER, Category.MECHANICAL, 9, None, False)
     NOT_MECHANICALLY_CALIBRATED = Code(PRINTER, Category.MECHANICAL, 13, None, False)
@@ -70,13 +70,13 @@ class Sl1Codes(Codes):
         "Is the platform and tank secured in correct position?\n\n"), False)
 
     # Temperature
-    TEMP_SENSOR_FAILURE = Code(PRINTER, Category.TEMPERATURE, 5, None, False)
-    UVLED_HEAT_SINK_FAILURE = Code(
+    TEMP_SENSOR_FAILED = Code(PRINTER, Category.TEMPERATURE, 5, None, False)
+    UVLED_HEAT_SINK_FAILED = Code(
         PRINTER, Category.TEMPERATURE, 6, _("UV LED overheating! Check proper heatsink installation."), False
     )
 
     # Connectivity
-    FAILED_TO_MQTT_SEND = Code(PRINTER, Category.CONNECTIVITY, 1, _("Cannot send factory config to MQTT!"), False)
+    MQTT_SEND_FAILED = Code(PRINTER, Category.CONNECTIVITY, 1, _("Cannot send factory config to MQTT!"), False)
     NOT_CONNECTED_TO_NETWORK = Code(PRINTER, Category.CONNECTIVITY, 2, None, False)
     CONNECTION_FAILED = Code(PRINTER, Category.CONNECTIVITY, 3, None, False)
     DOWNLOAD_FAILED = Code(PRINTER, Category.CONNECTIVITY, 4, None, False)
@@ -90,7 +90,7 @@ class Sl1Codes(Codes):
         False,
     )
     MOTION_CONTROLLER_EXCEPTION = Code(PRINTER, Category.ELECTRICAL, 6, None, False)
-    RESIN_SENSOR_FAILURE = Code(PRINTER, Category.ELECTRICAL, 7, None, False)
+    RESIN_SENSOR_FAILED = Code(PRINTER, Category.ELECTRICAL, 7, None, False)
     NOT_UV_CALIBRATED = Code(PRINTER, Category.ELECTRICAL, 8, None, False)
     UVLED_VOLTAGE_DIFFER_TOO_MUCH = Code(PRINTER, Category.ELECTRICAL, 9,
                                          _("UV LED voltages differ too much. Possibly LED module is broken."), False)
@@ -99,23 +99,19 @@ class Sl1Codes(Codes):
     # System
     NONE = Code(PRINTER, Category.SYSTEM, 0, _("No problem"), False)
     UNKNOWN = Code(
-        PRINTER,
-        Category.SYSTEM,
-        1,
-        _(
-            "An unexpected error has occurred :-(.\n\n"
-            "If the SL1 is printing, current job will be finished.\n\n"
-            "You can turn the printer off by pressing the front power button.\n\n"
-            "Please follow the instructions in Chapter 3.1 in the handbook to learn how to save a log file. "
-            "Please send the log to us and help us improve the printer.\n\n"
-            "Thank you!"
-        ),
-        False,
+        PRINTER, Category.SYSTEM, 1,
+        _("An unexpected error has occurred :-(.\n\n"
+          "If the SL1 is printing, current job will be finished.\n\n"
+          "You can turn the printer off by pressing the front power button.\n\n"
+          "Please follow the instructions in Chapter 3.1 in the handbook to learn how to save a log file. "
+          "Please send the log to us and help us improve the printer.\n\n"
+          "Thank you!"),
+        False
     )
-    PROJECT_FAILURE = Code(PRINTER, Category.SYSTEM, 4, None, False)
+    PROJECT_FAILED = Code(PRINTER, Category.SYSTEM, 4, None, False)
     CONFIG_EXCEPTION = Code(PRINTER, Category.SYSTEM, 5, _("Failed to read configuration file"), False)
     NOT_AVAILABLE_IN_STATE = Code(PRINTER, Category.SYSTEM, 6, None, False)
-    DBUS_MAPPING_EXCEPTION = Code(PRINTER, Category.SYSTEM, 7, None, False)
+    DBUS_MAPPING_ERROR = Code(PRINTER, Category.SYSTEM, 7, None, False)
     REPRINT_WITHOUT_HISTORY = Code(PRINTER, Category.SYSTEM, 8, None, False)
     MISSING_WIZARD_DATA = Code(PRINTER, Category.SYSTEM, 9, _("The wizard did not finish successfully!"), False)
     MISSING_CALIBRATION_DATA = Code(
