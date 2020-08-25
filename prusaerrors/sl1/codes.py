@@ -31,15 +31,9 @@ class Sl1Codes(Codes):
     FAN_FAILURE = Code(PRINTER, Category.MECHANICAL, 6, None, False)
     RESIN_TOO_LOW = Code(PRINTER, Category.MECHANICAL, 8, None, False)
     RESIN_TOO_HIGH = Code(PRINTER, Category.MECHANICAL, 9, None, False)
-    TILT_FAILURE = Code(PRINTER, Category.MECHANICAL, 10, None, False)
-    TOWER_FAILURE = Code(PRINTER, Category.MECHANICAL, 12, None, False)
     NOT_MECHANICALLY_CALIBRATED = Code(PRINTER, Category.MECHANICAL, 13, None, False)
     TOWER_ENDSTOP_NOT_REACHED = Code(PRINTER, Category.MECHANICAL, 14, _("Failed to reach tower endstop"), False)
     TILT_ENDSTOP_NOT_REACHED = Code(PRINTER, Category.MECHANICAL, 15, _("Failed to reach tilt endstop"), False)
-    TOWER_HOME_CHECK_FAILED = Code(PRINTER, Category.MECHANICAL, 16,
-                                   _("Tower home check failed!\n\nTower profiles need to be changed."), False)
-    TILT_HOME_CHECK_FAILED = Code(PRINTER, Category.MECHANICAL, 17,
-                                  _("Tilt home check failed!\n\nTilt profiles need to be changed."), False)
     TOWER_AXIS_CHECK_FAILED = Code(
         PRINTER,
         Category.MECHANICAL,
