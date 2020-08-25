@@ -8,12 +8,14 @@ SL1 error codes
 Warning: The codes has not yet been officially approved.
 """
 
+import builtins
+
 from prusaerrors.shared.codes import Code, Category, unique_codes, Codes, Printer
 
-try:
-    _
-except NameError:
-    _ = lambda x: x
+if "_" not in vars(builtins):
+
+    def _(value):
+        return value
 
 
 @unique_codes
