@@ -25,15 +25,15 @@ class Sl1Codes(Codes):
     PRINTER = Printer.SL1
 
     # Mechanical
-    GENERAL_TILT_HOME_FAILURE = Code(PRINTER, Category.MECHANICAL, 1, None, False)
-    GENERAL_TOWER_HOME_FAILURE = Code(PRINTER, Category.MECHANICAL, 2, None, False)
-    EXPOSURE_TOWER_MOVE_FAILURE = Code(PRINTER, Category.MECHANICAL, 3, None, False)
-    EXPOSURE_FAN_FAILURE = Code(PRINTER, Category.MECHANICAL, 6, None, False)
-    EXPOSURE_RESIN_TOO_LOW = Code(PRINTER, Category.MECHANICAL, 8, None, False)
-    EXPOSURE_RESIN_TOO_HIGH = Code(PRINTER, Category.MECHANICAL, 9, None, False)
-    EXPOSURE_TILT_FAILURE = Code(PRINTER, Category.MECHANICAL, 10, None, False)
-    EXPOSURE_TOWER_FAILURE = Code(PRINTER, Category.MECHANICAL, 12, None, False)
-    GENERAL_NOT_MECHANICALLY_CALIBRATED = Code(PRINTER, Category.MECHANICAL, 13, None, False)
+    TILT_HOME_FAILURE = Code(PRINTER, Category.MECHANICAL, 1, None, False)
+    TOWER_HOME_FAILURE = Code(PRINTER, Category.MECHANICAL, 2, None, False)
+    TOWER_MOVE_FAILURE = Code(PRINTER, Category.MECHANICAL, 3, None, False)
+    FAN_FAILURE = Code(PRINTER, Category.MECHANICAL, 6, None, False)
+    RESIN_TOO_LOW = Code(PRINTER, Category.MECHANICAL, 8, None, False)
+    RESIN_TOO_HIGH = Code(PRINTER, Category.MECHANICAL, 9, None, False)
+    TILT_FAILURE = Code(PRINTER, Category.MECHANICAL, 10, None, False)
+    TOWER_FAILURE = Code(PRINTER, Category.MECHANICAL, 12, None, False)
+    NOT_MECHANICALLY_CALIBRATED = Code(PRINTER, Category.MECHANICAL, 13, None, False)
     TOWER_ENDSTOP_NOT_REACHED = Code(PRINTER, Category.MECHANICAL, 14, _("Failed to reach tower endstop"), False)
     TILT_ENDSTOP_NOT_REACHED = Code(PRINTER, Category.MECHANICAL, 15, _("Failed to reach tilt endstop"), False)
     TOWER_HOME_CHECK_FAILED = Code(PRINTER, Category.MECHANICAL, 16,
@@ -76,18 +76,16 @@ class Sl1Codes(Codes):
         "Is the platform and tank secured in correct position?\n\n"), False)
 
     # Temperature
-    EXPOSURE_TEMP_SENSOR_FAILURE = Code(PRINTER, Category.TEMPERATURE, 5, None, False)
+    TEMP_SENSOR_FAILURE = Code(PRINTER, Category.TEMPERATURE, 5, None, False)
     UVLED_HEAT_SINK_FAILURE = Code(
         PRINTER, Category.TEMPERATURE, 6, _("UV LED overheating! Check proper heatsink installation."), False
     )
 
     # Connectivity
-    GENERAL_FAILED_TO_MQTT_SEND = Code(
-        PRINTER, Category.CONNECTIVITY, 1, _("Cannot send factory config to MQTT!"), False
-    )
-    GENERAL_NOT_CONNECTED_TO_NETWORK = Code(PRINTER, Category.CONNECTIVITY, 2, None, False)
-    GENERAL_CONNECTION_FAILED = Code(PRINTER, Category.CONNECTIVITY, 3, None, False)
-    GENERAL_DOWNLOAD_FAILED = Code(PRINTER, Category.CONNECTIVITY, 4, None, False)
+    FAILED_TO_MQTT_SEND = Code(PRINTER, Category.CONNECTIVITY, 1, _("Cannot send factory config to MQTT!"), False)
+    NOT_CONNECTED_TO_NETWORK = Code(PRINTER, Category.CONNECTIVITY, 2, None, False)
+    CONNECTION_FAILED = Code(PRINTER, Category.CONNECTIVITY, 3, None, False)
+    DOWNLOAD_FAILED = Code(PRINTER, Category.CONNECTIVITY, 4, None, False)
 
     # Electrical
     MOTION_CONTROLLER_WRONG_REVISION = Code(
@@ -97,9 +95,9 @@ class Sl1Codes(Codes):
         _("Wrong revision of the motion controller. Please replace it or contact our support."),
         False,
     )
-    GENERAL_MOTION_CONTROLLER_EXCEPTION = Code(PRINTER, Category.ELECTRICAL, 6, None, False)
-    EXPOSURE_RESIN_SENSOR_FAILURE = Code(PRINTER, Category.ELECTRICAL, 7, None, False)
-    GENERAL_NOT_UV_CALIBRATED = Code(PRINTER, Category.ELECTRICAL, 8, None, False)
+    MOTION_CONTROLLER_EXCEPTION = Code(PRINTER, Category.ELECTRICAL, 6, None, False)
+    RESIN_SENSOR_FAILURE = Code(PRINTER, Category.ELECTRICAL, 7, None, False)
+    NOT_UV_CALIBRATED = Code(PRINTER, Category.ELECTRICAL, 8, None, False)
     UVLED_VOLTAGE_DIFFER_TOO_MUCH = Code(PRINTER, Category.ELECTRICAL, 9,
                                          _("UV LED voltages differ too much. Possibly LED module is broken."), False)
     SOUND_TEST_FAILED = Code(PRINTER, Category.ELECTRICAL, 10, _("Speaker is broken"), False)
@@ -120,39 +118,39 @@ class Sl1Codes(Codes):
         ),
         False,
     )
-    EXPOSURE_PROJECT_FAILURE = Code(PRINTER, Category.SYSTEM, 4, None, False)
-    GENERAL_CONFIG_EXCEPTION = Code(PRINTER, Category.SYSTEM, 5, _("Failed to read configuration file"), False)
-    GENERAL_NOT_AVAILABLE_IN_STATE = Code(PRINTER, Category.SYSTEM, 6, None, False)
-    GENERAL_DBUS_MAPPING_EXCEPTION = Code(PRINTER, Category.SYSTEM, 7, None, False)
-    GENERAL_REPRINT_WITHOUT_HISTORY = Code(PRINTER, Category.SYSTEM, 8, None, False)
-    GENERAL_MISSING_WIZARD_DATA = Code(PRINTER, Category.SYSTEM, 9, _("The wizard did not finish successfully!"), False)
-    GENERAL_MISSING_CALIBRATION_DATA = Code(
+    PROJECT_FAILURE = Code(PRINTER, Category.SYSTEM, 4, None, False)
+    CONFIG_EXCEPTION = Code(PRINTER, Category.SYSTEM, 5, _("Failed to read configuration file"), False)
+    NOT_AVAILABLE_IN_STATE = Code(PRINTER, Category.SYSTEM, 6, None, False)
+    DBUS_MAPPING_EXCEPTION = Code(PRINTER, Category.SYSTEM, 7, None, False)
+    REPRINT_WITHOUT_HISTORY = Code(PRINTER, Category.SYSTEM, 8, None, False)
+    MISSING_WIZARD_DATA = Code(PRINTER, Category.SYSTEM, 9, _("The wizard did not finish successfully!"), False)
+    MISSING_CALIBRATION_DATA = Code(
         PRINTER, Category.SYSTEM, 10, _("The calibration did not finish successfully!"), False
     )
-    GENERAL_MISSING_UVCALIBRATION_DATA = Code(
+    MISSING_UVCALIBRATION_DATA = Code(
         PRINTER, Category.SYSTEM, 11, _("The automatic UV LED calibration did not finish successfully!"), False
     )
-    GENERAL_MISSING_UVPWM_SETTINGS = Code(PRINTER, Category.SYSTEM, 12, None, False)
-    GENERAL_FAILED_UPDATE_CHANNEL_SET = Code(PRINTER, Category.SYSTEM, 13, _("Cannot set update channel"), False)
-    GENERAL_FAILED_UPDATE_CHANNEL_GET = Code(PRINTER, Category.SYSTEM, 14, None, False)
-    EXPOSURE_WARNING_ESCALATION = Code(PRINTER, Category.SYSTEM, 15, None, False)
-    GENERAL_NOT_ENOUGH_INTERNAL_SPACE = Code(PRINTER, Category.SYSTEM, 16, None, False)
-    GENERAL_ADMIN_NOT_AVAILABLE = Code(PRINTER, Category.SYSTEM, 17, None, False)
-    GENERAL_FILE_NOT_FOUND = Code(PRINTER, Category.SYSTEM, 18, _("Cannot find a file!"), False)
-    GENERAL_INVALID_EXTENSION = Code(PRINTER, Category.SYSTEM, 19, _("File has an invalid extension!"), False)
-    GENERAL_FILE_ALREADY_EXISTS = Code(PRINTER, Category.SYSTEM, 20, _("File already exists!"), False)
-    GENERAL_INVALID_PROJECT = Code(PRINTER, Category.SYSTEM, 21, _("The project file is invalid!"), False)
+    MISSING_UVPWM_SETTINGS = Code(PRINTER, Category.SYSTEM, 12, None, False)
+    FAILED_UPDATE_CHANNEL_SET = Code(PRINTER, Category.SYSTEM, 13, _("Cannot set update channel"), False)
+    FAILED_UPDATE_CHANNEL_GET = Code(PRINTER, Category.SYSTEM, 14, None, False)
+    WARNING_ESCALATION = Code(PRINTER, Category.SYSTEM, 15, None, False)
+    NOT_ENOUGH_INTERNAL_SPACE = Code(PRINTER, Category.SYSTEM, 16, None, False)
+    ADMIN_NOT_AVAILABLE = Code(PRINTER, Category.SYSTEM, 17, None, False)
+    FILE_NOT_FOUND = Code(PRINTER, Category.SYSTEM, 18, _("Cannot find a file!"), False)
+    INVALID_EXTENSION = Code(PRINTER, Category.SYSTEM, 19, _("File has an invalid extension!"), False)
+    FILE_ALREADY_EXISTS = Code(PRINTER, Category.SYSTEM, 20, _("File already exists!"), False)
+    INVALID_PROJECT = Code(PRINTER, Category.SYSTEM, 21, _("The project file is invalid!"), False)
     WIZARD_NOT_CANCELABLE = Code(PRINTER, Category.SYSTEM, 22, _("This wizard cannot be canceled"), False)
 
     # Warnings
     NONE_WARNING = Code(PRINTER, Category.WARNINGS, 0, _("No warning"), False)
     UNKNOWN_WARNING = Code(PRINTER, Category.WARNINGS, 1, _("Unknown warning"), False)
-    EXPOSURE_AMBIENT_TOO_HOT_WARNING = Code(PRINTER, Category.WARNINGS, 2, None, False)
-    EXPOSURE_AMBIENT_TOO_COLD_WARNING = Code(PRINTER, Category.WARNINGS, 3, None, False)
-    EXPOSURE_PRINTING_DIRECTLY_WARNING = Code(PRINTER, Category.WARNINGS, 4, None, False)
-    EXPOSURE_PRINTER_MODEL_MISMATCH_WARNING = Code(PRINTER, Category.WARNINGS, 5, None, False)
-    EXPOSURE_RESIN_NOT_ENOUGH_WARNING = Code(PRINTER, Category.WARNINGS, 6, None, False)
-    EXPOSURE_PROJECT_SETTINGS_MODIFIED_WARNING = Code(PRINTER, Category.WARNINGS, 7, None, False)
+    AMBIENT_TOO_HOT_WARNING = Code(PRINTER, Category.WARNINGS, 2, None, False)
+    AMBIENT_TOO_COLD_WARNING = Code(PRINTER, Category.WARNINGS, 3, None, False)
+    PRINTING_DIRECTLY_WARNING = Code(PRINTER, Category.WARNINGS, 4, None, False)
+    PRINTER_MODEL_MISMATCH_WARNING = Code(PRINTER, Category.WARNINGS, 5, None, False)
+    RESIN_NOT_ENOUGH_WARNING = Code(PRINTER, Category.WARNINGS, 6, None, False)
+    PROJECT_SETTINGS_MODIFIED_WARNING = Code(PRINTER, Category.WARNINGS, 7, None, False)
 
     @classmethod
     def get(cls, code: str):
