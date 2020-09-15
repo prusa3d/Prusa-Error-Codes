@@ -18,6 +18,7 @@ Example: 12201
 
 ## Printer number
 10 - Original Prusa SL1
+
 12 - Original Prusa MINI
 
 ## Error categories
