@@ -125,6 +125,7 @@ class Sl1Codes(Codes):
         ),
         False,
     )
+    PRELOAD_FAILED = Code(PRINTER, Category.SYSTEM, 3, _("Image preloader did not finish successfully!"), False)
     PROJECT_FAILED = Code(PRINTER, Category.SYSTEM, 4, None, False)
     CONFIG_EXCEPTION = Code(PRINTER, Category.SYSTEM, 5, _("Failed to read configuration file"), False)
     NOT_AVAILABLE_IN_STATE = Code(PRINTER, Category.SYSTEM, 6, None, False)
@@ -158,6 +159,9 @@ class Sl1Codes(Codes):
     PRINTER_MODEL_MISMATCH_WARNING = Code(PRINTER, Category.WARNINGS, 5, None, False)
     RESIN_NOT_ENOUGH_WARNING = Code(PRINTER, Category.WARNINGS, 6, None, False)
     PROJECT_SETTINGS_MODIFIED_WARNING = Code(PRINTER, Category.WARNINGS, 7, None, False)
+    PERPARTES_NOAVAIL_WARNING = Code(PRINTER, Category.WARNINGS, 8, None, False)
+    MASK_NOAVAIL_WARNING = Code(PRINTER, Category.WARNINGS, 9, None, False)
+    OBJECT_TRUNCATED_WARNING = Code(PRINTER, Category.WARNINGS, 10, None, False)
 
     @classmethod
     def get(cls, code: str):
