@@ -11,4 +11,5 @@ setup(
     url="https://github.com/prusa3d/Prusa-Error-Codes",
     license="GNU General Public License v3 or later (GPLv3+)",
     classifiers=["License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)"],
+    include_package_data=True,
 )
