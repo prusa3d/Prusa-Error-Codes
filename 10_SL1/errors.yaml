@@ -433,7 +433,7 @@ Errors:
   approved: false
 
 - code: "10710"
-  title: "OBJECT TRUNCATED WARNING"
+  title: "OBJECT CROPPED WARNING"
   text: null
-  id: "OBJECT_TRUNCATED_WARNING"
+  id: "OBJECT_CROPPED_WARNING"
   approved: false
