@@ -55,7 +55,7 @@ Errors:
 
 - code: "10113"
   title: "NOT MECHANICALLY CALIBRATED"
-  text: null
+  text: "Project successfully uploaded, but the printer is not mechanically calibrated."
   id: "NOT_MECHANICALLY_CALIBRATED"
   approved: false
 
@@ -175,7 +175,7 @@ Errors:
 
 - code: "10308"
   title: "NOT UV CALIBRATED"
-  text: null
+  text: "Project successfully uploaded, but the printer is not UV calibrated."
   id: "NOT_UV_CALIBRATED"
   approved: false
 
