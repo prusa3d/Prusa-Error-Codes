@@ -76,7 +76,7 @@ Errors:
   text: "Tower axis check failed!
 
 
-    Current position: %d nm
+    Current position: %(position_nm)d nm
 
 
     Please check if the ballscrew can move smoothly in its entire range."
@@ -88,7 +88,7 @@ Errors:
   text: "Tilt axis check failed!
 
 
-    Current position: %d steps
+    Current position: %(position)d steps
 
 
     Please check if the tilt can move smoothly in its entire range."
@@ -97,7 +97,9 @@ Errors:
 
 - code: "10120"
   title: "DISPLAY TEST FAILED"
-  text: "Display test failed."
+  text: "Your display or LED set is probably not connected properly or broken.
+
+    Please check the proper connection first. Contact tech support in any case of troubles!"
   id: "DISPLAY_TEST_FAILED"
   approved: false
 
@@ -151,7 +153,29 @@ Errors:
   id: "UVLED_HEAT_SINK_FAILED"
   approved: false
 
+- code: "10207"
+  title: "A64 OVERHEAT"
+  text: "A64 temperature is too high. Measured: %(temperature).1f °C!
+    Shutting down in 10 seconds..."
+  id: "A64_OVERHEAT"
+  approved: false
 
+- code: "10208"
+  title: "TEMPERATURE OUT OF RANGE"
+  text: "%(sensor)s not in range!
+    Measured temperature: %(temperature).1f °C.
+    Keep the printer out of direct sunlight at room temperature (18 - 32 °C)."
+  id: "TEMPERATURE_OUT_OF_RANGE"
+  approved: false
+
+- code: "10209"
+  title: "UV TEMP SENSOR FAILED"
+  text: "Reading of UV LED temperature has failed!
+    This value is essential for the UV LED lifespan and printer safety.
+    Please contact tech support!
+    Current print job will be canceled."
+  id: "UV_TEMP_SENSOR_FAILED"
+  approved: false
 
 
 # ELECTRICAL     103xx   # Electrical, MINDA, FINDA, Motion Controller, …
@@ -169,7 +193,7 @@ Errors:
 
 - code: "10307"
   title: "RESIN SENSOR FAILED"
-  text: null
+  text: "The resin sensor was not detected, please check the connection and amount of resin in the tank."
   id: "RESIN_SENSOR_FAILED"
   approved: false
 
@@ -191,8 +215,70 @@ Errors:
   id: "SOUND_TEST_FAILED"
   approved: false
 
+- code: "10311"
+  title: "UV LED METER NOT DETECTED"
+  text: "The UV LED meter is not detected.
+    Check the connection and try again."
+  id: "UV_LED_METER_NOT_DETECTED"
+  approved: false
 
+- code: "10312"
+  title: "UV LED METER NOT RESPONDING"
+  text: "Cannot connect to the UV LED meter.
+    Check the connection and try again."
+  id: "UV_LED_METER_NOT_RESPONDING"
+  approved: false
 
+- code: "10313"
+  title: "UV LED METER COMMUNICATION ERROR"
+  text: "Communication with the UV LED meter has failed.
+    Check the connection and try again."
+  id: "UV_LED_METER_COMMUNICATION_ERROR"
+  approved: false
+
+- code: "10314"
+  title: "DISPLAY TRANSLUCENT"
+  text: "The UV LED meter detected some light on a dark display. This means there is a light 'leak' under the UV meter,
+    or your display does not block the UV light enough
+
+    Please check the UV meter placement on the screen or replace the exposure display."
+  id: "DISPLAY_TRANSLUCENT"
+  approved: false
+
+- code: "10315"
+  title: "UNEXPECTED UV INTENSITY"
+  text: "The UV LED meter failed to read expected UV light intensity.
+
+    Please check the UV meter placement on the screen."
+  id: "UNEXPECTED_UV_INTENSITY"
+  approved: false
+
+- code: "10316"
+  title: "UNKNOWN UV MEASUREMENT ERROR"
+  text: "Unknown UV LED meter error code: %(code)d"
+  id: "UNKNOWN_UV_MEASUREMENT_ERROR"
+  approved: false
+
+- code: "10317"
+  title: "UV TOO BRIGHT"
+  text: "Requested intensity cannot be reached by min. allowed PWM"
+  id: "UV_TOO_BRIGHT"
+  approved: false
+
+- code: "10318"
+  title: "UV TOO DIMM"
+  text: "Requested intensity cannot be reached by max. allowed PWM"
+  id: "UV_TOO_DIMM"
+  approved: false
+
+- code: "10319"
+  title: "UV INTENSITY DEVIATION TOO HIGH"
+  text: "The correct settings was found but standard deviation
+    (%(found).1f) is greater than allowed value (%(allowed).1f).
+
+    Verify the UV LED meter position and calibration, then try again."
+  id: "UV_INTENSITY_DEVIATION_TOO_HIGH"
+  approved: false
 
 # CONNECTIVITY   104xx   # Connectivity - Wi - Fi, LAN, Prusa Connect Cloud
 - code: "10401"
@@ -215,7 +301,7 @@ Errors:
 
 - code: "10404"
   title: "DOWNLOAD FAILED"
-  text: null
+  text: "The download failed, please check the connection to the internet and try again."
   id: "DOWNLOAD_FAILED"
   approved: false
 
@@ -297,9 +383,9 @@ Errors:
   approved: false
 
 - code: "10511"
-  title: "MISSING UVCALIBRATION DATA"
+  title: "MISSING UV CALIBRATION DATA"
   text: "The automatic UV LED calibration did not finish successfully!"
-  id: "MISSING_UVCALIBRATION_DATA"
+  id: "MISSING_UV_CALIBRATION_DATA"
   approved: false
 
 - code: "10512"
@@ -328,7 +414,7 @@ Errors:
 
 - code: "10516"
   title: "NOT ENOUGH INTERNAL SPACE"
-  text: null
+  text: "Internal memory full, please delete some of your projects first."
   id: "NOT_ENOUGH_INTERNAL_SPACE"
   approved: false
 
@@ -368,7 +454,117 @@ Errors:
   id: "WIZARD_NOT_CANCELABLE"
   approved: false
 
+- code: "10523"
+  title: "MISSING EXAMPLES"
+  text: "Examples (any projects) are missing in the user storage."
+  id: "MISSING_EXAMPLES"
+  approved: false
 
+- code: "10524"
+  title: "FAILED TO LOAD FACTORY LEDS CALIBRATION"
+  text: "Failed to load fans and LEDs factory calibration."
+  id: "FAILED_TO_LOAD_FACTORY_LEDS_CALIBRATION"
+  approved: false
+
+- code: "10525"
+  title: "FAILED TO SERIALIZE WIZARD DATA"
+  text: "Failed to serialize wizard data"
+  id: "FAILED_TO_SERIALIZE_WIZARD_DATA"
+  approved: false
+
+- code: "10526"
+  title: "FAILED TO SAVE WIZARD DATA"
+  text: "Failed to save wizard data"
+  id: "FAILED_TO_SAVE_WIZARD_DATA"
+  approved: false
+
+- code: "10527"
+  title: "SERIAL NUMBER IN WRONG FORMAT"
+  text: "Serial numbers in wrong format!
+    A64: %(a64)s
+    MC: %(mc)s
+    Please contact tech support!"
+  id: "SERIAL_NUMBER_IN_WRONG_FORMAT"
+  approved: false
+
+- code: "10528"
+  title: "NO EXTERNAL STORAGE"
+  text: "No USB storage present"
+  id: "NO_EXTERNAL_STORAGE"
+  approved: false
+
+- code: "10529"
+  title: "FAILED TO SET LOGLEVEL"
+  text: "Failed to set log level"
+  id: "FAILED_TO_SET_LOGLEVEL"
+  approved: false
+
+- code: "10530"
+  title: "FAILED TO SAVE FACTORY DEFAULTS"
+  text: "!!! Failed to save factory defaults !!!"
+  id: "FAILED_TO_SAVE_FACTORY_DEFAULTS"
+  approved: false
+
+- code: "10531"
+  title: "FAILED TO DISPLAY IMAGE"
+  text: "Error displaying test image"
+  id: "FAILED_TO_DISPLAY_IMAGE"
+  approved: false
+
+- code: "10532"
+  title: "NO UV CALIBRATION DATA"
+  text: "No calibration data to show!"
+  id: "NO_UV_CALIBRATION_DATA"
+  approved: false
+
+- code: "10533"
+  title: "DATA FROM UNKNOWN UV SENSOR"
+  text: "Data is from unknown UV LED sensor!"
+  id: "DATA_FROM_UNKNOWN_UV_SENSOR"
+  approved: false
+
+- code: "10534"
+  title: "UPDATE FAILED"
+  text: "Update failed!"
+  id: "UPDATE_FAILED"
+  approved: false
+
+- code: "10535"
+  title: "NO DISPLAY USAGE DATA"
+  text: "No display usage data to show"
+  id: "NO_DISPLAY_USAGE_DATA"
+  approved: false
+
+- code: "10536"
+  title: "FAILED TO SET HOSTNAME"
+  text: "Failed to set hostname"
+  id: "FAILED_TO_SET_HOSTNAME"
+  approved: false
+
+- code: "10537"
+  title: "FAILED PROFILE IMPORT"
+  text: "Cannot import profile"
+  id: "FAILED_PROFILE_IMPORT"
+  approved: false
+
+- code: "10538"
+  title: "FAILED PROFILE EXPORT"
+  text: "Cannot export profile"
+  id: "FAILED_PROFILE_EXPORT"
+  approved: false
+
+
+
+# BOOTLOADER     xx6xx   #
+- code: "10601"
+  title: "BOOTED FROM AN ALTERNATIVE SLOT"
+  text: "The printer has booted from an alternative slot due to failed boot attempts using the primary slot.
+
+    Update the printer with up-to-date firmware ASAP to recover the primary slot.
+
+    This usually happens after a failed update, or due to a hardware failure. Printer settings may have been reset."
+  id: "ALTERNATIVE_SLOT_BOOT"
+  approved: false
 
 
 # WARNINGS       107xx   # Category-less warnings
