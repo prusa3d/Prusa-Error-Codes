@@ -19,37 +19,37 @@ Errors:
 # MECHANICAL     101xx   # Mechanical failures, engines XYZ, tower
 - code: "10101"
   title: "TILT HOME FAILED"
-  text: null
+  text: "Tilt homing failed, please check its surroundings and repeat the action."
   id: "TILT_HOME_FAILED"
   approved: false
 
 - code: "10102"
   title: "TOWER HOME FAILED"
-  text: null
+  text: "Tower homing failed, make sure there is no obstacle in its path and repeat the action."
   id: "TOWER_HOME_FAILED"
   approved: false
 
 - code: "10103"
   title: "TOWER MOVE FAILED"
-  text: null
+  text: "Moving the tower failed, make sure there is no obstacle in its path and repeat the action."
   id: "TOWER_MOVE_FAILED"
   approved: false
 
 - code: "10106"
   title: "FAN FAILED"
-  text: null
+  text: "The %(failed_fans_text)s fan failed, please check its wiring and connection."
   id: "FAN_FAILED"
   approved: false
 
 - code: "10108"
   title: "RESIN TOO LOW"
-  text: null
+  text: "Measured resin volume %(volume_ml)d ml is lower than required for this print. Please refill the tank and restart the print. "
   id: "RESIN_TOO_LOW"
   approved: false
 
 - code: "10109"
   title: "RESIN TOO HIGH"
-  text: null
+  text: "Measured resin volume %(volume_ml)d ml is higher than required for this print. Please, remove some resin from the tank and restart the print."
   id: "RESIN_TOO_HIGH"
   approved: false
 
@@ -143,7 +143,7 @@ Errors:
 # TEMPERATURE    102xx   # Temperature measurement, thermistors, heating
 - code: "10205"
   title: "TEMP SENSOR FAILED"
-  text: null
+  text: "The %(sensor) sensor failed, please check the wiring and connection."
   id: "TEMP_SENSOR_FAILED"
   approved: false
 
@@ -187,7 +187,7 @@ Errors:
 
 - code: "10306"
   title: "MOTION CONTROLLER EXCEPTION"
-  text: null
+  text: "The motion controller has encountered an unexpected error, please restart the printer."
   id: "MOTION_CONTROLLER_EXCEPTION"
   approved: false
 
@@ -289,13 +289,13 @@ Errors:
 
 - code: "10402"
   title: "NOT CONNECTED TO NETWORK"
-  text: null
+  text: "The printer is not connected to the internet, please check the connection in the Settings."
   id: "NOT_CONNECTED_TO_NETWORK"
   approved: false
 
 - code: "10403"
   title: "CONNECTION FAILED"
-  text: null
+  text: "Connection to Prusa servers failed, please try again later."
   id: "CONNECTION_FAILED"
   approved: false
 
@@ -342,7 +342,7 @@ Errors:
 
 - code: "10504"
   title: "PROJECT FAILED"
-  text: null
+  text: "Opening the project failed, the file is possibly corrupted. Please re-slice or re-export the project, try again."
   id: "PROJECT_FAILED"
   approved: false
 
@@ -354,19 +354,19 @@ Errors:
 
 - code: "10506"
   title: "NOT AVAILABLE IN STATE"
-  text: null
+  text: "Cannot run this action, wait until the printer finishes the previous action."
   id: "NOT_AVAILABLE_IN_STATE"
   approved: false
 
 - code: "10507"
   title: "DBUS MAPPING ERROR"
-  text: null
+  text: "Internal error (DBUS mapping failed), please restart the printer. Contact support if the problem persists."
   id: "DBUS_MAPPING_ERROR"
   approved: false
 
 - code: "10508"
   title: "REPRINT WITHOUT HISTORY"
-  text: null
+  text: "Error, there is no file to reprint."
   id: "REPRINT_WITHOUT_HISTORY"
   approved: false
 
@@ -390,7 +390,7 @@ Errors:
 
 - code: "10512"
   title: "MISSING UVPWM SETTINGS"
-  text: null
+  text: "UV intensity not set. Please run the UV calibration before print."
   id: "MISSING_UVPWM_SETTINGS"
   approved: false
 
@@ -402,7 +402,7 @@ Errors:
 
 - code: "10514"
   title: "FAILED UPDATE CHANNEL GET"
-  text: null
+  text: "Cannot get the update channel, please restart the printer and try again."
   id: "FAILED_UPDATE_CHANNEL_GET"
   approved: false
 
@@ -420,7 +420,7 @@ Errors:
 
 - code: "10517"
   title: "ADMIN NOT AVAILABLE"
-  text: null
+  text: "The admin menu is not available."
   id: "ADMIN_NOT_AVAILABLE"
   approved: false
 
@@ -588,48 +588,48 @@ Errors:
 
 - code: "10703"
   title: "AMBIENT TOO COLD WARNING"
-  text: null
+  text: "The ambient temperature is too high, the print can continue, but it might fail."
   id: "AMBIENT_TOO_COLD_WARNING"
   approved: false
 
 - code: "10704"
   title: "PRINTING DIRECTLY WARNING"
-  text: null
+  text: "The internal memory is full, project cannot be copied. You can continue printing - however, you must not remove the USB drive mid-print, otherwise the process will fail."
   id: "PRINTING_DIRECTLY_WARNING"
   approved: false
 
 - code: "10705"
   title: "PRINTER MODEL MISMATCH WARNING"
-  text: null
+  text: "The model was sliced for a different printer model, please reslice."
   id: "PRINTER_MODEL_MISMATCH_WARNING"
   approved: false
 
 - code: "10706"
   title: "RESIN NOT ENOUGH WARNING"
-  text: null
+  text: "The amount of resin in the tank is not enough for the current project. Adding more resin will be required during the print."
   id: "RESIN_NOT_ENOUGH_WARNING"
   approved: false
 
 - code: "10707"
   title: "PROJECT SETTINGS MODIFIED WARNING"
-  text: null
+  text: "The print parameters are out of range of the printer, the system can try to fix the project. Proceed?"
   id: "PROJECT_SETTINGS_MODIFIED_WARNING"
   approved: false
 
 - code: "10708"
   title: "PERPARTES NOAVAIL WARNING"
-  text: null
+  text: "Per-partes print not available."
   id: "PERPARTES_NOAVAIL_WARNING"
   approved: false
 
 - code: "10709"
   title: "MASK NOAVAIL WARNING"
-  text: null
+  text: "Print mas missing."
   id: "MASK_NOAVAIL_WARNING"
   approved: false
 
 - code: "10710"
   title: "OBJECT CROPPED WARNING"
-  text: null
+  text: "Object was cropped as it does not fit the print surface."
   id: "OBJECT_CROPPED_WARNING"
   approved: false
