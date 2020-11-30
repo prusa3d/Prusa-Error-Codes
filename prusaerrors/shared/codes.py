@@ -136,6 +136,7 @@ class Code:
 
         :return: Error category title
         """
+        return self._title
 
     @property
     def message(self) -> str:
