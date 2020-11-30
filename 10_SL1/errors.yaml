@@ -13,7 +13,8 @@
 # BOOTLOADER     xx6xx   #
 # WARNINGS       xx7xx   # Category-less warnings
 
-
+# README
+# 1. The indentation of multiline texts must be 2 spaces from the 'text:' field.
 
 Errors:
 # MECHANICAL     101xx   # Mechanical failures, engines XYZ, tower
