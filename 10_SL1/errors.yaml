@@ -341,6 +341,7 @@ Errors:
   id: "PRELOAD_FAILED"
   approved: false
 
+# in 1.5.x, obsoleted by PROJECT_ERROR_* in 1.6.x
 - code: "10504"
   title: "PROJECT FAILED"
   text: "Opening the project failed, the file is possibly corrupted. Please re-slice or re-export the project, try again."
@@ -413,6 +414,8 @@ Errors:
   id: "WARNING_ESCALATION"
   approved: false
 
+# sl1fw/project/project.py
+# somewhere (filemanager?)
 - code: "10516"
   title: "NOT ENOUGH INTERNAL SPACE"
   text: "Internal memory full, please delete some of your projects first."
@@ -425,6 +428,8 @@ Errors:
   id: "ADMIN_NOT_AVAILABLE"
   approved: false
 
+# sl1fw/project/project.py
+# filemanager
 - code: "10518"
   title: "FILE NOT FOUND"
   text: "Cannot find a file!"
@@ -554,6 +559,47 @@ Errors:
   id: "FAILED_PROFILE_EXPORT"
   approved: false
 
+# sl1fw/project/project.py
+- code: "10539"
+  title: "CAN'T READ PROJECT"
+  text: "Opening the project failed, the file is possibly corrupted. Please re-slice or re-export the project, try again."
+  id: "PROJECT_ERROR_CANT_READ"
+  approved: false
+
+# sl1fw/project/project.py
+- code: "10540"
+  title: "NOT ENOUGHT LAYERS"
+  text: "The project must have at least one layer"
+  id: "PROJECT_ERROR_NOT_ENOUGH_LAYERS"
+  approved: false
+
+# sl1fw/project/project.py
+- code: "10541"
+  title: "PROJECT IS CORRUPTED"
+  text: "Opening the project failed, the file corrupted. Please re-slice or re-export the project, try again."
+  id: "PROJECT_ERROR_CORRUPTED"
+  approved: false
+
+# sl1fw/project/project.py
+- code: "10542"
+  title: "PROJECT ANALYSIS FAILED"
+  text: "Analysis of the project has failed"
+  id: "PROJECT_ERROR_ANALYSIS_FAILED"
+  approved: false
+
+# sl1fw/project/project.py
+- code: "10543"
+  title: "CALIBRATION PROJECT IS INVALID"
+  text: "Calibration project is invalid"
+  id: "PROJECT_ERROR_CALIBRATION_INVALID"
+  approved: false
+
+# sl1fw/project/project.py
+- code: "10544"
+  title: "WRONG PRINTER MODEL"
+  text: "The project is for different printer"
+  id: "PROJECT_ERROR_WRONG_PRINTER_MODEL"
+  approved: false
 
 
 # BOOTLOADER     xx6xx   #
@@ -599,6 +645,7 @@ Errors:
   id: "PRINTING_DIRECTLY_WARNING"
   approved: false
 
+# in 1.5.x, obsoleted by PRINTER_VARIANT_MISMATCH_WARNING in 1.6.x
 - code: "10705"
   title: "PRINTER MODEL MISMATCH WARNING"
   text: "The model was sliced for a different printer model, please reslice."
@@ -633,4 +680,11 @@ Errors:
   title: "OBJECT CROPPED WARNING"
   text: "Object was cropped as it does not fit the print surface."
   id: "OBJECT_CROPPED_WARNING"
+  approved: false
+
+# sl1fw/project/project.py
+- code: "10711"
+  title: "PRINTER VARIANT MISMATCH WARNING"
+  text: "The model was sliced for a different printer variant %(project_variant)s. Your printer variant is %(printer_variant)s."
+  id: "PRINTER_VARIANT_MISMATCH_WARNING"
   approved: false
