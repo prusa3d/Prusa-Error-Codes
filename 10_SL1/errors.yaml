@@ -19,28 +19,28 @@
 Errors:
 # MECHANICAL     101xx   # Mechanical failures, engines XYZ, tower
 - code: "10101"
-  title: "TILT HOME FAILED"
-  text: "Tilt homing failed, please check its surroundings and repeat the action."
+  title: "TILT HOMING FAILED"
+  text: "Tilt homing failed, check its surroundings and repeat the action."
   id: "TILT_HOME_FAILED"
-  approved: false
+  approved: true
 
 - code: "10102"
-  title: "TOWER HOME FAILED"
+  title: "TOWER HOMING FAILED"
   text: "Tower homing failed, make sure there is no obstacle in its path and repeat the action."
   id: "TOWER_HOME_FAILED"
-  approved: false
+  approved: true
 
 - code: "10103"
-  title: "TOWER MOVE FAILED"
-  text: "Moving the tower failed, make sure there is no obstacle in its path and repeat the action."
+  title: "TOWER MOVING FAILED"
+  text: "Moving the tower failed. Make sure there is no obstacle in its path and repeat the action."
   id: "TOWER_MOVE_FAILED"
-  approved: false
+  approved: true
 
 - code: "10106"
-  title: "FAN FAILED"
-  text: "The %(failed_fans_text)s fan failed, please check its wiring and connection."
+  title: "FAN FAILURE"
+  text: "Incorrect RPM reading of the %(failed_fans_text)s fan. Please check its wiring and connection."
   id: "FAN_FAILED"
-  approved: false
+  approved: true
 
 - code: "10108"
   title: "RESIN TOO LOW"
