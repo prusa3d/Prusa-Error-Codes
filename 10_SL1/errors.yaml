@@ -19,58 +19,58 @@
 Errors:
 # MECHANICAL     101xx   # Mechanical failures, engines XYZ, tower
 - code: "10101"
-  title: "TILT HOME FAILED"
-  text: "Tilt homing failed, please check its surroundings and repeat the action."
+  title: "TILT HOMING FAILED"
+  text: "Tilt homing failed, check its surroundings and repeat the action."
   id: "TILT_HOME_FAILED"
-  approved: false
+  approved: true
 
 - code: "10102"
-  title: "TOWER HOME FAILED"
+  title: "TOWER HOMING FAILED"
   text: "Tower homing failed, make sure there is no obstacle in its path and repeat the action."
   id: "TOWER_HOME_FAILED"
-  approved: false
+  approved: true
 
 - code: "10103"
-  title: "TOWER MOVE FAILED"
-  text: "Moving the tower failed, make sure there is no obstacle in its path and repeat the action."
+  title: "TOWER MOVING FAILED"
+  text: "Moving the tower failed. Make sure there is no obstacle in its path and repeat the action."
   id: "TOWER_MOVE_FAILED"
-  approved: false
+  approved: true
 
 - code: "10106"
-  title: "FAN FAILED"
-  text: "The %(failed_fans_text)s fan failed, please check its wiring and connection."
+  title: "FAN FAILURE"
+  text: "Incorrect RPM reading of the %(failed_fans_text)s fan. Please check its wiring and connection."
   id: "FAN_FAILED"
-  approved: false
+  approved: true
 
 - code: "10108"
   title: "RESIN TOO LOW"
-  text: "Measured resin volume %(volume_ml)d ml is lower than required for this print. Please refill the tank and restart the print. "
+  text: "Measured resin volume %(volume_ml)d ml is lower than required for this print. Refill the tank and restart the print."
   id: "RESIN_TOO_LOW"
-  approved: false
+  approved: true
 
 - code: "10109"
   title: "RESIN TOO HIGH"
-  text: "Measured resin volume %(volume_ml)d ml is higher than required for this print. Please, remove some resin from the tank and restart the print."
+  text: "Measured resin volume %(volume_ml)d ml is higher than required for this print. Make sure that the resin level does not exceed the 100% mark and restart the print."
   id: "RESIN_TOO_HIGH"
-  approved: false
+  approved: true
 
 - code: "10113"
-  title: "NOT MECHANICALLY CALIBRATED"
-  text: "Project successfully uploaded, but the printer is not mechanically calibrated."
+  title: "CALIBRATION ERROR"
+  text: "The printer is not calibrated. Please run the Wizard first."
   id: "NOT_MECHANICALLY_CALIBRATED"
-  approved: false
+  approved: true
 
 - code: "10114"
   title: "TOWER ENDSTOP NOT REACHED"
-  text: "Failed to reach tower endstop"
+  text: "Failed to reach the tower endstop, check that the tower motor is connected and repeat the action."
   id: "TOWER_ENDSTOP_NOT_REACHED"
-  approved: false
+  approved: true
 
 - code: "10115"
   title: "TILT ENDSTOP NOT REACHED"
-  text: "Failed to reach tilt endstop"
+  text: "Failed to reach the tilt endstop, check that the cable is connected and repeat the action."
   id: "TILT_ENDSTOP_NOT_REACHED"
-  approved: false
+  approved: true
 
 - code: "10118"
   title: "TOWER AXIS CHECK FAILED"
@@ -80,9 +80,9 @@ Errors:
     Current position: %(position_nm)d nm
 
 
-    Please check if the ballscrew can move smoothly in its entire range."
+    Check if the ballscrew can move smoothly in its entire range."
   id: "TOWER_AXIS_CHECK_FAILED"
-  approved: false
+  approved: true
 
 - code: "10119"
   title: "TILT AXIS CHECK FAILED"
@@ -92,21 +92,19 @@ Errors:
     Current position: %(position)d steps
 
 
-    Please check if the tilt can move smoothly in its entire range."
+    Check if the tilt can move smoothly in its entire range."
   id: "TILT_AXIS_CHECK_FAILED"
-  approved: false
+  approved: true
 
 - code: "10120"
   title: "DISPLAY TEST FAILED"
-  text: "Your display or LED set is probably not connected properly or broken.
-
-    Please check the proper connection first. Contact tech support in any case of troubles!"
+  text: "Display test failed, check the connection between the display and the A64 board."
   id: "DISPLAY_TEST_FAILED"
-  approved: false
+  approved: true
 
 - code: "10121"
   title: "INVALID TILT ALIGN POSITION"
-  text: "Invalid tilt align position"
+  text: "Invalid tilt alignment position. Check its mechanism and repeat the action."
   id: "INVALID_TILT_ALIGN_POSITION"
   approved: false
 
@@ -115,44 +113,39 @@ Errors:
   text: "RPM of %(fan)s not in range!
 
 
-    Please check if the fan is connected correctly.
+    Check if the fan is connected correctly.
 
 
     RPM data: %(rpm)s
 
-    Average: %(avg)s
-
-    Fan error: %(fanError)s"
+    Average: %(avg)s"
   id: "FAN_RPM_OUT_OF_TEST_RANGE"
-  approved: false
+  approved: true
 
 - code: "10123"
-  title: "TOWER BELOW SURFACE"
+  title: "TOWER POSITION ERROR"
   text: "Tower not at the expected position.
 
 
-    Is the platform and tank secured in correct position?
-
-
-    "
+    Are the platform and tank mounted and secured correctly?"
   id: "TOWER_BELOW_SURFACE"
-  approved: false
+  approved: true
 
 
 
 
 # TEMPERATURE    102xx   # Temperature measurement, thermistors, heating
 - code: "10205"
-  title: "TEMP SENSOR FAILED"
-  text: "The %(sensor) sensor failed, please check the wiring and connection."
+  title: "TEMPERATURE SENSOR FAILED"
+  text: "The %(sensor) sensor failed. Check the wiring and connection."
   id: "TEMP_SENSOR_FAILED"
-  approved: false
+  approved: true
 
 - code: "10206"
   title: "UVLED HEAT SINK FAILED"
-  text: "UV LED overheating! Check proper heatsink installation."
+  text: "UV LED is overheating! Check whether the heatsink is installed correctly."
   id: "UVLED_HEAT_SINK_FAILED"
-  approved: false
+  approved: true
 
 - code: "10207"
   title: "A64 OVERHEAT"
@@ -167,7 +160,7 @@ Errors:
     Measured temperature: %(temperature).1f °C.
     Keep the printer out of direct sunlight at room temperature (18 - 32 °C)."
   id: "TEMPERATURE_OUT_OF_RANGE"
-  approved: false
+  approved: true
 
 - code: "10209"
   title: "UV TEMP SENSOR FAILED"
@@ -181,40 +174,40 @@ Errors:
 
 # ELECTRICAL     103xx   # Electrical, MINDA, FINDA, Motion Controller, …
 - code: "10301"
-  title: "MOTION CONTROLLER WRONG REVISION"
-  text: "Wrong revision of the motion controller. Please replace it or contact our support."
+  title: "MC WRONG REVISION"
+  text: "Wrong revision of the Motion Controller (MC). Contact our support."
   id: "MOTION_CONTROLLER_WRONG_REVISION"
-  approved: false
+  approved: true
 
 - code: "10306"
-  title: "MOTION CONTROLLER EXCEPTION"
-  text: "The motion controller has encountered an unexpected error, please restart the printer."
+  title: "UNEXPECTED MC ERROR"
+  text: "The Motion Controller (MC) has encountered an unexpected error. Restart the printer."
   id: "MOTION_CONTROLLER_EXCEPTION"
-  approved: false
+  approved: true
 
 - code: "10307"
-  title: "RESIN SENSOR FAILED"
-  text: "The resin sensor was not detected, please check the connection and amount of resin in the tank."
+  title: "RESIN SENSOR ERROR"
+  text: "The resin sensor was not detected. Check the connection and amount of resin in the tank."
   id: "RESIN_SENSOR_FAILED"
-  approved: false
+  approved: true
 
 - code: "10308"
-  title: "NOT UV CALIBRATED"
-  text: "Project successfully uploaded, but the printer is not UV calibrated."
+  title: "PRINTER NOT UV CALIBRATED"
+  text: "The printer is not UV calibrated. Connect the UV calibrator and complete the calibration."
   id: "NOT_UV_CALIBRATED"
-  approved: false
+  approved: true
 
 - code: "10309"
-  title: "UVLED VOLTAGE DIFFER TOO MUCH"
-  text: "UV LED voltages differ too much. Possibly LED module is broken."
+  title: "UVLED VOLTAGE ERROR"
+  text: "UV LED voltages differ too much. The LED module might be faulty. Contact our support."
   id: "UVLED_VOLTAGE_DIFFER_TOO_MUCH"
-  approved: false
+  approved: true
 
 - code: "10310"
-  title: "SOUND TEST FAILED"
-  text: "Speaker is broken"
+  title: "SPEAKER TEST FAILED"
+  text: "Speaker test failed, check the connection and repeat the action."
   id: "SOUND_TEST_FAILED"
-  approved: false
+  approved: true
 
 - code: "10311"
   title: "UV LED METER NOT DETECTED"
@@ -283,41 +276,41 @@ Errors:
 
 # CONNECTIVITY   104xx   # Connectivity - Wi - Fi, LAN, Prusa Connect Cloud
 - code: "10401"
-  title: "MQTT SEND FAILED"
-  text: "Cannot send factory config to MQTT!"
+  title: "MQTT UPLOAD FAILED"
+  text: "Cannot send factory config to the database (MQTT)! Check the network connection. Please, contact support."
   id: "MQTT_SEND_FAILED"
-  approved: false
+  approved: true
 
 - code: "10402"
-  title: "NOT CONNECTED TO NETWORK"
-  text: "The printer is not connected to the internet, please check the connection in the Settings."
+  title: "NO INTERNET CONNECTION"
+  text: "The printer is not connected to the internet. Check the connection in the Settings."
   id: "NOT_CONNECTED_TO_NETWORK"
-  approved: false
+  approved: true
 
 - code: "10403"
   title: "CONNECTION FAILED"
   text: "Connection to Prusa servers failed, please try again later."
   id: "CONNECTION_FAILED"
-  approved: false
+  approved: true
 
 - code: "10404"
   title: "DOWNLOAD FAILED"
-  text: "The download failed, please check the connection to the internet and try again."
+  text: "The download failed. Check the connection to the internet and try again."
   id: "DOWNLOAD_FAILED"
-  approved: false
+  approved: true
 
 
 
 
 # SYSTEM         105xx   # System - BSOD, ...
 - code: "10500"
-  title: "NONE"
-  text: "No problem"
+  title: "PRINTER IS OK"
+  text: "No problem detected. You can continue using the printer."
   id: "NONE"
-  approved: false
+  approved: true
 
 - code: "10501"
-  title: "UNKNOWN"
+  title: "UNEXPECTED ERROR"
   text: "An unexpected error has occurred :-(.
 
 
@@ -327,13 +320,9 @@ Errors:
     You can turn the printer off by pressing the front power button.
 
 
-    Please follow the instructions in Chapter 3.1 in the handbook to learn how to
-    save a log file. Please send the log to us and help us improve the printer.
-
-
-    Thank you!"
+    See the handbook to learn how to save a log file and send it to us."
   id: "UNKNOWN"
-  approved: false
+  approved: true
 
 - code: "10503"
   title: "PRELOAD FAILED"
@@ -343,37 +332,37 @@ Errors:
 
 # in 1.5.x, obsoleted by PROJECT_ERROR_* in 1.6.x
 - code: "10504"
-  title: "PROJECT FAILED"
-  text: "Opening the project failed, the file is possibly corrupted. Please re-slice or re-export the project, try again."
+  title: "OPENING PROJECT FAILED"
+  text: "Opening the project failed, the file may be corrupted. Re-slice or re-export the project and try again."
   id: "PROJECT_FAILED"
-  approved: false
+  approved: true
 
 - code: "10505"
-  title: "CONFIG EXCEPTION"
-  text: "Failed to read configuration file"
+  title: "CONFIG FILE READ ERROR"
+  text: "Failed to read the configuration file. Try to reset the printer. If the problem persists, contact our support."
   id: "CONFIG_EXCEPTION"
-  approved: false
+  approved: true
 
 - code: "10506"
-  title: "NOT AVAILABLE IN STATE"
+  title: "PRINTER IS BUSY"
   text: "Cannot run this action, wait until the printer finishes the previous action."
   id: "NOT_AVAILABLE_IN_STATE"
-  approved: false
+  approved: true
 
 - code: "10507"
-  title: "DBUS MAPPING ERROR"
-  text: "Internal error (DBUS mapping failed), please restart the printer. Contact support if the problem persists."
+  title: "INTERNAL ERROR"
+  text: "Internal error (DBUS mapping failed), restart the printer. Contact support if the problem persists."
   id: "DBUS_MAPPING_ERROR"
-  approved: false
+  approved: true
 
 - code: "10508"
-  title: "REPRINT WITHOUT HISTORY"
+  title: "NO FILE TO REPRINT"
   text: "Error, there is no file to reprint."
   id: "REPRINT_WITHOUT_HISTORY"
-  approved: false
+  approved: true
 
 - code: "10509"
-  title: "MISSING WIZARD DATA"
+  title: "WIZARD FAILED"
   text: "The wizard did not finish successfully!"
   id: "MISSING_WIZARD_DATA"
   approved: false
