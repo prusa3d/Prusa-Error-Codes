@@ -118,7 +118,7 @@ Errors:
 
     RPM data: %(rpm)s
 
-    Average: %(avg)s
+    Average: %(avg)s"
   id: "FAN_RPM_OUT_OF_TEST_RANGE"
   approved: true
 
@@ -164,7 +164,7 @@ Errors:
 
 - code: "10209"
   title: "UV LED TEMP. ERROR"
-  text: "Reading of UV LED temperature has failed! This value is essential for the UV LED lifespan and printer safety. Please contact tech support! Current print job will be canceled.""
+  text: "Reading of UV LED temperature has failed! This value is essential for the UV LED lifespan and printer safety. Please contact tech support! Current print job will be canceled."
   id: "UV_TEMP_SENSOR_FAILED"
   approved: true
 
@@ -441,7 +441,7 @@ Errors:
 
 - code: "10523"
   title: "PRINT EXAMPLES MISSING"
-  text: "Examples (any projects) are missing in the user storage. Redownload them from the "Settings" menu."
+  text: "Examples (any projects) are missing in the user storage. Redownload them from the 'Settings' menu."
   id: "MISSING_EXAMPLES"
   approved: true
 
