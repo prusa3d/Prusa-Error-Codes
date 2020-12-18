@@ -303,12 +303,9 @@ Errors:
   title: "UNEXPECTED ERROR"
   text: "An unexpected error has occurred :-(.
 
-
     If the SL1 is printing, current job will be finished.
 
-
     You can turn the printer off by pressing the front power button.
-
 
     See the handbook to learn how to save a log file and send it to us."
   id: "UNKNOWN"
