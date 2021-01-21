@@ -577,6 +577,13 @@ Errors:
   id: "PROJECT_ERROR_WRONG_PRINTER_MODEL"
   approved: false
 
+  # sl1fw_fs/sources.py
+- code: "10545"
+  title: "CAN'T REMOVE PROJECT"
+  text: "Remove it's not possible while there is a lock in the project file for print."
+  id: "PROJECT_ERROR_CANT_REMOVE"
+  approved: false
+
 
 # BOOTLOADER     xx6xx   #
 - code: "10601"
