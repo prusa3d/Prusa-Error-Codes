@@ -307,6 +307,18 @@ Errors:
   id: "BAD_REQUEST"
   approved: false
 
+- code: "10408"
+  title: "NOT FOUND"
+  text: "The requested resource could not be found but may be available in the future."
+  id: "NOT_FOUND"
+  approved: false
+
+- code: "10409"
+  title: "NOT IMPLEMENTED"
+  text: "The server either does not recognize the request method, or it lacks the ability to fulfil the request."
+  id: "NOT_IMPLEMENTED"
+  approved: false
+
 # SYSTEM         105xx   # System - BSOD, ...
 - code: "10500"
   title: "PRINTER IS OK"
