@@ -289,8 +289,23 @@ Errors:
   id: "DOWNLOAD_FAILED"
   approved: true
 
+- code: "10405"
+  title: "INVALID API KEY"
+  text: "Please turn on the HTTP digest (which is the recommended security option) or correct the API key. You can find it in Settings > Network > Login credentials."
+  id: "INVALID_API_KEY"
+  approved: false
 
+- code: "10406"
+  title: "UNAUTHORIZED"
+  text: "The printer uses HTTP digest security. Please enable it also in the Slicer (recommended), or turn this security option off in the printer. You can find it in Settings > Network > Login credentials."
+  id: "UNAUTHORIZED"
+  approved: false
 
+- code: "10407"
+  title: "BAD REQUEST"
+  text: "It response status code indicates that the server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing)."
+  id: "BAD_REQUEST"
+  approved: false
 
 # SYSTEM         105xx   # System - BSOD, ...
 - code: "10500"
@@ -584,6 +599,11 @@ Errors:
   id: "PROJECT_ERROR_CANT_REMOVE"
   approved: false
 
+- code: "10546"
+  title: "DIRECTORY NOT EMPTY"
+  text: "The directory is not empty."
+  id: "DIRECTORY_NOT_EMPTY"
+  approved: false
 
 # BOOTLOADER     xx6xx   #
 - code: "10601"
