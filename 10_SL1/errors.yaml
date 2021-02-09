@@ -302,9 +302,9 @@ Errors:
   approved: false
 
 - code: "10407"
-  title: "BAD REQUEST"
-  text: "It response status code indicates that the server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing)."
-  id: "BAD_REQUEST"
+  title: "REMOTE API ERROR"
+  text: "This request is not compatible with Prusa remote API. See our documentation."
+  id: "REMOTE_API_ERROR"
   approved: false
 
 # SYSTEM         105xx   # System - BSOD, ...
