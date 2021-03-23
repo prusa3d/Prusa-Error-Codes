@@ -344,6 +344,21 @@ def unique_codes(cls):
 
     return cls
 
+def unique_titles(cls):
+    """
+    Class decorator requiring unique title definition inside the class
+
+    :param cls: Codes class
+    :return: Unmodified input class
+    """
+    used = set()
+    for name, code in cls.get_codes().items():
+        if code.title in used:
+            raise ValueError(f"Code {name} with title {code.title} is duplicate!")
+        used.add(code.title)
+
+    return cls
+
 
 def yaml_codes(src_path: Path):
     """

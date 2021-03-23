@@ -11,7 +11,7 @@ Warning: The codes has not yet been officially approved.
 import builtins
 from pathlib import Path
 
-from prusaerrors.shared.codes import unique_codes, Codes, yaml_codes
+from prusaerrors.shared.codes import unique_codes, unique_titles, Codes, yaml_codes
 
 if "_" not in vars(builtins):
 
@@ -20,6 +20,7 @@ if "_" not in vars(builtins):
 
 
 @unique_codes
+@unique_titles
 @yaml_codes(Path(__file__).parent / "errors.yaml")
 class Sl1Codes(Codes):
     """
