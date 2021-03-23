@@ -631,10 +631,10 @@ Errors:
   approved: true
 
 - code: "10701"
-  title: "UNEXPECTED ERROR"
-  text: "An unexpected error has occurred. Restart the printer. Contact our tech support if the problem persists."
+  title: "UNKNOWN WARNING"
+  text: "An unknown warning has occurred. Try it again. Contact our tech support if the problem persists."
   id: "UNKNOWN_WARNING"
-  approved: true
+  approved: false
 
 - code: "10702"
   title: "AMBIENT TEMP. TOO HIGH"
