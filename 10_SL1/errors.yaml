@@ -257,9 +257,9 @@ Errors:
 - code: "10319"
   title: "UV CALIBRATION ERROR"
   text: "Correct settings were found, but the standard deviation
-  
+
   (%(found).1f) is greater than the allowed value (%(allowed).1f).
-  
+
   Verify the UV LED calibrator's position and calibration, then try again."
   id: "UV_INTENSITY_DEVIATION_TOO_HIGH"
   approved: true
@@ -605,6 +605,12 @@ Errors:
   id: "DIRECTORY_NOT_EMPTY"
   approved: false
 
+- code: "10547"
+  title: "LANGUAGE NOT SET"
+  text: "The language is not set. Go to Settings -> Language & Time -> Set Language and pick preferred language."
+  id: "LANGUAGE_ERROR"
+  approved: false
+
 # BOOTLOADER     xx6xx   #
 - code: "10601"
   title: "BOOTED SLOT CHANGED"
@@ -666,7 +672,7 @@ Errors:
   text: "The print parameters are out of range of the printer, the system can try to fix the project. Proceed?"
   id: "PROJECT_SETTINGS_MODIFIED_WARNING"
   approved: true
-  
+
 - code: "10708"
   title: "PERPARTES NOAVAIL WARNING"
   text: "Per-partes print not available."
