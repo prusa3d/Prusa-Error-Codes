@@ -626,9 +626,9 @@ Errors:
 
 - code: "10701"
   title: "UNKNOWN WARNING"
-  text: "An unknown warning has occurred. Try it again. Contact our tech support if the problem persists."
+  text: "An unknown warning has occured. Restart the printer and try again. Contact our tech support if the problem persists."
   id: "UNKNOWN_WARNING"
-  approved: false
+  approved: true
 
 - code: "10702"
   title: "AMBIENT TEMP. TOO HIGH"
