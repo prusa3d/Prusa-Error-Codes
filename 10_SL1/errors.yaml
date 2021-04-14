@@ -264,6 +264,12 @@ Errors:
   id: "UV_INTENSITY_DEVIATION_TOO_HIGH"
   approved: true
 
+- code: "10320"
+  title: "BOOSTER BOARD PROBLEM"
+  text: "Communication with Booster board failed. Check the connection and restart the printer."
+  id: "BOOSTER_ERROR"
+  approved: false
+
 # CONNECTIVITY   104xx   # Connectivity - Wi - Fi, LAN, Prusa Connect Cloud
 - code: "10401"
   title: "MQTT UPLOAD FAILED"
