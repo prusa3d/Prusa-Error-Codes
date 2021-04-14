@@ -697,3 +697,9 @@ Errors:
   text: "The model was sliced for a different printer variant %(project_variant)s. Your printer variant is %(printer_variant)s."
   id: "PRINTER_VARIANT_MISMATCH_WARNING"
   approved: false
+
+- code: "10712"
+  title: "RESIN LOW"
+  text: "Measured resin volume is low, the print can continue, but refill might be required."
+  id: "RESIN_LOW"
+  approved: false
