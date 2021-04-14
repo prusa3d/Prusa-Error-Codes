@@ -701,5 +701,5 @@ Errors:
 - code: "10712"
   title: "RESIN LOW"
   text: "Measured resin volume is low, the print can continue, but it might fail."
-  id: "RESIN LOW"
+  id: "RESIN_LOW"
   approved: false
