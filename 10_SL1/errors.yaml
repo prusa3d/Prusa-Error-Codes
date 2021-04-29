@@ -270,6 +270,24 @@ Errors:
   id: "BOOSTER_ERROR"
   approved: false
 
+- code: "10321"
+  title: "Disconnected UV LED panel"
+  text: "The LED panel is not detected. Check the connection."
+  id: "UV_LEDS_DISCONNECTED"
+  approved: false
+
+- code: "10322"
+  title: "Broken UV LED panel"
+  text: "The part of the LED panel is disconnected. Check the connection and the LED panel."
+  id: "UV_LEDS_ROW_FAILED"
+  approved: false
+
+- code: "10323"
+  title: "Unknown printer model"
+  text: "The printer model was not detected. Check the connection of the exposure display and restart the printer."
+  id: "UNKNOWN_PRINTER_MODEL"
+  approved: false
+
 # CONNECTIVITY   104xx   # Connectivity - Wi - Fi, LAN, Prusa Connect Cloud
 - code: "10401"
   title: "MQTT UPLOAD FAILED"
