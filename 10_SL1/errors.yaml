@@ -137,7 +137,7 @@ Errors:
 # TEMPERATURE    102xx   # Temperature measurement, thermistors, heating
 - code: "10205"
   title: "TEMPERATURE SENSOR FAILED"
-  text: "The %(sensor) sensor failed. Check the wiring and connection."
+  text: "The %(sensor)s sensor failed. Check the wiring and connection."
   id: "TEMP_SENSOR_FAILED"
   approved: true
 
