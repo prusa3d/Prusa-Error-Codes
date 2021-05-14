@@ -727,3 +727,9 @@ Errors:
   text: "Measured resin volume is low, the print can continue, but refill might be required."
   id: "RESIN_LOW"
   approved: false
+
+- code: "10713"
+  title: "FAN WARNING"
+  text: "Failed: %(what)s\n\nPlease contact tech support!\n\n%(addText)s"
+  id: "FAN_WARNING"
+  approved: false
