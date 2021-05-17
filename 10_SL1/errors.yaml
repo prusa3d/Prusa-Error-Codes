@@ -731,7 +731,7 @@ Errors:
 - code: "10713"
   title: "FAN WARNING"
   text: "Incorrect RPM reading of the %(failed_fans_text)s fan. Please check its wiring and connection."
-  id: "FAN WARNING"
+  id: "FAN_WARNING"
   approved: false
 
 - code: "10714"
