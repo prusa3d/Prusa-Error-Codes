@@ -131,6 +131,12 @@ Errors:
   id: "TOWER_BELOW_SURFACE"
   approved: true
 
+- code: "10124"
+  title: "RESIN MEASURE FAILED"
+  text: "The resin measure failed. Check the presence of the platform and the amount of resin in the tank."
+  id: "RESIN_MEASURE_FAILED"
+  approved: false
+
 
 
 
@@ -184,9 +190,9 @@ Errors:
 
 - code: "10307"
   title: "RESIN SENSOR ERROR"
-  text: "The resin sensor was not detected. Check the connection and amount of resin in the tank."
+  text: "The resin sensor was not triggered. Check the mount of the tank and the platform and the connection of the sensor."
   id: "RESIN_SENSOR_FAILED"
-  approved: true
+  approved: false
 
 - code: "10308"
   title: "PRINTER NOT UV CALIBRATED"
