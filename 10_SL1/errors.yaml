@@ -377,7 +377,7 @@ Errors:
 
 - code: "10506"
   title: "PRINTER IS BUSY"
-  text: "Cannot run this action, wait until the printer finishes the previous action."
+  text: "Another action is already running. Finish this action directly using the printer's touchscreen."
   id: "NOT_AVAILABLE_IN_STATE"
   approved: true
 
