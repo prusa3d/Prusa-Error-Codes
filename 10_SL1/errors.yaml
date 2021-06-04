@@ -104,7 +104,7 @@ Errors:
 
 - code: "10121"
   title: "INVALID TILT ALIGN POSITION"
-  text: "Invalid tilt alignment position. Check its mechanism and repeat the action."
+  text: "Invalid tilt alignment position. Check the tilt mechanism and repeat the action."
   id: "INVALID_TILT_ALIGN_POSITION"
   approved: false
 
@@ -132,8 +132,8 @@ Errors:
   approved: true
 
 - code: "10124"
-  title: "RESIN MEASURE FAILED"
-  text: "The resin measure failed. Check the presence of the platform and the amount of resin in the tank."
+  title: "RESIN MEASURING FAILED"
+  text: "Measuring the resin failed. Check the presence of the platform and the amount of resin in the tank."
   id: "RESIN_MEASURE_FAILED"
   approved: false
 
@@ -190,7 +190,7 @@ Errors:
 
 - code: "10307"
   title: "RESIN SENSOR ERROR"
-  text: "The resin sensor was not triggered. Check the mount of the tank and the platform and the connection of the sensor."
+  text: "The resin sensor was not triggered. Check whether the tank and the platform are properly secured. Inspect the wiring of the sensor."
   id: "RESIN_SENSOR_FAILED"
   approved: false
 
@@ -272,19 +272,19 @@ Errors:
 
 - code: "10320"
   title: "BOOSTER BOARD PROBLEM"
-  text: "Communication with Booster board failed. Check the connection and restart the printer."
+  text: "Communication with the Booster board failed. Check the connection and restart the printer."
   id: "BOOSTER_ERROR"
   approved: false
 
 - code: "10321"
   title: "Disconnected UV LED panel"
-  text: "The LED panel is not detected. Check the connection."
+  text: "The UV LED panel is not detected. Check the connection."
   id: "UV_LEDS_DISCONNECTED"
   approved: false
 
 - code: "10322"
   title: "Broken UV LED panel"
-  text: "The part of the LED panel is disconnected. Check the connection and the LED panel."
+  text: "A part of the LED panel is disconnected. Check the connection and the LED panel."
   id: "UV_LEDS_ROW_FAILED"
   approved: false
 
@@ -321,19 +321,19 @@ Errors:
 
 - code: "10405"
   title: "INVALID API KEY"
-  text: "Please turn on the HTTP digest (which is the recommended security option) or correct the API key. You can find it in Settings > Network > Login credentials."
+  text: "Please turn on the HTTP digest (which is the recommended security option) or update the API key. You can find it in Settings > Network > Login credentials."
   id: "INVALID_API_KEY"
   approved: false
 
 - code: "10406"
   title: "UNAUTHORIZED"
-  text: "The printer uses HTTP digest security. Please enable it also in the Slicer (recommended), or turn this security option off in the printer. You can find it in Settings > Network > Login credentials."
+  text: "The printer uses HTTP digest security. Please enable it also in your slicer (recommended), or turn off this security option in the printer. You can find it in Settings > Network > Login credentials."
   id: "UNAUTHORIZED"
   approved: false
 
 - code: "10407"
   title: "REMOTE API ERROR"
-  text: "This request is not compatible with Prusa remote API. See our documentation."
+  text: "This request is not compatible with the Prusa remote API. See our documentation for more details."
   id: "REMOTE_API_ERROR"
   approved: false
 
@@ -582,8 +582,8 @@ Errors:
 
 # sl1fw/project/project.py
 - code: "10539"
-  title: "CAN'T READ PROJECT"
-  text: "Opening the project failed, the file is possibly corrupted. Please re-slice or re-export the project, try again."
+  title: "CANNOT READ PROJECT"
+  text: "Opening the project failed. The file is possibly corrupted. Please re-slice or re-export the project and try again."
   id: "PROJECT_ERROR_CANT_READ"
   approved: false
 
@@ -597,14 +597,14 @@ Errors:
 # sl1fw/project/project.py
 - code: "10541"
   title: "PROJECT IS CORRUPTED"
-  text: "Opening the project failed, the file corrupted. Please re-slice or re-export the project, try again."
+  text: "Opening the project failed. The file is corrupted. Please re-slice or re-export the project and try again."
   id: "PROJECT_ERROR_CORRUPTED"
   approved: false
 
 # sl1fw/project/project.py
 - code: "10542"
   title: "PROJECT ANALYSIS FAILED"
-  text: "Analysis of the project has failed"
+  text: "Analysis of the project failed"
   id: "PROJECT_ERROR_ANALYSIS_FAILED"
   approved: false
 
@@ -618,14 +618,14 @@ Errors:
 # sl1fw/project/project.py
 - code: "10544"
   title: "WRONG PRINTER MODEL"
-  text: "The project is for different printer"
+  text: "This project was prepared for a different printer"
   id: "PROJECT_ERROR_WRONG_PRINTER_MODEL"
   approved: false
 
   # sl1fw_fs/sources.py
 - code: "10545"
-  title: "CAN'T REMOVE PROJECT"
-  text: "Remove it's not possible while there is a lock in the project file for print."
+  title: "CANNOT REMOVE PROJECT"
+  text: "Removing this project is not possible. The project is locked by a print job."
   id: "PROJECT_ERROR_CANT_REMOVE"
   approved: false
 
@@ -711,13 +711,13 @@ Errors:
 
 - code: "10709"
   title: "MASK NOAVAIL WARNING"
-  text: "Print mas missing."
+  text: "Print mask is missing."
   id: "MASK_NOAVAIL_WARNING"
   approved: false
 
 - code: "10710"
   title: "OBJECT CROPPED WARNING"
-  text: "Object was cropped as it does not fit the print surface."
+  text: "Object was cropped because it does not fit the print area."
   id: "OBJECT_CROPPED_WARNING"
   approved: false
 
@@ -730,7 +730,7 @@ Errors:
 
 - code: "10712"
   title: "RESIN LOW"
-  text: "Measured resin volume is low, the print can continue, but refill might be required."
+  text: "Measured resin volume is too low. The print can continue, however, a refill might be required."
   id: "RESIN_LOW"
   approved: false
 
@@ -742,6 +742,6 @@ Errors:
 
 - code: "10714"
   title: "EXPECT OVERHEATING"
-  text: "Incorrect RPM reading of the %(failed_fans_text)s fan. Please check its wiring and connection. Expect overheating, but the print may continue."
+  text: "Incorrect RPM reading of the %(failed_fans_text)s fan. Please check its wiring. The print may continue, however, there's a risk of overheating."
   id: "EXPECT_OVERHEATING"
   approved: false
