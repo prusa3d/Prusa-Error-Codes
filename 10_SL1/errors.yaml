@@ -348,7 +348,7 @@ Errors:
   title: "UNEXPECTED ERROR"
   text: "An unexpected error has occurred :-(.
 
-    If the SL1 is printing, current job will be finished.
+    If print job is in progress, it should be finished.
 
     You can turn the printer off by pressing the front power button.
 
