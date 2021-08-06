@@ -1,0 +1,97 @@
+---
+# Error codes list for the MMU2S for the Buddy FW
+# GitHub repo https://github.com/prusa3d/Prusa-Error-Codes
+# Printer code
+# MMU            04xxx
+# Error categories
+# MECHANICAL     xx1xx   # Mechanical failures - FINDA, FSENSOR not triggering
+# TEMPERATURE    xx2xx   # Temperature measurement of TMC drivers
+# ELECTRICAL     xx3xx   # Electrical - TMC non-temperature-related errors
+# CONNECTIVITY   xx4xx   # Connectivity - UART/RS485 connectivity
+# SYSTEM         xx5xx   # System - internal MMU errors
+# BOOTLOADER     xx6xx   #
+# WARNINGS       xx7xx   # Category-less warnings
+Errors:
+
+# MECHANICAL
+
+- code: "04101"
+  title: "FINDA DIDNT SWITCH ON"
+  text: "FINDA didn't switch on while loading filament - either there is something blocking the metal ball or a cable is broken/disconnected"
+  id: ""
+  approved: false
+- code: "04102"
+  title: "FINDA DIDNT SWITCH OFF"
+  text: "FINDA didn't switch off while unloading filament - similar reasons like above."
+  id: ""
+  approved: false
+- code: "04103"
+  title: "FSENSOR DIDNT SWITCH ON"
+  text: "Filament sensor didn't switch on while performing LoadFilament."
+  id: ""
+  approved: false
+- code: "04104"
+  title: "FSENSOR DIDNT SWITCH OFF"
+  text: "Filament sensor didn't switch off while performing UnloadFilament."
+  id: ""
+  approved: false
+
+# TEMPERATURE    xx2xx   # Temperature measurement
+- code: "04201"
+  title: "TMC OVER TEMPERATURE WARN"
+  text: "TMC2130 overheating - pre-fail warning"
+  id: ""
+  approved: false
+# TMC driver over temperature warning - can be recovered by restarting the driver.
+# If this error happens, we should probably go into the error state as soon as the current command is finished.
+# The driver technically still works at this point.
+
+- code: "04202"
+  title: "TMC OVER TEMPERATURE ERROR"
+  text: "TMC2130 overheated "
+  id: ""
+  approved: false
+# TMC driver over temperature error - we really shouldn't ever reach this error.
+# It can still be recovered if the driver cools down below 120C.
+# The driver needs to be disabled and enabled again for operation to resume after this error is cleared.
+
+# ELECTRICAL     xx3xx
+- code: "04301"
+  title: "TMC IOIN MISMATCH"
+  text: "TMC driver init error - TMC dead or bad communication."
+  id: ""
+  approved: false
+- code: "04302"
+  title: "TMC RESET"
+  text: "TMC driver reset - usually due to undervoltage or some similar electrical problem - check the pins, wires etc."
+  id: ""
+  approved: false
+- code: "04303"
+  title: "TMC UNDERVOLTAGE ON CHARGE PUMP"
+  text: "Not enough current for the TMC, NOT RECOVERABLE - serious issues with power to the TMC/motors."
+  id: ""
+  approved: false
+- code: "04304"
+  title: "TMC SHORT TO GROUND"
+  text: "TMC driver serious error - short to ground on motor's coil A or coil B - dangerous to recover."
+  id: ""
+  approved: false
+
+# CONNECTIVITY
+- code: "04401"
+  title: "MMU NOT RESPONDING"
+  text: "internal error of the printer - communication with the MMU is not working."
+  id: ""
+  approved: false
+
+# SYSTEM
+- code: "04501"
+  title: "FILAMENT ALREADY LOADED"
+  text: "cannot perform operation LoadFilament or move the selector as the filament is already loaded."
+  id: ""
+  approved: false
+- code: "04502"
+  title: "INTERNAL"
+  text: "internal runtime error (software) - should not happen, but if it does, there is a bug in the FW which can be fixed by updating the FW."
+  id: ""
+  approved: false
