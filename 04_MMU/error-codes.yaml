@@ -11,6 +11,12 @@
 # SYSTEM         xx5xx   # System - internal MMU errors
 # BOOTLOADER     xx6xx   #
 # WARNINGS       xx7xx   # Category-less warnings
+#
+# for TMC-related errors the decimal digit specifies the TMC/motor in question:
+# 0 - pulley
+# 1 - selector
+# 2 - idler
+
 Errors:
 
 # MECHANICAL
@@ -39,41 +45,104 @@ Errors:
 # TEMPERATURE    xx2xx   # Temperature measurement
 - code: "04201"
   title: "TMC OVER TEMPERATURE WARN"
-  text: "TMC2130 overheating - pre-fail warning"
+  text: "Pulley TMC2130 overheating - pre-fail warning"
   id: ""
   approved: false
 # TMC driver over temperature warning - can be recovered by restarting the driver.
 # If this error happens, we should probably go into the error state as soon as the current command is finished.
 # The driver technically still works at this point.
+- code: "04211"
+  title: "TMC OVER TEMPERATURE WARN"
+  text: "Selector TMC2130 overheating - pre-fail warning"
+  id: ""
+  approved: false
+- code: "04221"
+  title: "TMC OVER TEMPERATURE WARN"
+  text: "Idler TMC2130 overheating - pre-fail warning"
+  id: ""
+  approved: false
 
 - code: "04202"
   title: "TMC OVER TEMPERATURE ERROR"
-  text: "TMC2130 overheated "
+  text: "Pulley TMC2130 overheated "
   id: ""
   approved: false
 # TMC driver over temperature error - we really shouldn't ever reach this error.
 # It can still be recovered if the driver cools down below 120C.
 # The driver needs to be disabled and enabled again for operation to resume after this error is cleared.
+- code: "04212"
+  title: "TMC OVER TEMPERATURE ERROR"
+  text: "Selector TMC2130 overheated "
+  id: ""
+  approved: false
+- code: "04222"
+  title: "TMC OVER TEMPERATURE ERROR"
+  text: "Idler TMC2130 overheated "
+  id: ""
+  approved: false
 
 # ELECTRICAL     xx3xx
 - code: "04301"
   title: "TMC IOIN MISMATCH"
-  text: "TMC driver init error - TMC dead or bad communication."
+  text: "Pulley TMC driver init error - TMC dead or bad communication."
   id: ""
   approved: false
+- code: "04311"
+  title: "TMC IOIN MISMATCH"
+  text: "Selector TMC driver init error - TMC dead or bad communication."
+  id: ""
+  approved: false
+- code: "04321"
+  title: "TMC IOIN MISMATCH"
+  text: "Idler TMC driver init error - TMC dead or bad communication."
+  id: ""
+  approved: false
+
 - code: "04302"
   title: "TMC RESET"
-  text: "TMC driver reset - usually due to undervoltage or some similar electrical problem - check the pins, wires etc."
+  text: "Pulley TMC driver reset - usually due to undervoltage or some similar electrical problem - check the pins, wires etc."
   id: ""
   approved: false
+- code: "04312"
+  title: "TMC RESET"
+  text: "Selector TMC driver reset - usually due to undervoltage or some similar electrical problem - check the pins, wires etc."
+  id: ""
+  approved: false
+- code: "04322"
+  title: "TMC RESET"
+  text: "Idler TMC driver reset - usually due to undervoltage or some similar electrical problem - check the pins, wires etc."
+  id: ""
+  approved: false
+
 - code: "04303"
   title: "TMC UNDERVOLTAGE ON CHARGE PUMP"
-  text: "Not enough current for the TMC, NOT RECOVERABLE - serious issues with power to the TMC/motors."
+  text: "Pulley Not enough current for the TMC, NOT RECOVERABLE - serious issues with power to the TMC/motors."
   id: ""
   approved: false
+- code: "04313"
+  title: "TMC UNDERVOLTAGE ON CHARGE PUMP"
+  text: "Selector Not enough current for the TMC, NOT RECOVERABLE - serious issues with power to the TMC/motors."
+  id: ""
+  approved: false
+- code: "04323"
+  title: "TMC UNDERVOLTAGE ON CHARGE PUMP"
+  text: "Idler Not enough current for the TMC, NOT RECOVERABLE - serious issues with power to the TMC/motors."
+  id: ""
+  approved: false
+
 - code: "04304"
   title: "TMC SHORT TO GROUND"
-  text: "TMC driver serious error - short to ground on motor's coil A or coil B - dangerous to recover."
+  text: "Pulley TMC driver serious error - short to ground on motor's coil A or coil B - dangerous to recover."
+  id: ""
+  approved: false
+- code: "04314"
+  title: "TMC SHORT TO GROUND"
+  text: "Selector TMC driver serious error - short to ground on motor's coil A or coil B - dangerous to recover."
+  id: ""
+  approved: false
+- code: "04324"
+  title: "TMC SHORT TO GROUND"
+  text: "Idler TMC driver serious error - short to ground on motor's coil A or coil B - dangerous to recover."
   id: ""
   approved: false
 
