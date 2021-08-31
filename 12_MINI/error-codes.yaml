@@ -53,3 +53,16 @@ Errors:
   text: "Check the print head thermistor wiring for possible damage."
   id: ""
   approved: true
+
+# thermistor is reporting temperature which is way off the results the internal simulated heating model expects
+# this usually means the thermistor is broken and/or loose in the heatblock / heatbed
+- code: "12209"
+  title: "THERMAL MODEL MISMATCH"
+  text: "Check the heat bed thermistor contact in the heatblock and/or replace the thermistor."
+  id: ""
+  approved: false
+- code: "12210"
+  title: "THERMAL MODEL MISMATCH"
+  text: "Check the print head thermistor contact in the heatblock and/or replace the thermistor."
+  id: ""
+  approved: false
