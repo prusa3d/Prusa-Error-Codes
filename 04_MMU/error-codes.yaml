@@ -152,6 +152,11 @@ Errors:
   text: "internal error of the printer - communication with the MMU is not working."
   id: ""
   approved: false
+- code: "04402"
+  title: "PROTOCOL ERROR"
+  text: "internal error of the printer - communication with the MMU got damaged, restarting communication."
+  id: ""
+  approved: false
 
 # SYSTEM
 - code: "04501"
@@ -160,6 +165,21 @@ Errors:
   id: ""
   approved: false
 - code: "04502"
+  title: "INVALID TOOL"
+  text: "The printer has requested a tool/slot out of range (like T7 or similar). This is an error in the printed G-code file."
+  id: ""
+  approved: false
+- code: "04503"
+  title: "QUEUE FULL"
+  text: "internal runtime error (software) - too many moves planned in the MMU FW, there is a bug in the FW which can be fixed by updating the FW."
+  id: ""
+  approved: false
+- code: "04504"
+  title: "VERSION MISMATCH"
+  text: "The MMU reports its FW version incompatible with the printer's firmware."
+  id: ""
+  approved: false
+- code: "04505"
   title: "INTERNAL"
   text: "internal runtime error (software) - should not happen, but if it does, there is a bug in the FW which can be fixed by updating the FW."
   id: ""
