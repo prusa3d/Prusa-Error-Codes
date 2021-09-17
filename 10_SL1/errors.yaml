@@ -346,7 +346,7 @@ Errors:
 
 - code: "10501"
   title: "UNEXPECTED ERROR"
-  text: "An unexpected error has occurred :-(.
+  text: "An unexpected error has occurred.
 
     If print job is in progress, it should be finished.
 
