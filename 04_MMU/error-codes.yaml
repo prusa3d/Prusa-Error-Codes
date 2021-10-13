@@ -22,151 +22,171 @@ Errors:
 # MECHANICAL
 
 - code: "04101"
-  title: "FINDA DIDNT SWITCH ON"
-  text: "FINDA didn't switch on while loading filament - either there is something blocking the metal ball or a cable is broken/disconnected"
+  title: "FINDA DIDNT TRIGGER"
+  text: "FINDA didn't trigger while loading filament. Either there is something blocking the steel finda ball or a cable is broken/disconnected."
+  action: [Repeat action, Slow load, Continue]
   id: ""
   approved: false
 - code: "04102"
   title: "FINDA DIDNT SWITCH OFF"
-  text: "FINDA didn't switch off while unloading filament - similar reasons like above."
+  text: "FINDA didn't switch off while unloading filament. There is probably something blocking the steel finda ball."
+  action: [Repeat action, Slow unload, Continue]
   id: ""
   approved: false
 - code: "04103"
-  title: "FSENSOR DIDNT SWITCH ON"
-  text: "Filament sensor didn't switch on while performing LoadFilament."
+  title: "FSENSOR DIDNT TRIGGER"
+  text: "Filament sensor didn't trigger while loading the filament. Either the filament didnt reach the sensor or the sensor and wiring is damaged"
+  action: [Repeat action, Slow load, Continue]
   id: ""
   approved: false
 - code: "04104"
   title: "FSENSOR DIDNT SWITCH OFF"
-  text: "Filament sensor didn't switch off while performing UnloadFilament."
+  text: "Filament sensor didn't switch off while unloading the filament. The filament is probably stuck near the sensor."
+  action: [Repeat action, Slow unload, Continue]
   id: ""
   approved: false
 
 # TEMPERATURE    xx2xx   # Temperature measurement
 - code: "04201"
-  title: "TMC OVER TEMPERATURE WARN"
-  text: "Pulley TMC2130 overheating - pre-fail warning"
+  title: "TMC OVERHEAT WARNING"
+  text: "TMC driver for the Pulley motor is almost overheated. Make sure there is sufficient airflow near the MMU board."
+  action: [Continue, Restart MMU]
   id: ""
   approved: false
-# TMC driver over temperature warning - can be recovered by restarting the driver.
-# If this error happens, we should probably go into the error state as soon as the current command is finished.
-# The driver technically still works at this point.
 - code: "04211"
-  title: "TMC OVER TEMPERATURE WARN"
-  text: "Selector TMC2130 overheating - pre-fail warning"
+  title: "TMC OVERHEAT WARNING"
+  text: "TMC driver for the Selector motor is almost overheated. Make sure there is sufficient airflow near the MMU board."
+  action: [Continue, Restart MMU]
   id: ""
   approved: false
 - code: "04221"
-  title: "TMC OVER TEMPERATURE WARN"
-  text: "Idler TMC2130 overheating - pre-fail warning"
+  title: "TMC OVERHEAT WARNING"
+  text: "TMC driver for the Idler motor is almost overheated. Make sure there is sufficient airflow near the MMU board."
+  action: [Continue, Restart MMU]  
   id: ""
   approved: false
 
 - code: "04202"
-  title: "TMC OVER TEMPERATURE ERROR"
-  text: "Pulley TMC2130 overheated "
+  title: "TMC OVERHEAT ERROR"
+  text: "TMC driver for the Pulley motor is overheated. Cool down the MMU board and restart MMU."
+  action: [Restart MMU]  
   id: ""
   approved: false
-# TMC driver over temperature error - we really shouldn't ever reach this error.
-# It can still be recovered if the driver cools down below 120C.
-# The driver needs to be disabled and enabled again for operation to resume after this error is cleared.
 - code: "04212"
-  title: "TMC OVER TEMPERATURE ERROR"
-  text: "Selector TMC2130 overheated "
+  title: "TMC OVERHEAT ERROR"
+  text: "TMC driver for the Selector motor is overheated. Cool down the MMU board and restart MMU."
+  action: [Restart MMU] 
   id: ""
   approved: false
 - code: "04222"
-  title: "TMC OVER TEMPERATURE ERROR"
-  text: "Idler TMC2130 overheated "
+  title: "TMC OVERHEAT ERROR"
+  text: "TMC driver for the Idler motor is overheated. Cool down the MMU board and restart MMU."
+  action: [Restart MMU] 
   id: ""
   approved: false
 
 # ELECTRICAL     xx3xx
 - code: "04301"
-  title: "TMC IOIN MISMATCH"
-  text: "Pulley TMC driver init error - TMC dead or bad communication."
+  title: "TMC DRIVER ERROR"
+  text: "TMC driver for the Pulley motor is not responding. Try restarting the MMU. If the issue persist contact the support."
+  action: [Restart MMU]   
   id: ""
   approved: false
 - code: "04311"
-  title: "TMC IOIN MISMATCH"
-  text: "Selector TMC driver init error - TMC dead or bad communication."
+  title: "TMC DRIVER ERROR"
+  text: "TMC driver for the Selector motor is not responding. Try restarting the MMU. If the issue persist contact the support."
+  action: [Restart MMU] 
   id: ""
   approved: false
 - code: "04321"
-  title: "TMC IOIN MISMATCH"
-  text: "Idler TMC driver init error - TMC dead or bad communication."
+  title: "TMC DRIVER ERROR"
+  text: "TMC driver for the Idler motor is not responding. Try restarting the MMU. If the issue persist contact the support."
+  action: [Restart MMU] 
   id: ""
   approved: false
 
 - code: "04302"
-  title: "TMC RESET"
-  text: "Pulley TMC driver reset - usually due to undervoltage or some similar electrical problem - check the pins, wires etc."
+  title: "TMC DRIVER RESET"
+  text: "TMC driver for the Pulley motor was restarted. There is probably an issue with the electronics. Check the wiring and connectors."
+  action: [Restart MMU] 
   id: ""
   approved: false
 - code: "04312"
-  title: "TMC RESET"
-  text: "Selector TMC driver reset - usually due to undervoltage or some similar electrical problem - check the pins, wires etc."
+  title: "TMC DRIVER RESET"
+  text: "TMC driver for the Selector motor was restarted. There is probably an issue with the electronics. Check the wiring and connectors."
+  action: [Restart MMU] 
   id: ""
   approved: false
 - code: "04322"
-  title: "TMC RESET"
-  text: "Idler TMC driver reset - usually due to undervoltage or some similar electrical problem - check the pins, wires etc."
+  title: "TMC DRIVER RESET"
+  text: "TMC driver for the Idler motor was restarted. There is probably an issue with the electronics. Check the wiring and connectors."
+  action: [Restart MMU] 
   id: ""
   approved: false
 
 - code: "04303"
-  title: "TMC UNDERVOLTAGE ON CHARGE PUMP"
-  text: "Pulley Not enough current for the TMC, NOT RECOVERABLE - serious issues with power to the TMC/motors."
+  title: "TMC UNDERVOLTAGE ERROR"
+  text: "Not enough current for the Pulley TMC driver. There is probably an issue with the electronics. Check the wiring and connectors."
+  action: [Restart MMU]
   id: ""
   approved: false
 - code: "04313"
-  title: "TMC UNDERVOLTAGE ON CHARGE PUMP"
-  text: "Selector Not enough current for the TMC, NOT RECOVERABLE - serious issues with power to the TMC/motors."
+  title: "TMC UNDERVOLTAGE ERROR"
+  text: "Not enough current for the Selector TMC driver. There is probably an issue with the electronics. Check the wiring and connectors."
+  action: [Restart MMU]
   id: ""
   approved: false
 - code: "04323"
-  title: "TMC UNDERVOLTAGE ON CHARGE PUMP"
-  text: "Idler Not enough current for the TMC, NOT RECOVERABLE - serious issues with power to the TMC/motors."
+  title: "TMC UNDERVOLTAGE ERROR"
+  text: "Not enough current for the Idler TMC driver. There is probably an issue with the electronics. Check the wiring and connectors."
+  action: [Restart MMU]
   id: ""
   approved: false
 
 - code: "04304"
-  title: "TMC SHORT TO GROUND"
-  text: "Pulley TMC driver serious error - short to ground on motor's coil A or coil B - dangerous to recover."
+  title: "TMC DRIVER SHORTED"
+  text: "Short circuit on the Pulley TMC driver. Check the wiring and connectors. If the issue persist contact the support."
+  action: [Restart MMU]
   id: ""
   approved: false
 - code: "04314"
-  title: "TMC SHORT TO GROUND"
-  text: "Selector TMC driver serious error - short to ground on motor's coil A or coil B - dangerous to recover."
+  title: "TMC DRIVER SHORTED"
+  text: "Short circuit on the Selector TMC driver. Check the wiring and connectors. If the issue persist contact the support."
+  action: [Restart MMU]
   id: ""
   approved: false
 - code: "04324"
-  title: "TMC SHORT TO GROUND"
-  text: "Idler TMC driver serious error - short to ground on motor's coil A or coil B - dangerous to recover."
+  title: "TMC DRIVER SHORTED"
+  text: "Short circuit on the Idler TMC driver. Check the wiring and connectors. If the issue persist contact the support."
+  action: [Restart MMU]
   id: ""
   approved: false
 
 # CONNECTIVITY
 - code: "04401"
   title: "MMU NOT RESPONDING"
-  text: "internal error of the printer - communication with the MMU is not working."
+  text: "MMU unit not responding. Check the wiring and connectors. If the issue persist contact the support."
+  action: [Restart MMU]
   id: ""
   approved: false
 - code: "04402"
-  title: "PROTOCOL ERROR"
-  text: "internal error of the printer - communication with the MMU got damaged, restarting communication."
+  title: "COMMUNICATION ERROR"
+  text: "MMU unit not responding correctly. Check the wiring and connectors. If the issue persist contact the support."
+  action: [Restart MMU]
   id: ""
   approved: false
 
 # SYSTEM
 - code: "04501"
   title: "FILAMENT ALREADY LOADED"
-  text: "cannot perform operation LoadFilament or move the selector as the filament is already loaded."
+  text: "Cannot perform the action, filament is already loaded. Unload it first."
+  action: [Unload, Restart MMU]
   id: ""
   approved: false
 - code: "04502"
   title: "INVALID TOOL"
-  text: "The printer has requested a tool/slot out of range (like T7 or similar). This is an error in the printed G-code file."
+  text: "Requested filament tool is out of selector's range (above 5th). Check the G-code file for possible issue."
+  action: [Restart MMU]  
   id: ""
   approved: false
 - code: "04503"
@@ -175,12 +195,12 @@ Errors:
   id: ""
   approved: false
 - code: "04504"
-  title: "VERSION MISMATCH"
-  text: "The MMU reports its FW version incompatible with the printer's firmware."
+  title: "FW VERSION MISMATCH"
+  text: "The MMU unit reports its FW version incompatible with the printer's firmware. Make sure the MMU firmware is up to date"
   id: ""
   approved: false
 - code: "04505"
-  title: "INTERNAL"
-  text: "internal runtime error (software) - should not happen, but if it does, there is a bug in the FW which can be fixed by updating the FW."
+  title: "FW RUNTIME ERROR"
+  text: "Internal runtime error. Try restarting the MMU unit or updating the firmware. If the issue persist contact the support."
   id: ""
   approved: false
