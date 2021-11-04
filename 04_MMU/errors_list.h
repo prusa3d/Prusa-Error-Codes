@@ -78,7 +78,7 @@ static constexpr MMUErrorDesc error_list[] = {
     // r=1, c=19
     { N_("FINDA DIDNT TRIGGER"),
         // r=5, c=20
-        N_("FINDA didn't trigger while loading filament. Either there is something blocking the steel finda ball or a cable is broken/disconnected."),
+        N_("FINDA didn't trigger while loading filament. Ensure that the steel FINDA ball can move freely and check the wiring."),
         ERR_MECHANICAL_FINDA_DIDNT_TRIGGER,
         { N_("Repeat action"), N_("Slow load"), N_("Continue") }
     },
@@ -86,7 +86,7 @@ static constexpr MMUErrorDesc error_list[] = {
     // r=1, c=19
     { N_("FINDA DIDNT SWITCH OFF"),
         // r=5, c=20
-        N_("FINDA didn't switch off while unloading filament. There is probably something blocking the steel finda ball."),
+        N_("FINDA didn't switch off while unloading filament. Try unloading the filament manually and ensure steel FINDA ball can move freely."),
         ERR_MECHANICAL_FINDA_DIDNT_SWITCH_OFF,
         { N_("Repeat action"), N_("Slow load"), N_("Continue") }
     },
@@ -94,7 +94,7 @@ static constexpr MMUErrorDesc error_list[] = {
     // r=1, c=19
     { N_("FSENSOR DIDNT TRIGGER"),
         // r=5, c=20
-        N_("Filament sensor didn't trigger while loading the filament. Either the filament didnt reach the sensor or the sensor and wiring is damaged"),
+        N_("Filament sensor didn't trigger while loading the filament. Check that the filament reached the fsensor and check the wiring."),
         ERR_MECHANICAL_FSENSOR_DIDNT_TRIGGER,
       { N_("Repeat action"), N_("Slow load"), N_("Continue") }
     },
@@ -102,7 +102,7 @@ static constexpr MMUErrorDesc error_list[] = {
     // r=1, c=19
     { N_("FSENSOR DIDNT SWITCH OFF"),
         // r=5, c=20
-        N_("Filament sensor didn't switch off while unloading the filament. The filament is probably stuck near the sensor."),
+        N_("Filament sensor didn't switch off while unloading the filament. The filament is probably stuck near the sensor or the sensor is malfunctioning."),
         ERR_MECHANICAL_FSENSOR_DIDNT_SWITCH_OFF,
       { N_("Repeat action"), N_("Slow load"), N_("Continue") }
     },
@@ -111,7 +111,7 @@ static constexpr MMUErrorDesc error_list[] = {
     // TEMPERATURE
     
     // r=1, c=19
-    { N_("TMC OVERHEAT WARNING"),
+    { N_("TMC TOO HOT"),
         // r=5, c=20
         N_("TMC driver for the Pulley motor is almost overheated. Make sure there is sufficient airflow near the MMU board."),
         ERR_TEMPERATURE_TMC_PULLEY_OVER_TEMPERATURE_WARN,
@@ -119,7 +119,7 @@ static constexpr MMUErrorDesc error_list[] = {
     },
 
     // r=1, c=19
-    { N_("TMC OVERHEAT WARNING"),
+    { N_("TMC TOO HOT"),
         // r=5, c=20
         N_("TMC driver for the Selector motor is almost overheated. Make sure there is sufficient airflow near the MMU board."),
         ERR_TEMPERATURE_TMC_SELECTOR_OVER_TEMPERATURE_WARN,
@@ -127,7 +127,7 @@ static constexpr MMUErrorDesc error_list[] = {
     },
 
     // r=1, c=19
-    { N_("TMC OVERHEAT WARNING"),
+    { N_("TMC TOO HOT"),
         // r=5, c=20
         N_("TMC driver for the Idler motor is almost overheated. Make sure there is sufficient airflow near the MMU board."),
         ERR_TEMPERATURE_TMC_IDLER_OVER_TEMPERATURE_WARN,
@@ -284,21 +284,21 @@ static constexpr MMUErrorDesc error_list[] = {
         // r=5, c=20
         N_("Cannot perform the action, filament is already loaded. Unload it first."),
         ERR_SYSTEM_FILAMENT_ALREADY_LOADED, 
-        { N_("Unload"), N_("Restart MMU"), nullptr }
+        { N_("Unload"), N_("Proceed"), N_("Restart MMU") }
     },
     
     // r=1, c=19
     { N_("INVALID TOOL"),
         // r=5, c=20
-        N_("Requested filament tool is out of selector's range (above 5th). Check the G-code file for possible issue."),
+        N_("Requested filament tool is not available on this hardware. Check the G-code file for possible issue."),
         ERR_SYSTEM_INVALID_TOOL, 
-        { nullptr, N_("Stop print"), nullptr }
+        { N_("Stop print"), N_("Restart MMU"), nullptr }
     },
 
     // r=1, c=19
     { N_("QUEUE FULL"),
         // r=5, c=20
-        N_("internal runtime error (software) - too many moves planned in the MMU FW, there is a bug in the FW which can be fixed by updating the FW."),
+        N_("Internal runtime error of the firmware, please restart the MMU."),
         ERR_SYSTEM_QUEUE_FULL, 
         { nullptr, N_("Restart MMU"), nullptr }
     },
