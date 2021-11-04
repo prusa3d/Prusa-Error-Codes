@@ -5,6 +5,8 @@
 #include "inttypes.h"
 #include "i18n.h"
 
+namespace MMU2 {
+
 static constexpr uint8_t ERR_MMU_CODE = 4;
 
 typedef enum : uint16_t {
@@ -317,3 +319,5 @@ static constexpr MMUErrorDesc error_list[] = {
       { nullptr, N_("Restart MMU"), nullptr }
     }
 };
+
+} // namespace MMU2
