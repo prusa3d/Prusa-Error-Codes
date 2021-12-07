@@ -62,13 +62,26 @@ typedef enum : uint16_t {
     ERR_OTHER = 900
 } err_num_t;
 
+/// Will be mapped onto dialog button responses in the Buddy FW
+/// Those responses have their unique+translated texts as well
+enum class ButtonOperations : uint8_t {
+    NoOperation,
+    Retry,
+    SlowLoad,
+    Continue,
+    RestartMMU,
+    Unload,
+    StopPrint,
+    DisableMMU,
+};
+
 struct MMUErrorDesc {
     // 32 bit
     const char *err_title;
     const char *err_text;
     // 16 bit
     err_num_t err_num;
-    std::array<const char *, 3> buttons;
+    std::array<ButtonOperations, 3> buttons;
 };
 
 static constexpr MMUErrorDesc error_list[] = {
@@ -80,7 +93,7 @@ static constexpr MMUErrorDesc error_list[] = {
         // r=5, c=20
         N_("FINDA didn't trigger while loading filament. Ensure that the steel FINDA ball can move freely and check the wiring."),
         ERR_MECHANICAL_FINDA_DIDNT_TRIGGER,
-        { N_("Repeat action"), N_("Slow load"), N_("Continue") }
+        { ButtonOperations::Retry, ButtonOperations::SlowLoad, ButtonOperations::Continue }
     },
 
     // r=1, c=19
@@ -88,7 +101,7 @@ static constexpr MMUErrorDesc error_list[] = {
         // r=5, c=20
         N_("FINDA didn't switch off while unloading filament. Try unloading the filament manually and ensure steel FINDA ball can move freely."),
         ERR_MECHANICAL_FINDA_DIDNT_SWITCH_OFF,
-        { N_("Repeat action"), N_("Slow load"), N_("Continue") }
+      { ButtonOperations::Retry, ButtonOperations::SlowLoad, ButtonOperations::Continue }
     },
 
     // r=1, c=19
@@ -96,7 +109,7 @@ static constexpr MMUErrorDesc error_list[] = {
         // r=5, c=20
         N_("Filament sensor didn't trigger while loading the filament. Check that the filament reached the fsensor and check the wiring."),
         ERR_MECHANICAL_FSENSOR_DIDNT_TRIGGER,
-      { N_("Repeat action"), N_("Slow load"), N_("Continue") }
+      { ButtonOperations::Retry, ButtonOperations::SlowLoad, ButtonOperations::Continue }
     },
 
     // r=1, c=19
@@ -104,7 +117,7 @@ static constexpr MMUErrorDesc error_list[] = {
         // r=5, c=20
         N_("Filament sensor didn't switch off while unloading the filament. The filament is probably stuck near the sensor or the sensor is malfunctioning."),
         ERR_MECHANICAL_FSENSOR_DIDNT_SWITCH_OFF,
-      { N_("Repeat action"), N_("Slow load"), N_("Continue") }
+      { ButtonOperations::Retry, ButtonOperations::SlowLoad, ButtonOperations::Continue }
     },
 
     /////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -115,7 +128,7 @@ static constexpr MMUErrorDesc error_list[] = {
         // r=5, c=20
         N_("TMC driver for the Pulley motor is almost overheated. Make sure there is sufficient airflow near the MMU board."),
         ERR_TEMPERATURE_TMC_PULLEY_OVER_TEMPERATURE_WARN,
-        { N_("Continue"), N_("Restart MMU"), nullptr }
+        { ButtonOperations::Continue, ButtonOperations::RestartMMU, ButtonOperations::NoOperation }
     },
 
     // r=1, c=19
@@ -123,7 +136,7 @@ static constexpr MMUErrorDesc error_list[] = {
         // r=5, c=20
         N_("TMC driver for the Selector motor is almost overheated. Make sure there is sufficient airflow near the MMU board."),
         ERR_TEMPERATURE_TMC_SELECTOR_OVER_TEMPERATURE_WARN,
-      { N_("Continue"), N_("Restart MMU"), nullptr }
+      { ButtonOperations::Continue, ButtonOperations::RestartMMU, ButtonOperations::NoOperation }
     },
 
     // r=1, c=19
@@ -131,7 +144,7 @@ static constexpr MMUErrorDesc error_list[] = {
         // r=5, c=20
         N_("TMC driver for the Idler motor is almost overheated. Make sure there is sufficient airflow near the MMU board."),
         ERR_TEMPERATURE_TMC_IDLER_OVER_TEMPERATURE_WARN,
-      { N_("Continue"), N_("Restart MMU"), nullptr }
+      { ButtonOperations::Continue, ButtonOperations::RestartMMU, ButtonOperations::NoOperation }
     },
     
     // r=1, c=19
@@ -139,7 +152,7 @@ static constexpr MMUErrorDesc error_list[] = {
         // r=5, c=20
         N_("TMC driver for the Pulley motor is overheated. Cool down the MMU board and restart MMU."),
         ERR_TEMPERATURE_TMC_PULLEY_OVER_TEMPERATURE_ERROR,
-      { nullptr, N_("Restart MMU"), nullptr }
+      { ButtonOperations::NoOperation, ButtonOperations::RestartMMU, ButtonOperations::NoOperation }
     },
 
     // r=1, c=19
@@ -147,7 +160,7 @@ static constexpr MMUErrorDesc error_list[] = {
         // r=5, c=20
         N_("TMC driver for the Selector motor is overheated. Cool down the MMU board and restart MMU."),
         ERR_TEMPERATURE_TMC_SELECTOR_OVER_TEMPERATURE_ERROR,
-      { nullptr, N_("Restart MMU"), nullptr }
+      { ButtonOperations::NoOperation, ButtonOperations::RestartMMU, ButtonOperations::NoOperation }
     },
 
     // r=1, c=19
@@ -155,7 +168,7 @@ static constexpr MMUErrorDesc error_list[] = {
         // r=5, c=20
         N_("TMC driver for the Idler motor is overheated. Cool down the MMU board and restart MMU."),
         ERR_TEMPERATURE_TMC_IDLER_OVER_TEMPERATURE_ERROR,
-      { nullptr, N_("Restart MMU"), nullptr }
+      { ButtonOperations::NoOperation, ButtonOperations::RestartMMU, ButtonOperations::NoOperation }
     },
     
     /////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -166,7 +179,7 @@ static constexpr MMUErrorDesc error_list[] = {
         // r=5, c=20
         N_("TMC driver for the Pulley motor is not responding. Try restarting the MMU. If the issue persist contact the support."),
         ERR_ELECTRICAL_TMC_PULLEY_DRIVER_ERROR,
-      { nullptr, N_("Restart MMU"), nullptr }
+      { ButtonOperations::NoOperation, ButtonOperations::RestartMMU, ButtonOperations::NoOperation }
     },
 
     // r=1, c=19
@@ -174,7 +187,7 @@ static constexpr MMUErrorDesc error_list[] = {
         // r=5, c=20
         N_("TMC driver for the Selector motor is not responding. Try restarting the MMU. If the issue persist contact the support."),
         ERR_ELECTRICAL_TMC_SELECTOR_DRIVER_ERROR,
-      { nullptr, N_("Restart MMU"), nullptr }
+      { ButtonOperations::NoOperation, ButtonOperations::RestartMMU, ButtonOperations::NoOperation }
     },
 
     // r=1, c=19
@@ -182,7 +195,7 @@ static constexpr MMUErrorDesc error_list[] = {
         // r=5, c=20
         N_("TMC driver for the Idler motor is not responding. Try restarting the MMU. If the issue persist contact the support."),
         ERR_ELECTRICAL_TMC_IDLER_DRIVER_ERROR,
-      { nullptr, N_("Restart MMU"), nullptr }
+      { ButtonOperations::NoOperation, ButtonOperations::RestartMMU, ButtonOperations::NoOperation }
     },
 
     // r=1, c=19
@@ -190,7 +203,7 @@ static constexpr MMUErrorDesc error_list[] = {
         // r=5, c=20
         N_("TMC driver for the Pulley motor was restarted. There is probably an issue with the electronics. Check the wiring and connectors."),
         ERR_ELECTRICAL_TMC_PULLEY_DRIVER_RESET,
-      { nullptr, N_("Restart MMU"), nullptr }
+      { ButtonOperations::NoOperation, ButtonOperations::RestartMMU, ButtonOperations::NoOperation }
     },
     
     // r=1, c=19
@@ -198,7 +211,7 @@ static constexpr MMUErrorDesc error_list[] = {
         // r=5, c=20
         N_("TMC driver for the Selector motor was restarted. There is probably an issue with the electronics. Check the wiring and connectors."),
         ERR_ELECTRICAL_TMC_SELECTOR_DRIVER_RESET,
-      { nullptr, N_("Restart MMU"), nullptr }
+      { ButtonOperations::NoOperation, ButtonOperations::RestartMMU, ButtonOperations::NoOperation }
     },
 
     // r=1, c=19
@@ -206,7 +219,7 @@ static constexpr MMUErrorDesc error_list[] = {
         // r=5, c=20
         N_("TMC driver for the Idler motor was restarted. There is probably an issue with the electronics. Check the wiring and connectors."),
         ERR_ELECTRICAL_TMC_IDLER_DRIVER_RESET,
-      { nullptr, N_("Restart MMU"), nullptr }
+      { ButtonOperations::NoOperation, ButtonOperations::RestartMMU, ButtonOperations::NoOperation }
     },
     
     // r=1, c=19
@@ -214,7 +227,7 @@ static constexpr MMUErrorDesc error_list[] = {
         // r=5, c=20
         N_("Not enough current for the Pulley TMC driver. There is probably an issue with the electronics. Check the wiring and connectors."),
         ERR_ELECTRICAL_TMC_PULLEY_UNDERVOLTAGE_ERROR,
-      { nullptr, N_("Restart MMU"), nullptr }
+      { ButtonOperations::NoOperation, ButtonOperations::RestartMMU, ButtonOperations::NoOperation }
     },
 
     // r=1, c=19
@@ -222,7 +235,7 @@ static constexpr MMUErrorDesc error_list[] = {
         // r=5, c=20
         N_("Not enough current for the Selector TMC driver. There is probably an issue with the electronics. Check the wiring and connectors."),
         ERR_ELECTRICAL_TMC_SELECTOR_UNDERVOLTAGE_ERROR,
-      { nullptr, N_("Restart MMU"), nullptr }
+      { ButtonOperations::NoOperation, ButtonOperations::RestartMMU, ButtonOperations::NoOperation }
     },
 
     // r=1, c=19
@@ -230,7 +243,7 @@ static constexpr MMUErrorDesc error_list[] = {
         // r=5, c=20
         N_("Not enough current for the Idler TMC driver. There is probably an issue with the electronics. Check the wiring and connectors."),
         ERR_ELECTRICAL_TMC_IDLER_UNDERVOLTAGE_ERROR,
-      { nullptr, N_("Restart MMU"), nullptr }
+      { ButtonOperations::NoOperation, ButtonOperations::RestartMMU, ButtonOperations::NoOperation }
     },
     
     // r=1, c=19
@@ -238,7 +251,7 @@ static constexpr MMUErrorDesc error_list[] = {
         // r=5, c=20
         N_("Short circuit on the Pulley TMC driver. Check the wiring and connectors. If the issue persist contact the support."),
         ERR_ELECTRICAL_TMC_PULLEY_DRIVER_SHORTED,
-      { nullptr, N_("Restart MMU"), nullptr }
+      { ButtonOperations::NoOperation, ButtonOperations::RestartMMU, ButtonOperations::NoOperation }
     },
 
     // r=1, c=19
@@ -246,7 +259,7 @@ static constexpr MMUErrorDesc error_list[] = {
         // r=5, c=20
         N_("Short circuit on the Selector TMC driver. Check the wiring and connectors. If the issue persist contact the support."),
         ERR_ELECTRICAL_TMC_SELECTOR_DRIVER_SHORTED,
-      { nullptr, N_("Restart MMU"), nullptr }
+      { ButtonOperations::NoOperation, ButtonOperations::RestartMMU, ButtonOperations::NoOperation }
     },
 
     // r=1, c=19
@@ -254,7 +267,7 @@ static constexpr MMUErrorDesc error_list[] = {
         // r=5, c=20
         N_("Short circuit on the Idler TMC driver. Check the wiring and connectors. If the issue persist contact the support."),
         ERR_ELECTRICAL_TMC_IDLER_DRIVER_SHORTED,
-      { nullptr, N_("Restart MMU"), nullptr }
+      { ButtonOperations::NoOperation, ButtonOperations::RestartMMU, ButtonOperations::NoOperation }
     },
 
     /////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -265,7 +278,7 @@ static constexpr MMUErrorDesc error_list[] = {
         // r=5, c=20
         N_("MMU unit not responding. Check the wiring and connectors. If the issue persist contact the support."),
         ERR_CONNECT_MMU_NOT_RESPONDING,
-      { nullptr, N_("Restart MMU"), nullptr }
+      { ButtonOperations::NoOperation, ButtonOperations::RestartMMU, ButtonOperations::NoOperation }
     },
     
     // r=1, c=19
@@ -273,7 +286,7 @@ static constexpr MMUErrorDesc error_list[] = {
         // r=5, c=20
         N_("MMU unit not responding correctly. Check the wiring and connectors. If the issue persist contact the support."),
         ERR_CONNECT_COMMUNICATION_ERROR,
-      { nullptr, N_("Restart MMU"), nullptr }
+      { ButtonOperations::NoOperation, ButtonOperations::RestartMMU, ButtonOperations::NoOperation }
     },
     
     /////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -284,7 +297,7 @@ static constexpr MMUErrorDesc error_list[] = {
         // r=5, c=20
         N_("Cannot perform the action, filament is already loaded. Unload it first."),
         ERR_SYSTEM_FILAMENT_ALREADY_LOADED, 
-        { N_("Unload"), N_("Proceed"), N_("Restart MMU") }
+        { ButtonOperations::Unload, ButtonOperations::Continue, ButtonOperations::RestartMMU }
     },
     
     // r=1, c=19
@@ -292,7 +305,7 @@ static constexpr MMUErrorDesc error_list[] = {
         // r=5, c=20
         N_("Requested filament tool is not available on this hardware. Check the G-code file for possible issue."),
         ERR_SYSTEM_INVALID_TOOL, 
-        { N_("Stop print"), N_("Restart MMU"), nullptr }
+        { ButtonOperations::StopPrint, ButtonOperations::RestartMMU, ButtonOperations::NoOperation }
     },
 
     // r=1, c=19
@@ -300,7 +313,7 @@ static constexpr MMUErrorDesc error_list[] = {
         // r=5, c=20
         N_("Internal runtime error of the firmware, please restart the MMU."),
         ERR_SYSTEM_QUEUE_FULL, 
-        { nullptr, N_("Restart MMU"), nullptr }
+      { ButtonOperations::NoOperation, ButtonOperations::RestartMMU, ButtonOperations::NoOperation }
     },
 
     // r=1, c=19
@@ -308,7 +321,7 @@ static constexpr MMUErrorDesc error_list[] = {
         // r=5, c=20
         N_("The MMU unit reports its FW version incompatible with the printer's firmware. Make sure the MMU firmware is up to date."),
         ERR_SYSTEM_VERSION_MISMATCH, 
-        { nullptr, N_("Disable MMU"), nullptr }
+      { ButtonOperations::NoOperation, ButtonOperations::DisableMMU, ButtonOperations::NoOperation }
     },
 
     // r=1, c=19
@@ -316,7 +329,7 @@ static constexpr MMUErrorDesc error_list[] = {
         // r=5, c=20
         N_("Internal runtime error. Try restarting the MMU unit or updating the firmware. If the issue persist contact the support."),
         ERR_SYSTEM_RUNTIME_ERROR,
-      { nullptr, N_("Restart MMU"), nullptr }
+      { ButtonOperations::NoOperation, ButtonOperations::RestartMMU, ButtonOperations::NoOperation }
     }
 };
 
