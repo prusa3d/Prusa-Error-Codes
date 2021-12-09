@@ -93,7 +93,7 @@ static constexpr MMUErrorDesc error_list[] = {
         // r=5, c=20
         N_("FINDA didn't trigger while loading filament. Ensure that the steel FINDA ball can move freely and check the wiring."),
         ERR_MECHANICAL_FINDA_DIDNT_TRIGGER,
-        { ButtonOperations::Retry, ButtonOperations::SlowLoad, ButtonOperations::Continue }
+        { ButtonOperations::SlowLoad, ButtonOperations::Retry, ButtonOperations::Continue }
     },
 
     // r=1, c=19
@@ -101,7 +101,7 @@ static constexpr MMUErrorDesc error_list[] = {
         // r=5, c=20
         N_("FINDA didn't switch off while unloading filament. Try unloading the filament manually and ensure steel FINDA ball can move freely."),
         ERR_MECHANICAL_FINDA_DIDNT_SWITCH_OFF,
-      { ButtonOperations::Retry, ButtonOperations::SlowLoad, ButtonOperations::Continue }
+      { ButtonOperations::SlowLoad, ButtonOperations::Retry, ButtonOperations::Continue }
     },
 
     // r=1, c=19
@@ -109,7 +109,7 @@ static constexpr MMUErrorDesc error_list[] = {
         // r=5, c=20
         N_("Filament sensor didn't trigger while loading the filament. Check that the filament reached the fsensor and check the wiring."),
         ERR_MECHANICAL_FSENSOR_DIDNT_TRIGGER,
-      { ButtonOperations::Retry, ButtonOperations::SlowLoad, ButtonOperations::Continue }
+      { ButtonOperations::SlowLoad, ButtonOperations::Retry, ButtonOperations::Continue }
     },
 
     // r=1, c=19
@@ -117,7 +117,7 @@ static constexpr MMUErrorDesc error_list[] = {
         // r=5, c=20
         N_("Filament sensor didn't switch off while unloading the filament. The filament is probably stuck near the sensor or the sensor is malfunctioning."),
         ERR_MECHANICAL_FSENSOR_DIDNT_SWITCH_OFF,
-      { ButtonOperations::Retry, ButtonOperations::SlowLoad, ButtonOperations::Continue }
+      { ButtonOperations::SlowLoad, ButtonOperations::Retry, ButtonOperations::Continue }
     },
 
     /////////////////////////////////////////////////////////////////////////////////////////////////////
