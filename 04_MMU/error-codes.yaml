@@ -49,6 +49,25 @@ Errors:
   id: ""
   approved: false
   #suggestion1: collect stall-guard data on the pulley, possibly increase the torque on second attempt
+- code: "04105"
+  title: "PULLEY STALLED"
+  text: "The Pulley stalled - check for anything blocking the filament from being pushed/pulled to/from the extruder."
+  action: [Retry]
+  id: ""
+  approved: false
+- code: "04115"
+  title: "SELECTOR CANNOT HOME"
+  text: "The Selector cannot home properly - check for anything blocking its movement."
+  action: [Retry]
+  id: ""
+  approved: false
+- code: "04125"
+  title: "IDLER CANNOT HOME"
+  text: "The Idler cannot home properly - check for anything blocking its movement."
+  action: [Retry]
+  id: ""
+  approved: false
+
 
 # TEMPERATURE    xx2xx   # Temperature measurement
 - code: "04201"
