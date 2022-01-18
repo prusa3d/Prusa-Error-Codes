@@ -124,6 +124,30 @@ static constexpr MMUErrorDesc error_list[] = {
       { ButtonOperations::SlowLoad, ButtonOperations::Retry, ButtonOperations::Continue }
     },
 
+    // r=1, c=19
+    { N_("PULLEY STALLED"),
+        // r=5, c=20
+        N_("The Pulley stalled - check for anything blocking the filament from being pushed/pulled to/from the extruder."),
+        ERR_MECHANICAL_PULLEY_STALLED,
+      { ButtonOperations::NoOperation, ButtonOperations::Retry, ButtonOperations::NoOperation }
+    },
+
+    // r=1, c=19
+    { N_("SELECTOR CANNOT HOME"),
+        // r=5, c=20
+        N_("The Selector cannot home properly - check for anything blocking its movement."),
+        ERR_MECHANICAL_SELECTOR_CANNOT_HOME,
+      { ButtonOperations::NoOperation, ButtonOperations::Retry, ButtonOperations::NoOperation }
+    },
+
+    // r=1, c=19
+    { N_("IDLER CANNOT HOME"),
+        // r=5, c=20
+        N_("The Idler cannot home properly - check for anything blocking its movement."),
+        ERR_MECHANICAL_IDLER_CANNOT_HOME,
+      { ButtonOperations::NoOperation, ButtonOperations::Retry, ButtonOperations::NoOperation }
+    },
+
     /////////////////////////////////////////////////////////////////////////////////////////////////////
     // TEMPERATURE
     
