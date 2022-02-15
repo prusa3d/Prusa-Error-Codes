@@ -138,9 +138,11 @@ Errors:
   approved: false
 
 - code: "10125"
-  title: "GARBAGE COLLECTOR MISSING"
-  text: "Garbage collector was not detected, it does not seem to be correctly attached to the print platform. Attach it properly and try again."
-  id: "GARBAGE_COLLECTOR_MISSING"
+  title: "CLEANING ADAPTOR MISSING"
+  text: "Cleaning adaptor was not detected, it does not seem to be correctly attached to the print platform.
+
+  Attach it properly and try again."
+  id: "CLEANING_ADAPTOR_MISSING"
   approved: false
 
 
