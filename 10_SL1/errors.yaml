@@ -161,11 +161,11 @@ Errors:
     Check if the fan is connected correctly.
 
 
-    RPM data: %(rpm)s
+    RPM data: %(min_rpm)d - %(max_rpm)d
 
-    Average: %(avg)s"
+    Average: %(avg_rpm)d (%(lower_bound_rpm)d - %(upper_bound_rpm)d), error: %(error)d"
   id: "FAN_RPM_OUT_OF_TEST_RANGE_ID"
-  approved: true
+  approved: false
 
 # TEMPERATURE    102xx   # Temperature measurement, thermistors, heating
 
@@ -212,7 +212,7 @@ Errors:
 
 - code: "10211"
   title: "TEMPERATURE OUT OF RANGE"
-  text: "%(sensor__map_HardwareDeviceId)s not in range!
+  text: "Reading of %(sensor__map_HardwareDeviceId)s not in range!
 
 
     Measured temperature: %(temperature).1f °C, allowed range: %(min)d - %(max)d °C.
