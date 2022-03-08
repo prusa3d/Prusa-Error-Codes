@@ -213,10 +213,14 @@ Errors:
 - code: "10211"
   title: "TEMPERATURE OUT OF RANGE"
   text: "%(sensor__map_HardwareDeviceId)s not in range!
-    Measured temperature: %(temperature).1f °C.
+
+
+    Measured temperature: %(temperature).1f °C, allowed range: %(min)d - %(max)d °C.
+
+
     Keep the printer out of direct sunlight at room temperature (18 - 32 °C)."
   id: "TEMPERATURE_OUT_OF_RANGE_ID"
-  approved: true
+  approved: false
 
 # ELECTRICAL     103xx   # Electrical, MINDA, FINDA, Motion Controller, …
 - code: "10301"
