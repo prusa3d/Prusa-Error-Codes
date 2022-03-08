@@ -344,6 +344,7 @@ def unique_codes(cls):
 
     return cls
 
+
 def unique_titles(cls):
     """
     Class decorator requiring unique title definition inside the class
