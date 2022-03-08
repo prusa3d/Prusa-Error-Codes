@@ -36,6 +36,7 @@ Errors:
   id: "TOWER_MOVE_FAILED"
   approved: true
 
+# Deprecated, use FAN_FAILED_ID
 - code: "10106"
   title: "FAN FAILURE"
   text: "Incorrect RPM reading of the %(failed_fans_text)s fan. Please check its wiring and connection."
@@ -108,6 +109,7 @@ Errors:
   id: "INVALID_TILT_ALIGN_POSITION"
   approved: false
 
+# Deprecated, use FAN_RPM_OUT_OF_TEST_RANGE_ID
 - code: "10122"
   title: "FAN RPM OUT OF TEST RANGE"
   text: "RPM of %(fan)s not in range!
@@ -145,9 +147,29 @@ Errors:
   id: "CLEANING_ADAPTOR_MISSING"
   approved: false
 
+- code: "10126"
+  title: "FAN FAILURE"
+  text: "Incorrect RPM reading of the %(fan__map_HardwareDeviceId)s. Please check its wiring and connection."
+  id: "FAN_FAILED_ID"
+  approved: true
 
+- code: "10127"
+  title: "FAN RPM OUT OF TEST RANGE"
+  text: "RPM of %(fan__map_HardwareDeviceId)s not in range!
+
+
+    Check if the fan is connected correctly.
+
+
+    RPM data: %(rpm)s
+
+    Average: %(avg)s"
+  id: "FAN_RPM_OUT_OF_TEST_RANGE_ID"
+  approved: true
 
 # TEMPERATURE    102xx   # Temperature measurement, thermistors, heating
+
+# Deprecated, use TEMP_SENSOR_FAILED_ID
 - code: "10205"
   title: "TEMPERATURE SENSOR FAILED"
   text: "The %(sensor)s sensor failed. Check the wiring and connection."
@@ -167,6 +189,7 @@ Errors:
   id: "A64_OVERHEAT"
   approved: false
 
+# Deprecated, use TEMPERATURE_OUT_OF_RANGE_ID
 - code: "10208"
   title: "TEMPERATURE OUT OF RANGE"
   text: "%(sensor)s not in range!
@@ -181,6 +204,19 @@ Errors:
   id: "UV_TEMP_SENSOR_FAILED"
   approved: true
 
+- code: "10210"
+  title: "TEMPERATURE SENSOR FAILED"
+  text: "The %(sensor__map_HardwareDeviceId)s sensor failed. Check the wiring and connection."
+  id: "TEMP_SENSOR_FAILED_ID"
+  approved: true
+
+- code: "10211"
+  title: "TEMPERATURE OUT OF RANGE"
+  text: "%(sensor__map_HardwareDeviceId)s not in range!
+    Measured temperature: %(temperature).1f °C.
+    Keep the printer out of direct sunlight at room temperature (18 - 32 °C)."
+  id: "TEMPERATURE_OUT_OF_RANGE_ID"
+  approved: true
 
 # ELECTRICAL     103xx   # Electrical, MINDA, FINDA, Motion Controller, …
 - code: "10301"
