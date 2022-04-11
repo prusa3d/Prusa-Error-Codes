@@ -63,3 +63,8 @@ Errors:
   text: "Measured temperature is not matching expected value. Check the thermistor is in contact with hotend. In case of damage, replace it."
   id: ""
   approved: true
+- code: "12301"
+  title: "HOMING ERROR"
+  text: "SuperPINDA sensor is probably broken or disconnected, could not home Z-axis properly."
+  id: ""
+  approved: true
