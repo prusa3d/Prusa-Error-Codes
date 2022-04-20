@@ -5,7 +5,7 @@
 #include "inttypes.h"
 #include "i18n.h"
 
-namespace MMU2 {
+namespace mmu {
 
 static constexpr uint8_t ERR_MMU_CODE = 4;
 
@@ -361,4 +361,4 @@ static constexpr MMUErrorDesc error_list[] = {
     }
 };
 
-} // namespace MMU2
+} // namespace mmu
