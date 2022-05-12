@@ -246,7 +246,7 @@ Errors:
 - code: "04502"
   title: "INVALID TOOL"
   text: "Requested filament tool is not available on this hardware. Check the G-code for tool index out of range (T0-T4)."
-  action: [Stop Print, Ignore]  
+  action: [Stop Print, Reset MMU]  
   id: ""
   approved: false
 
@@ -259,7 +259,7 @@ Errors:
 
 - code: "04504"
   title: "FW UPDATE NEEDED"
-  text: "The MMU unit reports its FW version incompatible with the printer's firmware. Make sure the MMU firmware is up to date"
+  text: "The MMU unit reports its FW version incompatible with the printer's firmware. Make sure the MMU firmware is up to date."
   action: [Update, Disable MMU] 
   id: ""
   approved: false
