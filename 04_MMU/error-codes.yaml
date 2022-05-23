@@ -57,6 +57,15 @@ Errors:
   id: ""
   approved: true
 
+  code: "04106"
+  title: "FSENSOR TOO EARLY"
+  text: "Filament sensor triggered too early while loading to extruder. Check there isn't anything stuck in PTFE tube. Check that sensor reads properly."
+  action: [Retry]
+  id: ""
+  approved: false
+  # FSENSOR_TOO_EARLY = E32777 
+  # FSensor triggered while doing FastFeedToBondtech. ShortPFTE? Piece of filament in PTFE? Sensor malfunction?
+
 - code: "04115"
   title: "SELECTOR CANNOT HOME"
   text: "The Selector cannot home properly. Check for anything blocking its movement."
