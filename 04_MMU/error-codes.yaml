@@ -240,6 +240,30 @@ Errors:
   id: ""
   approved: true
 
+- code: "04305"
+  title: "MMU SELFTEST FAILED"
+  text: "MMU selftest failed on the Pulley TMC driver. Check the wiring and connectors. If the issue persists contact support."
+  text_short: "More details online."
+  action: [Reset MMU]
+  id: ""
+  approved: false
+
+- code: "04315"
+  title: "MMU SELFTEST FAILED"
+  text: "MMU selftest failed on the Selector TMC driver. Check the wiring and connectors. If the issue persists contact support."
+  text_short: "More details online."
+  action: [Reset MMU]
+  id: ""
+  approved: false
+
+- code: "04325"
+  title: "MMU SELFTEST FAILED"
+  text: "MMU selftest failed on the Idler TMC driver. Check the wiring and connectors. If the issue persists contact support."
+  text_short: "More details online."
+  action: [Reset MMU]
+  id: ""
+  approved: false
+
 # CONNECTIVITY
 - code: "04401"
   title: "MMU NOT RESPONDING"
