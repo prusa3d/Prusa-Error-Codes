@@ -68,3 +68,8 @@ Errors:
   text: "SuperPINDA sensor is probably broken or disconnected, could not home Z-axis properly."
   id: "HOMING_ERROR"
   approved: true
+- code: "12510"
+  title: "EMERGENCY STOP"
+  text: "Emergency stop invoked from G-code (M112)."
+  id: "EMERGENCY_STOP"
+  approved: true
