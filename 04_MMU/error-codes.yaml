@@ -63,7 +63,7 @@ Errors:
   action: [Retry]
   id: "FSENSOR_TOO_EARLY"
   approved: false
-  # FSENSOR_TOO_EARLY = E32777 
+  # FSENSOR_TOO_EARLY = E32777
   # FSensor triggered while doing FastFeedToBondtech. ShortPFTE? Piece of filament in PTFE? Sensor malfunction?
 
   code: "04107"
@@ -73,7 +73,7 @@ Errors:
   id: "INSPECT_FINDA"
   approved: false
   # FINDA_FLICKERS
-  
+
 - code: "04115"
   title: "SELECTOR CANNOT HOME"
   text: "The Selector cannot home properly. Check for anything blocking its movement."
@@ -94,7 +94,7 @@ Errors:
   action: [Retry]
   id: "IDLER_CANNOT_HOME"
   approved: true
-  
+
   code: "04126"
   title: "IDLER CANNOT MOVE"
   text: "The Idler cannot move properly. Check for anything blocking its movement. Check the wiring is correct."
@@ -114,7 +114,7 @@ Errors:
 - code: "04211"
   title: "WARNING TMC TOO HOT"
   text: "TMC driver for the Selector motor is almost overheating. Make sure there is sufficient airflow near the MMU board."
-  text_short: "More details online." 
+  text_short: "More details online."
   action: [Continue, Reset MMU]
   id: "WARNING_TMC_SELECTOR_TOO_HOT"
   approved: true
