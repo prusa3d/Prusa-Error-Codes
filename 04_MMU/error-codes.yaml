@@ -113,7 +113,7 @@ Errors:
   title: "WARNING TMC TOO HOT"
   text: "TMC driver for the Pulley motor is almost overheating. Make sure there is sufficient airflow near the MMU board."
   text_short: "More details online."
-  action: [Continue, Reset MMU]
+  action: [Continue, ResetMMU]
   id: "WARNING_TMC_PULLEY_TOO_HOT"
   approved: true
 
@@ -121,7 +121,7 @@ Errors:
   title: "WARNING TMC TOO HOT"
   text: "TMC driver for the Selector motor is almost overheating. Make sure there is sufficient airflow near the MMU board."
   text_short: "More details online."
-  action: [Continue, Reset MMU]
+  action: [Continue, ResetMMU]
   id: "WARNING_TMC_SELECTOR_TOO_HOT"
   approved: true
 
@@ -129,7 +129,7 @@ Errors:
   title: "WARNING TMC TOO HOT"
   text: "TMC driver for the Idler motor is almost overheating. Make sure there is sufficient airflow near the MMU board."
   text_short: "More details online."
-  action: [Continue, Reset MMU]
+  action: [Continue, ResetMMU]
   id: "WARNING_TMC_IDLER_TOO_HOT"
   approved: true
 
@@ -137,7 +137,7 @@ Errors:
   title: "TMC OVERHEAT ERROR"
   text: "TMC driver for the Pulley motor is overheated. Cool down the MMU board and reset MMU."
   text_short: "More details online."
-  action: [Reset MMU]
+  action: [ResetMMU]
   id: "TMC_PULLEY_OVERHEAT_ERROR"
   approved: true
 
@@ -145,7 +145,7 @@ Errors:
   title: "TMC OVERHEAT ERROR"
   text: "TMC driver for the Selector motor is overheated. Cool down the MMU board and reset MMU."
   text_short: "More details online."
-  action: [Reset MMU]
+  action: [ResetMMU]
   id: "TMC_SELECTOR_OVERHEAT_ERROR"
   approved: true
 
@@ -153,7 +153,7 @@ Errors:
   title: "TMC OVERHEAT ERROR"
   text: "TMC driver for the Idler motor is overheated. Cool down the MMU board and reset MMU."
   text_short: "More details online."
-  action: [Reset MMU]
+  action: [ResetMMU]
   id: "TMC_IDLER_OVERHEAT_ERROR"
   approved: true
 
@@ -162,7 +162,7 @@ Errors:
   title: "TMC DRIVER ERROR"
   text: "TMC driver for the Pulley motor is not responding. Try resetting the MMU. If the issue persists contact support."
   text_short: "More details online."
-  action: [Reset MMU]
+  action: [ResetMMU]
   id: "TMC_PULLEY_DRIVER_ERROR"
   approved: true
 
@@ -170,7 +170,7 @@ Errors:
   title: "TMC DRIVER ERROR"
   text: "TMC driver for the Selector motor is not responding. Try resetting the MMU. If the issue persists contact support."
   text_short: "More details online."
-  action: [Reset MMU]
+  action: [ResetMMU]
   id: "TMC_SELECTOR_DRIVER_ERROR"
   approved: true
 
@@ -178,7 +178,7 @@ Errors:
   title: "TMC DRIVER ERROR"
   text: "TMC driver for the Idler motor is not responding. Try resetting the MMU. If the issue persists contact support."
   text_short: "More details online."
-  action: [Reset MMU]
+  action: [ResetMMU]
   id: "TMC_IDLER_DRIVER_ERROR"
   approved: true
 
@@ -186,7 +186,7 @@ Errors:
   title: "TMC DRIVER RESET"
   text: "TMC driver for the Pulley motor was restarted. There is probably an issue with the electronics. Check the wiring and connectors."
   text_short: "More details online."
-  action: [Reset MMU]
+  action: [ResetMMU]
   id: "TMC_PULLEY_DRIVER_RESET"
   approved: true
 
@@ -194,7 +194,7 @@ Errors:
   title: "TMC DRIVER RESET"
   text: "TMC driver for the Selector motor was restarted. There is probably an issue with the electronics. Check the wiring and connectors."
   text_short: "More details online."
-  action: [Reset MMU]
+  action: [ResetMMU]
   id: "TMC_SELECTOR_DRIVER_RESET"
   approved: true
 
@@ -202,7 +202,7 @@ Errors:
   title: "TMC DRIVER RESET"
   text: "TMC driver for the Idler motor was restarted. There is probably an issue with the electronics. Check the wiring and connectors."
   text_short: "More details online."
-  action: [Reset MMU]
+  action: [ResetMMU]
   id: "TMC_IDLER_DRIVER_RESET"
   approved: true
 
@@ -210,7 +210,7 @@ Errors:
   title: "TMC UNDERVOLTAGE ERROR"
   text: "Not enough current for the Pulley TMC driver. There is probably an issue with the electronics. Check the wiring and connectors."
   text_short: "More details online."
-  action: [Reset MMU]
+  action: [ResetMMU]
   id: "TMC_PULLEY_UNDERVOLTAGE_ERROR"
   approved: true
 
@@ -218,7 +218,7 @@ Errors:
   title: "TMC UNDERVOLTAGE ERROR"
   text: "Not enough current for the Selector TMC driver. There is probably an issue with the electronics. Check the wiring and connectors."
   text_short: "More details online."
-  action: [Reset MMU]
+  action: [ResetMMU]
   id: "TMC_SELECTOR_UNDERVOLTAGE_ERROR"
   approved: true
 
@@ -226,7 +226,7 @@ Errors:
   title: "TMC UNDERVOLTAGE ERROR"
   text: "Not enough current for the Idler TMC driver. There is probably an issue with the electronics. Check the wiring and connectors."
   text_short: "More details online."
-  action: [Reset MMU]
+  action: [ResetMMU]
   id: "TMC_IDLER_UNDERVOLTAGE_ERROR"
   approved: true
 
@@ -234,7 +234,7 @@ Errors:
   title: "TMC DRIVER SHORTED"
   text: "Short circuit on the Pulley TMC driver. Check the wiring and connectors. If the issue persists contact support."
   text_short: "More details online."
-  action: [Reset MMU]
+  action: [ResetMMU]
   id: "TMC_PULLEY_DRIVER_SHORTED"
   approved: true
 
@@ -242,7 +242,7 @@ Errors:
   title: "TMC DRIVER SHORTED"
   text: "Short circuit on the Selector TMC driver. Check the wiring and connectors. If the issue persists contact support."
   text_short: "More details online."
-  action: [Reset MMU]
+  action: [ResetMMU]
   id: "TMC_SELECTOR_DRIVER_SHORTED"
   approved: true
 
@@ -250,7 +250,7 @@ Errors:
   title: "TMC DRIVER SHORTED"
   text: "Short circuit on the Idler TMC driver. Check the wiring and connectors. If the issue persists contact support."
   text_short: "More details online."
-  action: [Reset MMU]
+  action: [ResetMMU]
   id: "TMC_IDLER_DRIVER_SHORTED"
   approved: true
 
@@ -258,7 +258,7 @@ Errors:
   title: "MMU SELFTEST FAILED"
   text: "MMU selftest failed on the Pulley TMC driver. Check the wiring and connectors. If the issue persists contact support."
   text_short: "More details online."
-  action: [Reset MMU]
+  action: [ResetMMU]
   id: "MMU_PULLEY_SELFTEST_FAILED"
   approved: false
 
@@ -266,7 +266,7 @@ Errors:
   title: "MMU SELFTEST FAILED"
   text: "MMU selftest failed on the Selector TMC driver. Check the wiring and connectors. If the issue persists contact support."
   text_short: "More details online."
-  action: [Reset MMU]
+  action: [ResetMMU]
   id: "MMU_SELECTOR_SELFTEST_FAILED"
   approved: false
 
@@ -274,7 +274,7 @@ Errors:
   title: "MMU SELFTEST FAILED"
   text: "MMU selftest failed on the Idler TMC driver. Check the wiring and connectors. If the issue persists contact support."
   text_short: "More details online."
-  action: [Reset MMU]
+  action: [ResetMMU]
   id: "MMU_IDLER_SELFTEST_FAILED"
   approved: false
 
@@ -282,14 +282,14 @@ Errors:
 - code: "04401"
   title: "MMU NOT RESPONDING"
   text: "MMU unit not responding. Check the wiring and connectors. If the issue persists, contact support."
-  action: [Reset MMU]
+  action: [ResetMMU]
   id: "MMU_NOT_RESPONDING"
   approved: true
 
 - code: "04402"
   title: "COMMUNICATION ERROR"
   text: "MMU unit not responding correctly. Check the wiring and connectors. If the issue persists, contact support."
-  action: [Reset MMU]
+  action: [ResetMMU]
   id: "COMMUNICATION_ERROR"
   approved: true
 
@@ -297,35 +297,35 @@ Errors:
 - code: "04501"
   title: "FILAMENT ALREADY LOADED"
   text: "Cannot perform the action, filament is already loaded. Unload it first."
-  action: [Unload, Proceed]
+  action: [Unload, Continue]
   id: "FILAMENT_ALREADY_LOADED"
   approved: true
 
 - code: "04502"
   title: "INVALID TOOL"
   text: "Requested filament tool is not available on this hardware. Check the G-code for tool index out of range (T0-T4)."
-  action: [Stop Print, Reset MMU]
+  action: [StopPrint, ResetMMU]
   id: "INVALID_TOOL"
   approved: true
 
 - code: "04503"
   title: "QUEUE FULL"
   text: "MMU Firmware internal error, please reset the MMU."
-  action: [Reset MMU]
+  action: [ResetMMU]
   id: "QUEUE_FULL"
   approved: true
 
 - code: "04504"
   title: "FW UPDATE NEEDED"
   text: "The MMU unit reports its FW version incompatible with the printer's firmware. Make sure the MMU firmware is up to date."
-  action: [Update, Disable MMU]
+  action: [DisableMMU]
   id: "FW_UPDATE_NEEDED"
   approved: true
 
 - code: "04505"
   title: "FW RUNTIME ERROR"
   text: "Internal runtime error. Try resetting the MMU unit or updating the firmware. If the issue persists, contact support."
-  action: [Reset MMU]
+  action: [ResetMMU]
   id: "FW_RUNTIME_ERROR"
   approved: true
 
