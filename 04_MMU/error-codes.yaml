@@ -342,3 +342,12 @@ Errors:
   action: [Continue]
   id: "FILAMENT_EJECTED"
   approved: true
+
+# Only as a fallback when we'd fail to detect which exact error happened, if
+# this ever gets triggered, a specific error should be added for the case
+- code: "04900"
+  title: "UNKNOWN ERROR"
+  text: "Unexpected error occurred."
+  action: [ResetMMU]
+  id: "UNKNOWN_ERROR"
+  approved: false
