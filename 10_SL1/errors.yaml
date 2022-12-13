@@ -61,6 +61,12 @@ Errors:
   id: "RESIN_TOO_HIGH"
   approved: true
 
+- code: "10110"
+  title: "SELF-TEST ERROR"
+  text: "The printer is not calibrated through self-test. Please run Self-Test calibration first."
+  id: "NOT_SELF_TESTED"
+  approved: true
+
 - code: "10113"
   title: "CALIBRATION ERROR"
   text: "The printer is not calibrated. Please run the Wizard first."
