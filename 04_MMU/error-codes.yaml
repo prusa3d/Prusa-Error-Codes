@@ -63,7 +63,6 @@ Errors:
   action: [Retry]
   id: "FSENSOR_TOO_EARLY"
   approved: false
-  # FSENSOR_TOO_EARLY = E32777
   # FSensor triggered while doing FastFeedToBondtech. ShortPFTE? Piece of filament in PTFE? Sensor malfunction?
 
   code: "04107"
@@ -74,6 +73,13 @@ Errors:
   approved: false
   # FINDA_FLICKERS
 
+  code: "04108"
+  title: "LOAD TO EXTR. FAILED"
+  text: "Loading to extruder failed. Inspect the filament tip shape. Refine the sensor calibration, if needed."
+  action: [Retry]
+  id: "LOAD_TO_EXTRUDER_FAILED"
+  approved: false
+
 - code: "04115"
   title: "SELECTOR CANNOT HOME"
   text: "The Selector cannot home properly. Check for anything blocking its movement."
@@ -83,7 +89,7 @@ Errors:
 
 - code: "04116"
   title: "SELECTOR CANNOT MOVE"
-  text: "The Selector cannot move. Check for anything blocking its movement. Check the wiring is correct."
+  text: "The Selector cannot move. Check for anything blocking its movement. Check the wiring."
   action: [Retry]
   id: "SELECTOR_CANNOT_MOVE"
   approved: true
@@ -97,7 +103,7 @@ Errors:
 
   code: "04126"
   title: "IDLER CANNOT MOVE"
-  text: "The Idler cannot move properly. Check for anything blocking its movement. Check the wiring is correct."
+  text: "The Idler cannot move properly. Check for anything blocking its movement. Check the wiring."
   action: [Retry]
   id: "IDLER_CANNOT_MOVE"
   approved: true
@@ -325,7 +331,7 @@ Errors:
 
 - code: "04506"
   title: "UNLOAD MANUALLY"
-  text: "Unexpected FINDA reading. Ensure no filament is under FINDA and the selector is free. Check FINDA connection."
+  text: "Filament detected unexpectedly. Ensure no filament is loaded. Check the sensors and wiring."
   action: [Retry]
   id: "UNLOAD_MANUALLY"
   approved: true
