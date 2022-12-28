@@ -321,7 +321,7 @@ Errors:
   action: [Update, Disable MMU]
   id: "FW_UPDATE_NEEDED"
   approved: true
-  
+
 - code: "04505"
   title: "FW RUNTIME ERROR"
   text: "Internal runtime error. Try resetting the MMU unit or updating the firmware. If the issue persists, contact support."
