@@ -335,3 +335,10 @@ Errors:
   action: [Retry]
   id: "UNLOAD_MANUALLY"
   approved: true
+
+- code: "04507"
+  title: "FILAMENT EJECTED"
+  text: "Remove the ejected filament from the front of the MMU unit."
+  action: [Continue]
+  id: "FILAMENT_EJECTED"
+  approved: true
