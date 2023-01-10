@@ -13,6 +13,8 @@ err_class_mapping = {
     3: "ERR_ELECTRO",
     4: "ERR_CONNECT",
     5: "ERR_SYSTEM",
+    6: "BOOTLOADER",
+    7: "WARNING",
     9: "ERR_OTHER"
 }
 
@@ -68,7 +70,7 @@ def generate_header_file(yaml_file_name, header_file_name, mmu):
                 "id": err_id,
                 "code": err_code,
                 "title": err["title"],
-                "text": err["text"],
+                "text": err["text"].replace("\n", "\\n"),
                 "btns": btns_text
             }
 
