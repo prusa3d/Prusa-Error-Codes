@@ -134,3 +134,68 @@ Errors:
   text: "USB flash drive contains\nunsupported firmware BBF file."
   id: "UNSUPPORTED_BBF_VERSION"
   approved: true
+- code: "13307"
+  title: "HOMING ERROR"
+  text: "Minda cable is broken or not properly connected. Please check the minda cable wiring."
+  id: "MINDA_ERROR"
+  approved: true
+- code: "13501"
+  title: "HEAP"
+  text: "Malloc error - Out of memory."
+  id: "MALLOC_FAILED"
+  approved: true
+- code: "13502"
+  title: "HEAP"
+  text: "PNG Malloc error - Out of memory."
+  id: "PNG_MALLOC_FAILED"
+  approved: true
+- code: "13503"
+  title: "EEPROM TRANSMIT"
+  text: "HAL has encountered I2C error."
+  id: "EEPROM_I2C_TRANSMIT_ERROR"
+  approved: true
+- code: "13504"
+  title: "EEPROM TRANSMIT"
+  text: "HAL has encountered I2C busy."
+  id: "EEPROM_I2C_TRANSMIT_BUSY"
+  approved: true
+- code: "13505"
+  title: "EEPROM TRANSMIT"
+  text: "HAL has encountered I2C timeout."
+  id: "EEPROM_I2C_TRANSMIT_TIMEOUT"
+  approved: true
+- code: "13506"
+  title: "EEPROM TRANSMIT"
+  text: "HAL has encountered I2C undefined error."
+  id: "EEPROM_I2C_TRANSMIT_UNDEFINED"
+  approved: true
+- code: "13507"
+  title: "EEPROM RECEIVE"
+  text: "HAL has encountered I2C error."
+  id: "EEPROM_I2C_RECEIVE_ERROR"
+  approved: true
+- code: "13508"
+  title: "EEPROM RECEIVE"
+  text: "HAL has encountered I2C busy."
+  id: "EEPROM_I2C_RECEIVE_BUSY"
+  approved: true
+- code: "13509"
+  title: "EEPROM RECEIVE"
+  text: "HAL has encountered I2C timeout."
+  id: "EEPROM_I2C_RECEIVE_TIMEOUT"
+  approved: true
+- code: "13511"
+  title: "EEPROM RECEIVE"
+  text: "HAL has encountered I2C undefined error."
+  id: "EEPROM_I2C_RECEIVE_UNDEFINED"
+  approved: true
+  - code: "13524"
+  title: "LITTLE BBF"
+  text: "Allocation of space for bbf failed."
+  id: "LITTLE_BBF_ALLOC_FAILED"
+  approved: true
+- code: "13525"
+  title: "LITTLE BBF"
+  text: "Wrong initialization of little bbf detected while trying to read."
+  id: "LITTLE_BBF_INIT_FAILED"
+  approved: true
