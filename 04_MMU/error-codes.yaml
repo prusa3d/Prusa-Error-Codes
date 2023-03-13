@@ -289,14 +289,14 @@ Errors:
 # CONNECTIVITY
 - code: "04401"
   title: "MMU NOT RESPONDING"
-  text: "MMU not responding. Check the wiring and connectors. If the issue persists, contact support."
+  text: "MMU not responding. Check the wiring and connectors."
   action: [ResetMMU,DisableMMU]
   id: "MMU_NOT_RESPONDING"
   approved: true
 
 - code: "04402"
   title: "COMMUNICATION ERROR"
-  text: "MMU not responding correctly. Check the wiring and connectors. If the issue persists, contact support."
+  text: "MMU not responding correctly. Check the wiring and connectors."
   action: [ResetMMU,DisableMMU]
   id: "COMMUNICATION_ERROR"
   approved: true
@@ -332,7 +332,7 @@ Errors:
 
 - code: "04505"
   title: "FW RUNTIME ERROR"
-  text: "Internal runtime error. Try resetting the MMU or updating the firmware. If the issue persists, contact support."
+  text: "Internal runtime error. Try resetting the MMU or updating the firmware."
   action: [ResetMMU]
   id: "FW_RUNTIME_ERROR"
   approved: true
