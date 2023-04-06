@@ -142,7 +142,7 @@ Errors:
   id: "I2C_RX_ERROR"
   approved: true
 - code: "12316"
-  title: "EEPROM I2C RECEIVE BUSY"
+  title: "I2C RECEIVE BUSY"
   text: "HAL detected an I2C busy when receiving data via I2C."
   id: "I2C_RX_BUSY"
   approved: true
