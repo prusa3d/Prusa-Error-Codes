@@ -87,7 +87,7 @@ Errors:
   approved: true
 - code: "13305"
   title: "HOMING ERROR Y"
-  text: "Failed to home the extruder in Y-axis, make sure there is no obstacle on Y-axis."
+  text: "Failed to home the Y-axis, make sure there is no obstacle on Y-axis."
   id: "HOMING_ERROR_Y"
   approved: true
 - code: "13306"
