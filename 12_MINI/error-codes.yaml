@@ -204,7 +204,7 @@ Errors:
   text: "BBF initialization failed, repeat the action or try another USB drive."
   id: "BBF_INIT_FAILED"
   approved: true
-- code: "13533"
+- code: "12533"
   title: "ESP NOT CONNECTED"
   text: "ESP doesn't seem to be connected."
   id: "ESP_NOT_CONNECTED"
