@@ -22,8 +22,10 @@ mmu_template = \
 """#pragma once
 #include "inttypes.h"
 #include "button_operations.h"
-{include_items}
 
+#include <array>
+
+{include_items}
 
 namespace MMU2 {{
 
@@ -49,6 +51,7 @@ struct MMUErrDesc {{
 mmu_list_template = \
 """#pragma once
 #include "i18n.h"
+
 {include_items}
 
 namespace MMU2 {{
@@ -62,8 +65,8 @@ inline constexpr MMUErrDesc error_list[] = {{{list_items}
 buddy_template = \
 """#pragma once
 #include "inttypes.h"
-{include_items}
 
+{include_items}
 
 inline constexpr uint8_t ERR_PRINTER_CODE = {printer_code};
 
@@ -84,6 +87,7 @@ struct ErrDesc {{
 buddy_list_template = \
 """#pragma once
 #include "i18n.h"
+
 {include_items}
 
 inline constexpr ErrDesc error_list[] = {{{list_items}
