@@ -328,6 +328,16 @@ class Codes:
 
         yaml.dump({"Errors": codes}, file, sort_keys=False)
 
+    @classmethod
+    def get_codes_with_approve_status(cls, approved: bool) -> Dict[str, Code]:
+        """
+        Return dict of error codes by its approved status.
+
+        :param approved: flag definig what approved status to return
+        :return: Dict of error codes
+        """
+        return {item: var for item, var in vars(cls).items() if isinstance(var, Code) and var.approved == approved}
+
 
 def unique_codes(cls):
     """
