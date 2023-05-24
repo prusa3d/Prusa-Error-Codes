@@ -96,10 +96,7 @@ Errors:
   text: "Tilt axis check failed!
 
 
-    Current position: %(position)d steps
-
-
-    "
+    Current position: %(position)d steps"
   id: "TILT_AXIS_CHECK_FAILED"
   approved: true
 
@@ -119,10 +116,6 @@ Errors:
 - code: "10122"
   title: "FAN RPM OUT OF TEST RANGE"
   text: "RPM of %(fan)s not in range!
-
-
-    
-
 
     RPM data: %(rpm)s
 
