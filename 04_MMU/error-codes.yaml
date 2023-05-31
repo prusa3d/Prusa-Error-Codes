@@ -352,6 +352,13 @@ Errors:
   action: [Continue]
   id: "FILAMENT_EJECTED"
   approved: true
+  
+- code: "04508"
+  title: "FILAMENT CHANGE"
+  text: "M600 Filament Change. Load a new filament or eject the old one."
+  action: [Eject,Load]
+  id: "FILAMENT_CHANGE"
+  approved: true
 
 # Only as a fallback when we'd fail to detect which exact error happened, if
 # this ever gets triggered, a specific error should be added for the case
