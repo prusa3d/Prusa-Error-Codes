@@ -285,7 +285,7 @@ Errors:
   text: "MMU MCU detected a 5V undervoltage. There might be an issue with the electronics. Check the wiring and connectors"
   text_short: "More details online."
   action: [ResetMMU]
-  id: "ERR_ELECTRICAL_MCU_UNDERVOLTAGE_VCC"
+  id: "MCU_UNDERVOLTAGE_VCC"
   approved: true
 
 # CONNECTIVITY
