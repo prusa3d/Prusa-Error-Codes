@@ -37,7 +37,7 @@ Errors:
   approved: true
 
 - code: "04103"
-  title: "FSENSOR DIDNT TRIGGER"
+  title: "FSENSOR DIDNT TRIGG."
   text: "Filament sensor didn't trigger while loading the filament. Ensure the sensor is calibrated and the filament reached it."
   action: [Retry]
   id: "FSENSOR_DIDNT_TRIGGER"
@@ -209,7 +209,7 @@ Errors:
   approved: true
 
 - code: "04303"
-  title: "TMC UNDERVOLTAGE ERROR"
+  title: "TMC UNDERVOLTAGE ERR"
   text: "Not enough current for the Pulley TMC driver. There is probably an issue with the electronics. Check the wiring and connectors."
   text_short: "More details online."
   action: [ResetMMU]
@@ -217,7 +217,7 @@ Errors:
   approved: true
 
 - code: "04313"
-  title: "TMC UNDERVOLTAGE ERROR"
+  title: "TMC UNDERVOLTAGE ERR"
   text: "Not enough current for the Selector TMC driver. There is probably an issue with the electronics. Check the wiring and connectors."
   text_short: "More details online."
   action: [ResetMMU]
@@ -225,7 +225,7 @@ Errors:
   approved: true
 
 - code: "04323"
-  title: "TMC UNDERVOLTAGE ERROR"
+  title: "TMC UNDERVOLTAGE ERR"
   text: "Not enough current for the Idler TMC driver. There is probably an issue with the electronics. Check the wiring and connectors."
   text_short: "More details online."
   action: [ResetMMU]
@@ -305,7 +305,7 @@ Errors:
 
 # SYSTEM
 - code: "04501"
-  title: "FILAMENT ALREADY LOADED"
+  title: "FIL. ALREADY LOADED"
   text: "Cannot perform the action, filament is already loaded. Unload it first."
   action: [Unload, Continue]
   id: "FILAMENT_ALREADY_LOADED"
@@ -326,7 +326,7 @@ Errors:
   approved: true
 
 - code: "04504"
-  title: "FW UPDATE NEEDED"
+  title: "MMU FW UPDATE NEEDED"
   text: "The MMU reports its FW version incompatible with the printer's firmware. Make sure the MMU firmware is up to date."
   action: [ResetMMU,DisableMMU]
   id: "FW_UPDATE_NEEDED"
