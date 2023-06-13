@@ -30,7 +30,7 @@ Errors:
   approved: true
 
 - code: "04102"
-  title: "FINDA: FILAM. STUCK"
+  title: "FINDA FILAM. STUCK"
   text: "FINDA didn't switch off while unloading filament. Try unloading manually. Ensure filament can move and FINDA works."
   action: [Retry]
   id: "FINDA_FILAMENT_STUCK"
@@ -44,7 +44,7 @@ Errors:
   approved: true
 
 - code: "04104"
-  title: "FSENSOR: FIL. STUCK"
+  title: "FSENSOR FIL. STUCK"
   text: "Filament sensor didn't switch off while unloading filament. Ensure filament can move and the sensor works."
   action: [Retry]
   id: "FSENSOR_FILAMENT_STUCK"
@@ -327,7 +327,7 @@ Errors:
 
 - code: "04504"
   title: "MMU FW UPDATE NEEDED"
-  text: "The MMU reports its FW version incompatible with the printer's firmware. Make sure the MMU firmware is up to date."
+  text: "The MMU firmware version incompatible with the printer's FW. Update to compatible version."
   action: [ResetMMU,DisableMMU]
   id: "FW_UPDATE_NEEDED"
   approved: true
