@@ -115,7 +115,7 @@ Errors:
   title: "WARNING TMC TOO HOT"
   text: "TMC driver for the Pulley motor is almost overheating. Make sure there is sufficient airflow near the MMU board."
   text_short: "More details online."
-  action: [Continue, ResetMMU]
+  action: [Continue,ResetMMU]
   id: "WARNING_TMC_PULLEY_TOO_HOT"
   approved: true
 
@@ -123,7 +123,7 @@ Errors:
   title: "WARNING TMC TOO HOT"
   text: "TMC driver for the Selector motor is almost overheating. Make sure there is sufficient airflow near the MMU board."
   text_short: "More details online."
-  action: [Continue, ResetMMU]
+  action: [Continue,ResetMMU]
   id: "WARNING_TMC_SELECTOR_TOO_HOT"
   approved: true
 
@@ -131,7 +131,7 @@ Errors:
   title: "WARNING TMC TOO HOT"
   text: "TMC driver for the Idler motor is almost overheating. Make sure there is sufficient airflow near the MMU board."
   text_short: "More details online."
-  action: [Continue, ResetMMU]
+  action: [Continue,ResetMMU]
   id: "WARNING_TMC_IDLER_TOO_HOT"
   approved: true
 
@@ -307,14 +307,14 @@ Errors:
 - code: "04501"
   title: "FIL. ALREADY LOADED"
   text: "Cannot perform the action, filament is already loaded. Unload it first."
-  action: [Unload, Continue]
+  action: [Unload,Continue]
   id: "FILAMENT_ALREADY_LOADED"
   approved: true
 
 - code: "04502"
   title: "INVALID TOOL"
   text: "Requested filament tool is not available on this hardware. Check the G-code for tool index out of range (T0-T4)."
-  action: [StopPrint, ResetMMU]
+  action: [StopPrint,ResetMMU]
   id: "INVALID_TOOL"
   approved: true
 
