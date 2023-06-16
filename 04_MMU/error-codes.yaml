@@ -281,7 +281,7 @@ Errors:
   approved: false
 
 - code: "04306"
-  title: "MMU MCU UNDERVOLTAGE"
+  title: "MMU MCU UNDERPOWER"
   text: "MMU MCU detected a 5V undervoltage. There might be an issue with the electronics. Check the wiring and connectors"
   text_short: "More details online."
   action: [ResetMMU]
@@ -327,7 +327,8 @@ Errors:
 
 - code: "04504"
   title: "MMU FW UPDATE NEEDED"
-  text: "MMU FW version is incompatible with printer FW.Update to compatible version."
+  text: "The MMU firmware version is incompatible with the printer's FW. Update to compatible version."
+  text_short: "MMU FW version is incompatible with printer FW.Update to version 2.1.9."
   action: [ResetMMU,DisableMMU]
   id: "FW_UPDATE_NEEDED"
   approved: true
