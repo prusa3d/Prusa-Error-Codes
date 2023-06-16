@@ -281,7 +281,7 @@ Errors:
   approved: false
 
 - code: "04306"
-  title: "MMU MCU UNDERPOWER"
+  title: "MMU MCU UNDERVOLTAGE"
   text: "MMU MCU detected a 5V undervoltage. There might be an issue with the electronics. Check the wiring and connectors"
   text_short: "More details online."
   action: [ResetMMU]
