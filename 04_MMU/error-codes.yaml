@@ -38,7 +38,7 @@ Errors:
 
 - code: "04103"
   title: "FSENSOR DIDNT TRIGGER"
-  text: "Filament sensor didn't trigger while loading the filament. Ensure the filament reached the fsensor and the sensor works."
+  text: "Filament sensor didn't trigger while loading the filament. Ensure the sensor is calibrated and the filament reached it."
   action: [Retry]
   id: "FSENSOR_DIDNT_TRIGGER"
   approved: true
@@ -91,7 +91,7 @@ Errors:
 
 - code: "04116"
   title: "SELECTOR CANNOT MOVE"
-  text: "The Selector cannot move. Check for anything blocking its movement. Check the wiring."
+  text: "The Selector cannot move. Check for anything blocking its movement. Check if the wiring is correct."
   action: [Retry]
   id: "SELECTOR_CANNOT_MOVE"
   approved: true
@@ -105,7 +105,7 @@ Errors:
 
 - code: "04126"
   title: "IDLER CANNOT MOVE"
-  text: "The Idler cannot move properly. Check for anything blocking its movement. Check the wiring."
+  text: "The Idler cannot move properly. Check for anything blocking its movement. Check if the wiring is correct."
   action: [Retry]
   id: "IDLER_CANNOT_MOVE"
   approved: true
