@@ -290,7 +290,7 @@ Errors:
 
 - code: "10316"
   title: "UV LED CALIBRATOR UNKNONW ERROR"
-  text: "Unknown UV LED calibrator error code: %(code)d"
+  text: "Unknown UV LED calibrator error code: %(nonprusa_code)d"
   id: "UNKNOWN_UV_MEASUREMENT_ERROR"
   approved: true
 
