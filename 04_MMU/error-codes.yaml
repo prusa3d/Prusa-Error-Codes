@@ -352,7 +352,7 @@ Errors:
 
 - code: "04900"
   title: "UNKNOWN ERROR"
-  text: "Unexpected error occurred."
+  text: "Unexpected error occurred. If the issue persists, contact support."
   action: [ResetMMU]
   id: "UNKNOWN_ERROR"
-  approved: false
+  approved: true
