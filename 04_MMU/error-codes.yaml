@@ -324,7 +324,7 @@ Errors:
 - code: "04504"
   title: "MMU FW UPDATE NEEDED"
   text: "The MMU firmware version is incompatible with the printer's FW. Update to compatible version."
-  text_short: "MMU FW version is incompatible with printer FW. Update to version 3.0.0."
+  text_short: "MMU FW version is incompatible with printer FW.Update to version 3.0.0."
   action: [ResetMMU,DisableMMU]
   id: "FW_UPDATE_NEEDED"
   approved: true
