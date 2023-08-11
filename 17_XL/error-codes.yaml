@@ -49,6 +49,12 @@ Errors:
   text: "Calibration pin has not been reached. Please check the pin installation."
   id: "PIN_NOT_REACHED"
   approved: false
+- code: "17108"
+  title: "STUCK FILAMENT DETECTED"
+  text: "The filament seems to be stuck, please unload it from nextruder and load it again."
+  action: [Unload]
+  id: "STUCK_FILAMENT_DETECTED"
+  approved: true
 - code: "17202"
   title: "EXTRUDER PREHEAT ERROR"
   text: "Check the heater and thermistor wiring for potential damage."
