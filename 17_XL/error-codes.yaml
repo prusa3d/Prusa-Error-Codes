@@ -53,7 +53,7 @@ Errors:
   title: "STUCK FILAMENT DETECTED"
   text: "The filament seems to be stuck, please unload it from nextruder and load it again."
   action: [Unload]
-  id: "TBA"
+  id: "STUCK_FILAMENT_DETECTED"
   approved: true
 - code: "17202"
   title: "EXTRUDER PREHEAT ERROR"
