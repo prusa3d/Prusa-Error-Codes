@@ -28,6 +28,7 @@ Errors:
   action: [Retry]
   id: "FINDA_DIDNT_TRIGGER"
   approved: true
+  type: WARNING
 
 - code: "04102"
   title: "FINDA FILAM. STUCK"
@@ -114,6 +115,7 @@ Errors:
   action: [Continue,ResetMMU]
   id: "WARNING_TMC_PULLEY_TOO_HOT"
   approved: true
+  type: ERROR
 
 - code: "04211"
   title: "WARNING TMC TOO HOT"
@@ -349,6 +351,7 @@ Errors:
   action: [Continue]
   id: "FILAMENT_EJECTED"
   approved: true
+  type: USER_ACTION
 
 - code: "04900"
   title: "UNKNOWN ERROR"
