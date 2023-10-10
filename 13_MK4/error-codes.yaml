@@ -208,6 +208,13 @@ Errors:
   id: "ACF_AT_INIT"
   approved: false
 
+# CONNECTIVITY   xx4xx
+
+- code: "13401"
+  title: "CONNECT REGISTRATION FAILED"
+  text: "Registration to Prusa Connect failed due to: %s"
+  id: "CONNECT_REGISTRATION_FAILED"
+  approved: true
 # SYSTEM         xx5xx
 
 # XX501-XX503 reserved
