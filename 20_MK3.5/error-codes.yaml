@@ -164,7 +164,7 @@ Errors:
   approved: false
 - code: "20401"
   title: "CONNECT REGISTRATION FAILED"
-  text: "Registration to Prusa Connect failed due to: %s"
+  text: "Registration to Prusa Connect failed due to:"
   id: "CONNECT_REGISTRATION_FAILED"
   approved: true
   # XX501-XX503 reserved
