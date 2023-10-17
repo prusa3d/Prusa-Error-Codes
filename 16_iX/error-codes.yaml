@@ -232,7 +232,7 @@ Errors:
   approved: false
 - code: "16401"
   title: "CONNECT REGISTRATION FAILED"
-  text: "Registration to Prusa Connect failed due to: %s"
+  text: "Registration to Prusa Connect failed due to:"
   id: "CONNECT_REGISTRATION_FAILED"
   approved: true
 - code: "16501"

@@ -212,7 +212,7 @@ Errors:
 
 - code: "13401"
   title: "CONNECT REGISTRATION FAILED"
-  text: "Registration to Prusa Connect failed due to: %s"
+  text: "Registration to Prusa Connect failed due to:"
   id: "CONNECT_REGISTRATION_FAILED"
   approved: true
 # SYSTEM         xx5xx
