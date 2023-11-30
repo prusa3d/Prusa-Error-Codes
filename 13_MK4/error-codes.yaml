@@ -411,3 +411,9 @@ Errors:
   text: "USB flash drive contains\nunsupported firmware BBF file."
   id: "UNSUPPORTED_BBF_VERSION"
   approved: true
+
+- code: "13701"
+  title: ""
+  text: "To continue, please insert the bundled USB flash drive and install the MK3.5 firmware"
+  id: "DIFFERENT_FW_REQUIRED"
+  approved: true
