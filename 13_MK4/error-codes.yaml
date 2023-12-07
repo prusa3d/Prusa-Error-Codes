@@ -413,7 +413,7 @@ Errors:
   approved: true
 
 - code: "13701"
-  title: ""
+  title: "Firmware Update Required"
   text: "To continue, please insert the bundled USB flash drive and install the MK3.5 firmware"
   id: "DIFFERENT_FW_REQUIRED"
   approved: true

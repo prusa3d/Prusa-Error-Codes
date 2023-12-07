@@ -330,7 +330,7 @@ Errors:
   id: "UNSUPPORTED_BBF_VERSION"
   approved: true
 - code: "20701"
-  title: ""
+  title: "Firmware Update Required"
   text: "To continue, please insert the bundled USB flash drive and install the MK4/MK3.9 firmware"
   id: "DIFFERENT_FW_REQUIRED"
   approved: true
