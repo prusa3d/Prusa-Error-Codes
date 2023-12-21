@@ -70,6 +70,8 @@ buddy_template = \
 #include "button_operations.h"
 #include "error_type.h"
 
+#include <array>
+
 {include_items}
 
 inline constexpr uint8_t ERR_PRINTER_CODE = {printer_code};
