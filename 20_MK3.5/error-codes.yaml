@@ -322,6 +322,6 @@ Errors:
   approved: true
 - code: "20701"
   title: "Firmware Update Required"
-  text: "To continue, please insert the bundled USB flash drive and install the MK4/MK3.9 firmware"
+  text: "Insert the bundled USB drive, restart the printer and click the knob once during the boot. This will install the MK4/MK3.9 firmware."
   id: "DIFFERENT_FW_REQUIRED"
   approved: true
