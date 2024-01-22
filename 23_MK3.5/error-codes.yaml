@@ -74,7 +74,7 @@ Errors:
   # XX250-XX257 reserved
 - code: "23301"
   title: "HOMING ERROR Z"
-  text: "Failed to home the extruder in Z-axis, make sure the loadcell is working."
+  text: "Failed to home the extruder in Z-axis."
   id: "HOMING_ERROR_Z"
   approved: true
   # XX302-XX303 reserved
