@@ -396,8 +396,8 @@ Errors:
 
 - code: "04507"
   title: "FILAMENT EJECTED"
-  text: "Remove the ejected filament from the front of the MMU."
-  text2: "Tip: Filament is automatically ejected when the end of the spool is reached."
+  text: "Remove the ejected filament from the front of the MMU.\n\nTip: Filament is automatically ejected when the end of the spool is reached."
+  text_short: "Remove the ejected filament from the front of the MMU."
   action: [Continue]
   id: "FILAMENT_EJECTED"
   approved: true
