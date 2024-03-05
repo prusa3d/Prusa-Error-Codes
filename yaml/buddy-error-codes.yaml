@@ -962,19 +962,19 @@ Errors:
     printers: [XL]
     title: ""
     text: ""
-    id: "XL_ENCLOSURE_FAN_ERROR"
+    id: "ENCLOSURE_FAN_ERROR"
     type: "CONNECT"
 
   - code: "XX830"
     printers: [XL]
     title: ""
     text: ""
-    id: "XL_ENCLOSURE_FILTER_EXPIRATION_WARNING"
+    id: "ENCLOSURE_FILTER_EXPIRATION_WARNING"
     type: "CONNECT"
 
   - code: "XX831"
     printers: [XL]
     title: ""
     text: ""
-    id: "XL_ENCLOSURE_FILTER_EXPIRATION"
+    id: "ENCLOSURE_FILTER_EXPIRATION"
     type: "CONNECT"
