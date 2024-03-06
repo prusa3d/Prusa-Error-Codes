@@ -403,6 +403,15 @@ Errors:
   approved: true
   type: USER_ACTION
 
+- code: "04508"
+  title: "FILAMENT RUNOUT"
+  text: "The filament has depleted and its remnants were ejected from the MMU's front. Kindly remove them and replace with a new filament."
+  text_short: "N/A."
+  action: [Continue]
+  id: "FILAMENT_RUNOUT"
+  approved: true
+  type: USER_ACTION
+
 - code: "04900"
   title: "UNKNOWN ERROR"
   text: "Unexpected error occurred."
