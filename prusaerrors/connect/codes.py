@@ -61,7 +61,7 @@ def yaml_codes(src_path: Path):
                         printers.append('MK39')
                 else:  # if no printers specified code is valid for all buddy
                     printers = BUDDY
-    
+
                 for printer in printers:
                     printer = Printer[printer.upper().replace(".", "")]
                     code = PrinterCode(
