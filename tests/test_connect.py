@@ -21,6 +21,7 @@ class TestErrors(unittest.TestCase):
         assert code.error == 5
         assert code.title
         assert code.message
+        assert code.id
 
     def test_unknown_code(self):
         code = PrinterCodes.get("unknown_code")
