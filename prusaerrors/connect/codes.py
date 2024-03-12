@@ -25,6 +25,21 @@ class PrinterCode(Code):
 
     """
 
+    # pylint: disable = too-many-arguments
+    def __init__(
+            self,
+            printer: Printer,
+            category: Category,
+            error: int,
+            title: str,
+            message: str,
+            approved: bool,
+            id_: str,
+    ):
+        super().__init__(printer=printer, category=category, error=error,
+                         title=title, message=message, approved=approved)
+        self.id = id_
+
     @property
     def code(self) -> str:
         """
@@ -66,14 +81,16 @@ def yaml_codes(src_path: Path):
                     printer = Printer[printer.upper().replace(".", "")]
                     code = PrinterCode(
                         printer, category, error, entry["title"],
-                        entry["text"], entry.get("approved", False))
+                        entry["text"], entry.get("approved", False),
+                        entry["id"])
                     setattr(cls, str(code), code)
 
             # code contains printer number
             else:
                 printer = Printer(int(code_parts["printer"]))
                 code = PrinterCode(printer, category, error, entry["title"],
-                            entry["text"],  entry.get("approved", False))
+                            entry["text"],  entry.get("approved", False),
+                            entry["id"])
                 setattr(cls, str(code), code)
         return cls
 
@@ -92,7 +109,7 @@ class PrinterCodes(Codes):
     """
 
     @classmethod
-    def get(cls, code: str) -> Optional[Code]:
+    def get(cls, code: str) -> Optional[PrinterCode]:
         """
         Get Code by its number
 

@@ -11,7 +11,7 @@ import json
 import re
 from enum import unique, IntEnum
 from pathlib import Path
-from typing import Optional, TextIO, Dict
+from typing import TextIO, Dict
 import yaml
 
 
@@ -65,8 +65,8 @@ class Code:
             printer: Printer,
             category: Category,
             error: int,
-            title: Optional[str],
-            message: Optional[str],
+            title: str,
+            message: str,
             approved: bool,
     ):
         if printer.value < 0 or printer.value > 99:
