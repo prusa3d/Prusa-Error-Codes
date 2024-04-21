@@ -824,3 +824,10 @@ Errors:
   text: "Incorrect RPM reading of the %(failed_fans_text)s fan. The print may continue, however, there's a risk of overheating."
   id: "EXPECT_OVERHEATING"
   approved: true
+
+- code: "10715"
+  title: "FILL THE RESIN"
+  text: "Pour enough resin for selected file into the tank and close the lid. Minimal amount of the resin is displayed on the touchscreen."
+  id: "FILL_THE_RESIN"
+  action: ['Continue', 'Stop Print']
+  approved: false
