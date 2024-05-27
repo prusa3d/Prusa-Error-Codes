@@ -780,6 +780,12 @@ Errors:
     id: "UNSUPPORTED_BBF_VERSION"
     approved: true
 
+  - code: "XX615"
+    title: "EXTRUDER NOT DETECTED"
+    text: "Unable to verify the extruder type, check the wiring and connectors."
+    id: "BT_EXTRUDER_NOT_DETECTED"
+    approved: true
+
   - code: "XX701"
     printers: [MK4]
     title: "Firmware Update Required"
