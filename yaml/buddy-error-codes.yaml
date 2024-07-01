@@ -690,6 +690,12 @@ Errors:
     text: "Gcode on the USB drive is corrupt. Fix manually before resuming."
     id: "GCODE_CORRUPTION"
 
+  - code: "XX535"
+    title: "Gcode Cropped"
+    text: "G-code command was too long and did not fit in the internal buffers. As a result, it might have beet not executed correctly."
+    id: "GCODE_CROPPED"
+    approved: false
+
   - code: "XX601"
     title: ""
     text: "This error code is not found\nin our database.\nContact the support."
