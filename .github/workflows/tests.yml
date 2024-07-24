@@ -1,6 +1,8 @@
 name: Prusa error codes
 
-on: [push]
+on:
+  push:
+  pull_request:
 
 jobs:
   tests:
