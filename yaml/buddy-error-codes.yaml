@@ -615,7 +615,7 @@ Errors:
   - code: "XX523"
     printers: [MK4, iX, XL, MK3.5]
     title: "LOADCELL NOT CALIBRATED"
-    text: "Loadcell calibration is incomplete. Restart the printer and callibrate loadcell."
+    text: "Loadcell calibration is incomplete. Restart the printer and calibrate loadcell."
     id: "LOADCELL_INCOMPLETE_CONFIGURATION_ERROR"
     approved: true
 
