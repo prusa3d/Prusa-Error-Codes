@@ -882,32 +882,32 @@ Errors:
     type: "CONNECT"
 
   - code: "XX809"
-    title: ""
+    title: "CRASH DETECTED"
     text: "Length of an axis is too long.\nMotor current is too low, probably.\nRetry check, pause or resume the print?"
     id: "CRASH_RECOVERY_AXIS_LONG"
     type: "CONNECT"
 
   - code: "XX810"
-    title: ""
+    title: "CRASH DETECTED"
     text: "Length of an axis is too short.\nThere's an obstacle or bearing issue.\nRetry check, pause or resume the print?"
     id: "CRASH_RECOVERY_AXIS_SHORT"
     type: "CONNECT"
 
   - code: "XX811"
-    title: ""
+    title: "CRASH DETECTED"
     text: "Repeated collision has been detected.\nDo you want to resume or pause the print?"
     id: "CRASH_RECOVERY_REPEATED_CRASH"
     type: "CONNECT"
 
   - code: "XX812"
-    title: ""
+    title: "CRASH DETECTED"
     text: "Unable to home the printer.\nDo you want to try again?"
     id: "CRASH_RECOVERY_HOME_FAIL"
     type: "CONNECT"
     
   - code: "XX813"
     printers: [XL]
-    title: ""
+    title: "CRASH DETECTED"
     text: "Toolchanger problem has been detected.\nPark all tools to docks\nand leave the carriage free."
     id: "CRASH_RECOVERY_TOOL_PICKUP"
     type: "CONNECT"
