@@ -24,6 +24,7 @@ Example: 12201
 * 26 `MK4S` - Original Prusa MK4S
 * 27 `MK3.9S` - Original Prusa MK3.9S
 * 28 `MK3.5S` - Original Prusa MK3.5S
+* 29 `M1` - Original Medical One
 
 ## Error categories
 1. Mechanical - XYZ motors, tower, axis range
