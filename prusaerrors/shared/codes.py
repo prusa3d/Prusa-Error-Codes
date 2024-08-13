@@ -32,6 +32,7 @@ class Printer(IntEnum):
     XL = 0x0011
     MK35 = 0x0017
     MK39 = 0x0015
+    M1 = 0x001D
 
 
 @unique
