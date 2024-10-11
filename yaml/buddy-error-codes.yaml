@@ -1005,7 +1005,7 @@ Errors:
     text: "MCU in Modular Bed is overheated, likely due to exceeding the printer's operating temperature. Prevent overheating for optimal performance."
     id: "MOD_BED_MCU_MAX_TEMP"
     type: "CONNECT"
-    
+
   - code: "XX828"
     title: "Warning"
     text: "Hotend fan not spinning. Check it for possible debris, then inspect the wiring."
@@ -1013,8 +1013,12 @@ Errors:
     type: "CONNECT"
 
   - code: "XX829"
-    title: "Filament runout"
-    text: "Filament runout during print, please insert new one."
+    # Unfortunately, the printer doesn't know if it is out of filament because
+    # it just run out of it, or because it was unloaded in case of a stuck
+    # filament or for some other reason. So, the message needs to be slightly
+    # generic and simply ask for the filament to be inserted.
+    title: "Replace filament"
+    text: "Please replace filament."
     id: "FILAMENT_RUNOUT"
     type: "CONNECT"
 
