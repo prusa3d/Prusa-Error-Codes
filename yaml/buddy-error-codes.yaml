@@ -711,7 +711,7 @@ Errors:
 
   - code: "XX535"
     title: "Gcode Cropped"
-    text: "G-code command was too long and did not fit in the internal buffers. As a result, it might have beet not executed correctly."
+    text: "G-code command was too long and did not fit in the internal buffers. As a result, it might not be executed correctly."
     id: "GCODE_CROPPED"
     approved: false
 
