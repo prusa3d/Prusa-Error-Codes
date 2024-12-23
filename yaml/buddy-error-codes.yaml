@@ -286,6 +286,18 @@ Errors:
     id: "MB_HEATER_CONNECTED"
     approved: false
 
+  - code: "XX259"
+    printers: [COREONE]
+    title: "Chamber Overheating"
+    text: "Ensure better chamber ventilation!"
+    id: "CHAMBER_OVERHEATING_TEMP"
+
+  - code: "XX260"
+    printers: [COREONE]
+    title: "Chamber Critical Temperature"
+    text: "Ensure better chamber ventilation!"
+    id: "CHAMBER_CRITICAL_TEMP"
+
   # ELECTRICAL     xx3xx
 
   - code: "XX301"
