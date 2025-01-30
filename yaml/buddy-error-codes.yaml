@@ -17,6 +17,9 @@
 # e.g. MK4 covers all printers running MK4 firmware: MK4, MK4S, MK3.9
 # currently supported list: MINI, MK4, XL, iX, MK3.5
 # if no printers list exists, the error is applicable to all printers running Buddy FW.
+# Attribute gui_layout ["red_screen", "warning_dialog"]
+#   Specify what pre-defined GUI layout is used to display this error. This is used to test if translated messages fit into the layout
+#   To add more pre-defined layout tests, edit Prusa-Firmware-Buddy/tests/unit/lang/text_fit/ & Prusa-Firmware-Buddy/utils/extract_error_texts.py
 
 Errors:
   - code: "XX101"
