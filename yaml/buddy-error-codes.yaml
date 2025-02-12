@@ -990,7 +990,7 @@ Errors:
   - code: "XX801"
     title: "Warning"
     text: "Please complete Calibrations & Tests before using the printer."
-    id: "PRINT_PREVIEW_UNFINISHED_SELFTEST"
+    id: "UNFINISHED_SELFTEST"
     type: "CONNECT"
 
   - code: "XX802"
