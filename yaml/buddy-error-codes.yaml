@@ -270,7 +270,7 @@ Errors:
     approved: false
 
   - code: "XX214"
-    printers: [XL, COREONE]
+    printers: [COREONE]
     title: "CHAMBER MAXTEMP ERROR"
     text: "Check the chamber thermistor wiring for possible damage."
     id: "CHAMBER_MAXTEMP"
@@ -278,7 +278,7 @@ Errors:
     approved: true
 
   - code: "XX215"
-    printers: [XL, COREONE]
+    printers: [COREONE]
     title: "CHAMBER MINTEMP ERROR"
     text: "Check the chamber thermistor wiring for possible damage."
     id: "CHAMBER_MINTEMP"
