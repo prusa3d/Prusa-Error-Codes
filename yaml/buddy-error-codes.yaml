@@ -308,25 +308,8 @@ Errors:
     gui_layout: "red_screen"
     approved: true
 
-  - code: "XX209"
-    title: "TEMP NOT MATCHING"
-    text: "Measured temperature is not matching expected value. Check the thermistor is in contact with heatbed. In case of damage, replace it."
-    id: "BED_TEMP_NOT_MATCHING"
-    approved: true
-
-  - code: "XX210"
-    printers: [MINI, MK4, COREONE, iX, MK3.5]
-    title: "TEMP NOT MATCHING"
-    text: "Measured temperature is not matching expected value. Check the thermistor is in contact with hotend. In case of damage, replace it."
-    id: "HOTEND_TEMP_NOT_MATCHING"
-    approved: true
-
-  - code: "XX210"
-    printers: [XL]
-    title: "EXTRUDER TEMP NOT MATCHING"
-    text: "Measured temperature is not matching expected value. Check if the thermistor is in contact with the heaterblock. In case of damage, replace it."
-    id: "HOTEND_TEMP_NOT_MATCHING"
-    approved: true
+  # XX209 BED_TEMP_NOT_MATCHING deprecated
+  # XX210 HOTEND_TEMP_NOT_MATCHING deprecated
 
   - code: "XX211"
     title: "HEATBREAK MINTEMP ERROR"
@@ -694,7 +677,7 @@ Errors:
     id: "CONNECT_REGISTRATION_FAILED"
     approved: true
 
-  # XX4402 NEW_WIFI_CREDENTIALS deprecated
+  # XX402 NEW_WIFI_CREDENTIALS deprecated
   
   - code: "XX403"
     title: "G-CODE METRICS CONFIG CHANGE"
@@ -719,41 +702,12 @@ Errors:
     gui_layout: "red_screen"
     approved: false
 
-  - code: "XX503"
-    printers: [XL]
-    title: "DWARF ERROR"
-    text: "Dwarf board %d fault: %s"
-    id: "DWARF_MARLIN_ERR"
-    
-  - code: "XX504"
-    title: "ESP ERROR"
-    text: "Reading ESP firmware failed."
-    id: "ESP_FW_READ"
-    approved: true
-
-  - code: "XX505"
-    title: "ESP ERROR"
-    text: "ESP detected command error."
-    id: "ESP_COMMAND_ERR"
-    approved: true
-
-  - code: "XX506"
-    title: "ESP ERROR"
-    text: "ESP detected unknown error."
-    id: "ESP_UNKNOWN_ERR"
-    approved: true
-
-  - code: "XX507"
-    title: "OUT OF MEMORY"
-    text: "Dynamic allocation failed - out of memory. Reset the printer."
-    id: "MALLOC_ERROR"
-    approved: true
-
-  - code: "XX508"
-    title: "PNG BUFFER FULL"
-    text: "Allocation of dynamic buffer for PNG failed - out of memory."
-    id: "PNG_MALLOC_ERROR"
-    approved: true
+  # XX503 DWARF_MARLIN_ERR deprecated
+  # XX504 ESP_FW_READ deprecated
+  # XX505 ESP_COMMAND_ERR deprecated
+  # XX506 ESP_UNKNOWN_ERR deprecated
+  # XX507 MALLOC_ERROR deprecated
+  # XX508 PNG_MALLOC_ERROR deprecated
 
   - code: "XX510"
     title: "EMERGENCY STOP"
@@ -858,26 +812,9 @@ Errors:
     gui_layout: "red_screen"
     approved: false
 
-  - code: "XX523"
-    printers: [MK4, COREONE, iX, XL, MK3.5]
-    title: "LOADCELL NOT CALIBRATED"
-    text: "Loadcell calibration is incomplete. Restart the printer and calibrate loadcell."
-    id: "LOADCELL_INCOMPLETE_CONFIGURATION_ERROR"
-    approved: true
-
-  - code: "XX524"
-    printers: [MK4, COREONE, iX, XL]
-    title: "LOADCELL TARE ERROR"
-    text: "There was an error requesting the tare for loadcell."
-    id: "LOADCELL_TARE_ALREADY_REQUESTED"
-    approved: true
-
-  - code: "XX525"
-    printers: [MK4, COREONE, iX, XL]
-    title: "LOADCELL TARE FAILED"
-    text: "Setting the tare failed. Check the loadcell wiring and connection."
-    id: "LOADCELL_TARE_FAILED"
-    approved: true
+  # XX523 LOADCELL_INCOMPLETE_CONFIGURATION_ERROR deprecated
+  # XX524 LOADCELL_TARE_ALREADY_REQUESTED deprecated
+  # XX525 LOADCELL_TARE_FAILED deprecated
 
   - code: "XX526"
     printers: [MK4, COREONE, iX, XL]
@@ -887,13 +824,8 @@ Errors:
     gui_layout: "red_screen"
     approved: true
 
-  - code: "XX527"
-    printers: [MK4, COREONE, iX, XL]
-    title: "LOADCELL BAD CONFIGURATION"
-    text: "The loadcell configuration is incorrect."
-    id: "LOADCELL_BAD_CONFIGURATION"
-    approved: true
-
+  # XX527 LOADCELL_BAD_CONFIGURATION deprecated
+  
   - code: "XX528"
     printers: [MK4, COREONE, iX, XL]
     title: "LOADCELL TIMEOUT"
@@ -931,11 +863,7 @@ Errors:
     gui_layout: "red_screen"
     approved: true
 
-  - code: "XX533"
-    title: "ESP NOT CONNECTED"
-    text: "ESP doesn't seem to be connected."
-    id: "ESP_NOT_CONNECTED"
-    approved: false
+  # XX533 ESP_NOT_CONNECTED deprecated
 
   - code: "XX534"
     title: "Gcode Corruption"
@@ -962,48 +890,56 @@ Errors:
     title: "UNKNOWN ERROR"
     text: "This error code is not found\nin our database.\nContact the support."
     id: "UNKNOWN_ERROR_CODE"
+    gui_layout: "bootloader"
     approved: true
 
   - code: "XX602"
     title: "USB FLASH DRIVE NOT CONNECTED"
     text: "USB drive not\nconnected! Please\ninsert a USB drive\nwith a valid\nfirmware file."
     id: "USB_NOT_CONNECTED"
+    gui_layout: "bootloader"
     approved: true
 
   - code: "XX603"
     title: "INVALID FW SIZE ON USB FLASH DRIVE"
     text: "Firmware file has\ninvalid size!\nCheck the file\non the USB drive\nand try again."
     id: "INVALID_FW_SIZE_ON_USB"
+    gui_layout: "bootloader"
     approved: true
 
   - code: "XX604"
     title: "NO FW ON USB FLASH DRIVE"
     text: "Firmware file\nmissing in the USB\nflash!"
     id: "NO_FW_ON_USB"
+    gui_layout: "bootloader"
     approved: true
 
   - code: "XX605"
     title: "FLASH ERASE ERROR"
     text: "Error erasing\n flash! Restart\nthe printer and\ntry again."
     id: "FLASH_ERASE_ERROR"
+    gui_layout: "bootloader"
     approved: true
 
   - code: "XX606"
     title: "IMPOSTER! FAKE SIGNATURE"
     text: "Firmware signature\nverification failed!\nOnly official\nsigned firmware can\nbe flashed."
     id: "SIGNATURE_VERIFICATION_FAILED"
+    gui_layout: "bootloader"
     approved: true
 
   - code: "XX607"
     title: "HASH VERIFICATION FAILED"
     text: "Firmware hash\nverification failed!\nFirmware file is\ndamaged. Try\ndownloading and\ncopying it onto the\nUSB drive again."
     id: "HASH_VERIFICATION_FAILED"
+    gui_layout: "bootloader"
     approved: true
 
   - code: "XX608"
     title: "FW IN INTERNAL FLASH CORRUPTED"
     text: "Firmware in the\ninternal flash\ncorrupted! Please\nreflash the\nfirmware."
     id: "FW_IN_INTERNAL_FLASH_CORRUPTED"
+    gui_layout: "bootloader"
     approved: true
 
   - code: "XX609"
@@ -1011,6 +947,7 @@ Errors:
     title: "FIRMWARExPRINTER MISMATCH"
     text: "Firmware and hardware\nversions do not\nmatch. Make sure\nyou have the right\nfirmware file for\nyour printer."
     id: "HW_VERSION_ERR"
+    gui_layout: "bootloader"
     approved: true
 
   - code: "XX609"
@@ -1018,42 +955,49 @@ Errors:
     title: "FIRMWARExPRINTER MISMATCH"
     text: "Firmware and hardware versions do\nnot match. Make sure you have\nthe right firmware file for\nyour printer."
     id: "HW_VERSION_ERR"
+    gui_layout: "bootloader"
     approved: true
 
   - code: "XX610"
     title: "UNSUPPORTED PRINTER MODEL"
     text: "Firmware/printer\ntypes do not match.\nMake sure you have\nthe right firmware\nfile for your\nprinter model."
     id: "UNSUPPORTED_PRINTER_TYPE"
+    gui_layout: "bootloader"
     approved: true
 
   - code: "XX611"
     title: "UNSUPPORTED BUDDY FW"
     text: "Firmware/printer\nversions do not\nmatch! You are\ntrying to flash\nFW meant for other\nrevision of the\nBuddy board."
     id: "UNSUPPORTED_PRINTER_VERSION"
+    gui_layout: "bootloader"
     approved: true
 
   - code: "XX612"
     title: "FIRMWARE MISSING"
     text: "No firmware found\nin the internal\nflash! Please\nflash firmware\nfirst!"
     id: "NO_FW_IN_INTERNAL_FLASH"
+    gui_layout: "bootloader"
     approved: true
 
   - code: "XX613"
     title: "USB FLASH ERROR"
     text: "File system error!\nTry a different USB\ndrive or format the\ndrive with FAT32\nfilesystem (all \ndata will be lost)!"
     id: "FILE_SYSTEM_ERROR"
+    gui_layout: "bootloader"
     approved: true
 
   - code: "XX614"
     title: "UNSUPPORTED FIRMWARE BBF FILE"
     text: "USB flash drive contains\nunsupported firmware BBF file."
     id: "UNSUPPORTED_BBF_VERSION"
+    gui_layout: "bootloader"
     approved: true
 
   - code: "XX615"
     title: "EXTRUDER NOT DETECTED"
     text: "Unable to verify the extruder type, check the wiring and connectors."
     id: "BT_EXTRUDER_NOT_DETECTED"
+    gui_layout: "bootloader"
     approved: true
 
   - code: "XX701"
