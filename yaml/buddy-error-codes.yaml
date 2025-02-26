@@ -451,6 +451,7 @@ Errors:
     text: "Chamber temperature above safety limit. Ensure better ventilation."
     id: "CHAMBER_OVERHEATING_TEMP"
     gui_layout: "warning_dialog"
+    approved: false
 
   - code: "XX261"
     printers: [COREONE, XL]
@@ -458,6 +459,7 @@ Errors:
     text: "Chamber temperature critical. Aborting print to prevent printer damage."
     id: "CHAMBER_CRITICAL_TEMP"
     gui_layout: "warning_dialog"
+    approved: false
 
   # ELECTRICAL     xx3xx
 
@@ -656,6 +658,7 @@ Errors:
     text: "Power failure"
     id: "MB_FAULT"
     gui_layout: "red_screen"
+    approved: false
     
   - code: "XX320"
     printers: [iX, XL]
@@ -724,6 +727,7 @@ Errors:
     title: "DWARF ERROR"
     text: "Dwarf board %d fault: %s"
     id: "DWARF_MARLIN_ERR"
+    approved: false
     
   - code: "XX504"
     title: "ESP ERROR"
@@ -942,6 +946,7 @@ Errors:
     text: "Gcode on the USB drive is corrupt. Fix manually before resuming."
     id: "GCODE_CORRUPTION"
     gui_layout: "warning_dialog"
+    approved: false
 
   - code: "XX535"
     title: "Gcode Cropped"
@@ -1082,12 +1087,14 @@ Errors:
     text: "Use a different USB drive or reformat this one to the supported FAT32 file system."
     id: "USB_DRIVE_UNSUPPORTED_FILE_SYSTEM"
     gui_layout: "warning_dialog"
+    approved: false
     
   - code: "XX801"
     title: "Warning"
     text: "Please complete Calibrations & Tests before using the printer."
     id: "UNFINISHED_SELFTEST"
     type: "CONNECT"
+    approved: false
 
   - code: "XX802"
     printers: [MINI]
@@ -1095,6 +1102,7 @@ Errors:
     text: "New FW available"
     id: "PRINT_PREVIEW_NEW_FW"
     type: "CONNECT"
+    approved: false
 
   - code: "XX802"
     printers: [MK4, COREONE, XL, MK3.5, iX]
@@ -1102,18 +1110,21 @@ Errors:
     text: "New firmware available"
     id: "PRINT_PREVIEW_NEW_FW"
     type: "CONNECT"
+    approved: false
 
   - code: "XX803"
     title: "Warning"
     text: "The G-code isn't fully compatible"
     id: "PRINT_PREVIEW_WRONG_PRINTER"
     type: "CONNECT"
+    approved: false
 
   - code: "XX804"
     title: "Warning"
     text: "Filament not detected. Load filament now?\nSelect NO to cancel the print.\nSelect DISABLE FS to disable the filament sensor and continue print."
     id: "PRINT_PREVIEW_NO_FILAMENT"
     type: "CONNECT"
+    approved: false
 
   - code: "XX805"
     printers: [MINI]
@@ -1121,6 +1132,7 @@ Errors:
     text: "This G-code was set up for another filament type."
     id: "PRINT_PREVIEW_WRONG_FILAMENT"
     type: "CONNECT"
+    approved: false
 
   - code: "XX805"
     printers: [MK4, COREONE, XL, MK3.5, iX]
@@ -1128,6 +1140,7 @@ Errors:
     text: "A filament specified in the G-code is either not loaded or wrong type."
     id: "PRINT_PREVIEW_WRONG_FILAMENT"
     type: "CONNECT"
+    approved: false
     
   - code: "XX806"
     printers: [MK4, COREONE, MK3.5]
@@ -1135,6 +1148,7 @@ Errors:
     text: "Filament detected. Unload filament now? Select NO to start the print with the currently loaded filament."
     id: "PRINT_PREVIEW_MMU_FILAMENT_INSERTED"
     type: "CONNECT"
+    approved: false
     
   - code: "XX807"
     title: "File error"
@@ -1142,6 +1156,7 @@ Errors:
     text: "File error"
     id: "PRINT_PREVIEW_FILE_ERROR"
     type: "CONNECT"
+    approved: false
 
   - code: "XX808"
     title: "Warning"
@@ -1149,30 +1164,35 @@ Errors:
     id: "POWER_PANIC_COLD_BED"
     type: "CONNECT"
     gui_layout: "warning_dialog"
+    approved: false
 
   - code: "XX809"
     title: "CRASH DETECTED"
     text: "Length of an axis is too long.\nMotor current is too low, probably.\nRetry check, pause or resume the print?"
     id: "CRASH_RECOVERY_AXIS_LONG"
     type: "CONNECT"
+    approved: false
 
   - code: "XX810"
     title: "CRASH DETECTED"
     text: "Length of an axis is too short.\nThere's an obstacle or bearing issue.\nRetry check, pause or resume the print?"
     id: "CRASH_RECOVERY_AXIS_SHORT"
     type: "CONNECT"
+    approved: false
 
   - code: "XX811"
     title: "CRASH DETECTED"
     text: "Repeated collision has been detected.\nDo you want to resume or pause the print?"
     id: "CRASH_RECOVERY_REPEATED_CRASH"
     type: "CONNECT"
+    approved: false
 
   - code: "XX812"
     title: "CRASH DETECTED"
     text: "Unable to home the printer.\nDo you want to try again?"
     id: "CRASH_RECOVERY_HOME_FAIL"
     type: "CONNECT"
+    approved: false
     
   - code: "XX813"
     printers: [XL]
@@ -1180,6 +1200,7 @@ Errors:
     text: "Toolchanger problem has been detected.\nPark all tools to docks\nand leave the carriage free."
     id: "CRASH_RECOVERY_TOOL_PICKUP"
     type: "CONNECT"
+    approved: false
 
   - code: "XX814"
     printers: [MK4, COREONE, XL, MK3.5]
@@ -1187,6 +1208,7 @@ Errors:
     text: "Changes of mapping available only in the Printer UI. Select Print to start the print with defaults."
     id: "PRINT_PREVIEW_TOOLS_MAPPING"
     type: "CONNECT"
+    approved: false
     
   - code: "XX815"
     printers: [MK4, COREONE, MK3.5]
@@ -1194,6 +1216,7 @@ Errors:
     text: "Waiting for user input"
     id: "MMU_LOAD_UNLOAD_ERROR"
     type: "CONNECT"
+    approved: false
     
   - code: "XX816"
     title: "Warning"
@@ -1201,6 +1224,7 @@ Errors:
     id: "PRINT_FAN_ERROR"
     type: "CONNECT"
     gui_layout: "warning_dialog"
+    approved: false
 
   - code: "XX817"
     printers: [iX]
@@ -1209,6 +1233,7 @@ Errors:
     id: "HEATERS_TIMEOUT"
     type: "CONNECT"
     gui_layout: "warning_dialog"
+    approved: false
 
   - code: "XX817"
     printers: [MINI, MK3.5, MK4, XL, COREONE]
@@ -1217,6 +1242,7 @@ Errors:
     id: "HEATERS_TIMEOUT"
     type: "CONNECT"
     gui_layout: "warning_dialog"
+    approved: false
 
   - code: "XX818"
     title: "Warning"
@@ -1224,6 +1250,7 @@ Errors:
     id: "HOTEND_TEMP_DISCREPANCY"
     type: "CONNECT"
     gui_layout: "warning_dialog"
+    approved: false
 
   - code: "XX819"
     printers: [iX]
@@ -1232,6 +1259,7 @@ Errors:
     id: "NOZZLE_TIMEOUT"
     type: "CONNECT"
     gui_layout: "warning_dialog"
+    approved: false
 
   - code: "XX819"
     printers: [MINI, MK3.5, MK4, XL, COREONE]
@@ -1240,6 +1268,7 @@ Errors:
     id: "NOZZLE_TIMEOUT"
     type: "CONNECT"
     gui_layout: "warning_dialog"
+    approved: false
 
   - code: "XX820"
     title: "Warning"
@@ -1247,6 +1276,7 @@ Errors:
     id: "STEPPERS_TIMEOUT"
     type: "CONNECT"
     gui_layout: "warning_dialog"
+    approved: false
 
   - code: "XX821"
     title: "Warning"
@@ -1254,6 +1284,7 @@ Errors:
     id: "USB_FLASH_DISK_ERROR"
     type: "CONNECT"
     gui_layout: "warning_dialog"
+    approved: false
 
   - code: "XX822"
     title: "Warning"
@@ -1261,6 +1292,7 @@ Errors:
     id: "HEATBREAK_THERMISTOR_FAIL"
     type: "CONNECT"
     gui_layout: "warning_dialog"
+    approved: false
 
   - code: "XX823"
     printers: [XL, MK3.5]
@@ -1269,6 +1301,7 @@ Errors:
     id: "NOZZLE_DOES_NOT_HAVE_ROUND_SECTION"
     type: "CONNECT"
     gui_layout: "warning_dialog"
+    approved: false
 
   - code: "XX824"
     title: "Warning"
@@ -1276,6 +1309,7 @@ Errors:
     id: "NOT_DOWNLOADED"
     type: "CONNECT"
     gui_layout: "warning_dialog"
+    approved: false
 
   - code: "XX825"
     title: "Warning"
@@ -1283,6 +1317,7 @@ Errors:
     id: "BUDDY_MCU_MAX_TEMP"
     type: "CONNECT"
     gui_layout: "warning_dialog"
+    approved: false
 
   - code: "XX826"
     printers: [XL]
@@ -1291,6 +1326,7 @@ Errors:
     id: "DWARF_MCU_MAX_TEMP"
     type: "CONNECT"
     gui_layout: "warning_dialog"
+    approved: false
 
   - code: "XX827"
     printers: [iX, XL]
@@ -1299,6 +1335,7 @@ Errors:
     id: "MOD_BED_MCU_MAX_TEMP"
     type: "CONNECT"
     gui_layout: "warning_dialog"
+    approved: false
 
   - code: "XX828"
     title: "Warning"
@@ -1306,6 +1343,7 @@ Errors:
     id: "HOTEND_FAN_ERROR"
     type: "CONNECT"
     gui_layout: "warning_dialog"
+    approved: false
 
   - code: "XX829"
     # Unfortunately, the printer doesn't know if it is out of filament because
@@ -1316,6 +1354,7 @@ Errors:
     text: "Please replace filament."
     id: "FILAMENT_RUNOUT"
     type: "CONNECT"
+    approved: false
 
   - code: "XX830"
     printers: [XL]
@@ -1324,6 +1363,7 @@ Errors:
     id: "ENCLOSURE_FAN_ERROR"
     type: "CONNECT"
     gui_layout: "warning_dialog"
+    approved: false
 
   - code: "XX831"
     printers: [XL]
@@ -1332,6 +1372,7 @@ Errors:
     id: "ENCLOSURE_FILTER_EXPIRATION_WARNING"
     type: "CONNECT"
     gui_layout: "warning_dialog"
+    approved: false
 
   - code: "XX832"
     printers: [XL]
@@ -1340,6 +1381,7 @@ Errors:
     id: "ENCLOSURE_FILTER_EXPIRATION"
     type: "CONNECT"
     gui_layout: "warning_dialog"
+    approved: false
 
   - code: "XX833"
     printers: [iX, MK4, COREONE, MK3.5, MINI, XL]
@@ -1348,6 +1390,7 @@ Errors:
     id: "PROBING_FAILED"
     type: "CONNECT"
     gui_layout: "warning_dialog"
+    approved: false
 
   - code: "XX834"
     printers: [iX, MK4, COREONE, XL]
@@ -1356,6 +1399,7 @@ Errors:
     id: "NOZZLE_CLEANING_FAILED"
     type: "CONNECT"
     gui_layout: "warning_dialog"
+    approved: false
 
   - code: "XX835"
     printers: [iX, MK4, COREONE, MK3.5, MINI, XL]
@@ -1363,6 +1407,7 @@ Errors:
     text: "Waiting for the user. Press \"Resume\" once the printer is ready."
     id: "QUICK_PAUSE"
     type: "CONNECT"
+    approved: false
 
   - code: "XX836"
     title: "Loading Timeout"
@@ -1370,6 +1415,7 @@ Errors:
     id: "FILAMENT_LOADING_TIMEOUT"
     type: "CONNECT"
     gui_layout: "warning_dialog"
+    approved: false
 
   - code: "XX837"
     printers: [COREONE]
@@ -1378,6 +1424,7 @@ Errors:
     id: "OPEN_CHAMBER_VENTS"
     type: "CONNECT"
     gui_layout: "warning_dialog"
+    approved: false
 
   - code: "XX838"
     printers: [COREONE]
@@ -1386,6 +1433,7 @@ Errors:
     id: "CLOSE_CHAMBER_VENTS"
     type: "CONNECT"
     gui_layout: "warning_dialog"
+    approved: false
 
   - code: "XX839"
     printers: [COREONE]
