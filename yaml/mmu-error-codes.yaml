@@ -447,6 +447,16 @@ Errors:
   type: USER_ACTION
   gui_layout: "mmu_dialog"
 
+- code: "04508"
+  title: "FILAMENT CHANGE"
+  text: "Change filament. Eject filament then load new filament into the MMU."
+  text_short: "Eject filament and load into the MMU."
+  action: [Eject,Load]
+  id: "FILAMENT_CHANGE"
+  approved: true
+  type: USER_ACTION
+  gui_layout: "mmu_dialog"
+
 - code: "04900"
   title: "UNKNOWN ERROR"
   text: "Unexpected error occurred."
