@@ -345,7 +345,6 @@ Errors:
 - code: "04306"
   title: "MMU MCU ERROR"
   text: "MMU detected a power-related issue. Check the wiring and connectors. If the issue persists, contact support."
-  text_short: "More details online."
   action: [ResetMMU]
   id: "MCU_POWER_ERROR"
   approved: true
@@ -450,7 +449,7 @@ Errors:
 - code: "04508"
   title: "FILAMENT CHANGE"
   text: "Change filament. Eject filament then load new filament into the MMU."
-  text_short: "Eject filament and load into the MMU."
+  text_short: "M600 Filament Change. Load a new filament or eject the old one."
   action: [Eject,Load]
   id: "FILAMENT_CHANGE"
   approved: true
