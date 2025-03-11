@@ -1393,6 +1393,15 @@ Errors:
     gui_layout: "warning_dialog"
     approved: true
 
+  - code: "XX831"
+    printers: [COREONE]
+    title: "HEPA Filter Expiring"
+    text: "The HEPA filter is nearing the end of its life span. We recommend purchasing a new one."
+    id: "ENCLOSURE_FILTER_EXPIRATION_WARNING"
+    type: "CONNECT"
+    gui_layout: "warning_dialog"
+    approved: false
+
   - code: "XX832"
     printers: [XL]
     title: "Warning"
@@ -1401,6 +1410,15 @@ Errors:
     type: "CONNECT"
     gui_layout: "warning_dialog"
     approved: true
+
+  - code: "XX832"
+    printers: [COREONE]
+    title: "HEPA Filter Expired"
+    text: "The HEPA filter has expired. Change the HEPA filter before your next print."
+    id: "ENCLOSURE_FILTER_EXPIRATION"
+    type: "CONNECT"
+    gui_layout: "warning_dialog"
+    approved: false
 
   - code: "XX833"
     printers: [iX, MK4, COREONE, MK3.5, MINI, XL]
