@@ -201,6 +201,7 @@ Errors:
     gui_layout: "warning_dialog"
     approved: true
 
+
   - code: "XX117"
     title: "MAINTENANCE WARNING"
     printers: [MK3.5]
@@ -210,6 +211,7 @@ Errors:
     type: WARNING
     gui_layout: "warning_dialog"
     approved: true
+
 
   # TEMPERATURE    xx2xx
 
@@ -313,6 +315,7 @@ Errors:
     text: "Measured temperature is not matching expected value. Check the thermistor is in contact with heatbed. In case of damage, replace it."
     id: "BED_TEMP_NOT_MATCHING"
     approved: true
+    deprecated: true
 
   - code: "XX210"
     printers: [MINI, MK4, COREONE, iX, MK3.5]
@@ -320,6 +323,7 @@ Errors:
     text: "Measured temperature is not matching expected value. Check the thermistor is in contact with hotend. In case of damage, replace it."
     id: "HOTEND_TEMP_NOT_MATCHING"
     approved: true
+    deprecated: true
 
   - code: "XX210"
     printers: [XL]
@@ -327,6 +331,7 @@ Errors:
     text: "Measured temperature is not matching expected value. Check if the thermistor is in contact with the heaterblock. In case of damage, replace it."
     id: "HOTEND_TEMP_NOT_MATCHING"
     approved: true
+    deprecated: true
 
   - code: "XX211"
     title: "HEATBREAK MINTEMP ERROR"
@@ -452,6 +457,7 @@ Errors:
     id: "CHAMBER_OVERHEATING_TEMP"
     gui_layout: "warning_dialog"
     approved: true
+
 
   - code: "XX261"
     printers: [COREONE, XL]
@@ -740,30 +746,35 @@ Errors:
     text: "Reading ESP firmware failed."
     id: "ESP_FW_READ"
     approved: true
+    deprecated: true
 
   - code: "XX505"
     title: "ESP ERROR"
     text: "ESP detected command error."
     id: "ESP_COMMAND_ERR"
     approved: true
+    deprecated: true
 
   - code: "XX506"
     title: "ESP ERROR"
     text: "ESP detected unknown error."
     id: "ESP_UNKNOWN_ERR"
     approved: true
+    deprecated: true
 
   - code: "XX507"
     title: "OUT OF MEMORY"
     text: "Dynamic allocation failed - out of memory. Reset the printer."
     id: "MALLOC_ERROR"
     approved: true
+    deprecated: true
 
   - code: "XX508"
     title: "PNG BUFFER FULL"
     text: "Allocation of dynamic buffer for PNG failed - out of memory."
     id: "PNG_MALLOC_ERROR"
     approved: true
+    deprecated: true
 
   - code: "XX510"
     title: "EMERGENCY STOP"
@@ -874,6 +885,7 @@ Errors:
     text: "Loadcell calibration is incomplete. Restart the printer and calibrate loadcell."
     id: "LOADCELL_INCOMPLETE_CONFIGURATION_ERROR"
     approved: true
+    deprecated: true
 
   - code: "XX524"
     printers: [MK4, COREONE, iX, XL]
@@ -881,6 +893,7 @@ Errors:
     text: "There was an error requesting the tare for loadcell."
     id: "LOADCELL_TARE_ALREADY_REQUESTED"
     approved: true
+    deprecated: true
 
   - code: "XX525"
     printers: [MK4, COREONE, iX, XL]
@@ -888,6 +901,7 @@ Errors:
     text: "Setting the tare failed. Check the loadcell wiring and connection."
     id: "LOADCELL_TARE_FAILED"
     approved: true
+    deprecated: true
 
   - code: "XX526"
     printers: [MK4, COREONE, iX, XL]
@@ -903,6 +917,7 @@ Errors:
     text: "The loadcell configuration is incorrect."
     id: "LOADCELL_BAD_CONFIGURATION"
     approved: true
+    deprecated: true
 
   - code: "XX528"
     printers: [MK4, COREONE, iX, XL]
@@ -946,6 +961,8 @@ Errors:
     text: "ESP doesn't seem to be connected."
     id: "ESP_NOT_CONNECTED"
     approved: true
+    deprecated: true
+
 
   - code: "XX534"
     title: "Gcode Corruption"
@@ -1459,4 +1476,3 @@ Errors:
     type: "CONNECT"
     gui_layout: "warning_dialog"
     approved: true
-    
