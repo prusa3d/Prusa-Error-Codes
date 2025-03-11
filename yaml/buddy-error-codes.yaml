@@ -171,6 +171,49 @@ Errors:
     gui_layout: "warning_dialog"
     approved: true
 
+<<<<<<< Updated upstream
+=======
+  - code: "XX116"
+    title: "MAINTENANCE WARNING FAILS"
+    printers: [COREONE, MK4]
+    text: "Printer has detected multiple consecutive filament loading errors. We recommend checking Nextruder main-plate. Visit prusa.io/mmu-care"
+    action: [Continue]
+    id: "MAINTENANCE_WARNING_FAILS"
+    type: WARNING
+    gui_layout: "warning_dialog"
+    approved: true
+
+  - code: "XX116"
+    title: "MAINTENANCE WARNING FAILS"
+    printers: [MK3.5]
+    text: "Printer has detected multiple consecutive filament loading errors. We recommend checking the extruder. Visit prusa.io/mmu-care."
+    action: [Continue]
+    id: "MAINTENANCE_WARNING_FAILS"
+    type: WARNING
+    gui_layout: "warning_dialog"
+    approved: true
+
+  - code: "XX117"
+    title: "MAINTENANCE WARNING CHANGES"
+    printers: [COREONE, MK4]
+    text: "Maintenance Reminder. Filament changes have reached main-plate lifespan. Inspect the part and ensure you have a spare plate available. Visit prusa.io/mmu-care"
+    action: [Continue]
+    id: "MAINTENANCE_WARNING_CHANGES"
+    type: WARNING
+    gui_layout: "warning_dialog"
+    approved: true
+
+  - code: "XX117"
+    title: "MAINTENANCE WARNING CHANGES"
+    printers: [MK3.5]
+    text: "Maintenance Reminder. Filament changes have reached 30k. Inspect and clean the extruder. Visit prusa.io/mmu-care"
+    action: [Continue]
+    id: "MAINTENANCE_WARNING_CHANGES"
+    type: WARNING
+    gui_layout: "warning_dialog"
+    approved: true
+
+>>>>>>> Stashed changes
   # TEMPERATURE    xx2xx
 
   - code: "XX201"
@@ -411,6 +454,10 @@ Errors:
     text: "Chamber temperature above safety limit. Ensure better ventilation."
     id: "CHAMBER_OVERHEATING_TEMP"
     gui_layout: "warning_dialog"
+<<<<<<< Updated upstream
+=======
+    approved: true
+>>>>>>> Stashed changes
 
   - code: "XX261"
     printers: [COREONE, XL]
@@ -418,6 +465,10 @@ Errors:
     text: "Chamber temperature critical. Aborting print to prevent printer damage."
     id: "CHAMBER_CRITICAL_TEMP"
     gui_layout: "warning_dialog"
+<<<<<<< Updated upstream
+=======
+    approved: true
+>>>>>>> Stashed changes
 
   # ELECTRICAL     xx3xx
 
@@ -655,8 +706,18 @@ Errors:
     id: "CONNECT_REGISTRATION_FAILED"
     approved: true
 
+<<<<<<< Updated upstream
   # XX4402 NEW_WIFI_CREDENTIALS deprecated
 
+=======
+  - code: "XX402"
+    title: "..."
+    text: "..."
+    id: "NEW_WIFI_CREDENTIALS"
+    approved: true
+    deprecated: true
+  
+>>>>>>> Stashed changes
   - code: "XX403"
     title: "G-CODE METRICS CONFIG CHANGE"
     text: "Gcode is trying to change metrics configuration.\n\nAllow the changes?"
@@ -685,7 +746,13 @@ Errors:
     title: "DWARF ERROR"
     text: "Dwarf board %d fault: %s"
     id: "DWARF_MARLIN_ERR"
+<<<<<<< Updated upstream
 
+=======
+    approved: true
+    deprecated: true
+    
+>>>>>>> Stashed changes
   - code: "XX504"
     title: "ESP ERROR"
     text: "Reading ESP firmware failed."
@@ -903,6 +970,10 @@ Errors:
     text: "Gcode on the USB drive is corrupt. Fix manually before resuming."
     id: "GCODE_CORRUPTION"
     gui_layout: "warning_dialog"
+<<<<<<< Updated upstream
+=======
+    approved: true
+>>>>>>> Stashed changes
 
   - code: "XX535"
     title: "Gcode Cropped"
