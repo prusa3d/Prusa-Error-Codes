@@ -1085,14 +1085,14 @@ Errors:
     title: "Firmware Update Required"
     text: "Insert the bundled USB drive, restart the printer and click the knob once during the boot. This will install the MK4 firmware."
     id: "DIFFERENT_FW_REQUIRED"
-    approved: false
+    approved: true
 
   - code: "XX701"
     printers: [MK4]
     title: "Firmware Update Required"
     text: "Insert the bundled USB drive, restart the printer and click the knob once during the boot. This will install the correct firmware for your hardware."
     id: "DIFFERENT_FW_REQUIRED"
-    approved: false
+    approved: true
 
   - code: "XX701"
     printers: [MK3.5]
@@ -1407,7 +1407,7 @@ Errors:
     id: "ENCLOSURE_FILTER_EXPIRATION_WARNING"
     type: "CONNECT"
     gui_layout: "warning_dialog"
-    approved: false
+    approved: true
 
   - code: "XX832"
     printers: [XL]
@@ -1425,7 +1425,7 @@ Errors:
     id: "ENCLOSURE_FILTER_EXPIRATION"
     type: "CONNECT"
     gui_layout: "warning_dialog"
-    approved: false
+    approved: true
 
   - code: "XX833"
     printers: [iX, MK4, COREONE, MK3.5, MINI, XL]
