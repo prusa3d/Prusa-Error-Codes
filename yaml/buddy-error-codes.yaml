@@ -368,6 +368,14 @@ Errors:
     gui_layout: "red_screen"
     approved: true
 
+  - code: "XX216"
+    printers: [iX]
+    title: "HEATBREAK THERMAL RUNAWAY"
+    text: "Check the thermistor wiring, cooling duct or heatbreak fan wiring for potential damage."
+    id: "HEATBREAK_THERMAL_RUNAWAY"
+    gui_layout: "red_screen"
+    approved: false
+
   - code: "XX250"
     printers: [iX, XL]
     title: "MODULAR BED ERROR"
