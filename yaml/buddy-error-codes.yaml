@@ -990,6 +990,13 @@ Errors:
     gui_layout: "red_screen"
     approved: true
 
+  - code: "XX537"
+    title: "SELFTEST NOT PASSED"
+    text: "Selftests required to perform this action have not been completed. The action cannot be executed."
+    id: "ACTION_SELFTEST_REQUIRED"
+    gui_layout: "warning_dialog"
+    approved: false
+
   - code: "XX601"
     title: "UNKNOWN ERROR"
     text: "This error code is not found\nin our database.\nContact the support."
