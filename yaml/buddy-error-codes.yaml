@@ -228,6 +228,15 @@ Errors:
     gui_layout: "warning_dialog"
     approved: false
 
+  - code: "XX119"
+    title: "FILAMENT ALREADY IN EXTRUDER SENSOR"
+    printers: [XL, COREONE, iX]
+    text: "Filament is already loaded in the extruder's filament sensor. Please remove it from the extruder manually before proceeding."
+    id: "FILAMENT_ALREADY_IN_EXTRUDER_SENSOR"
+    type: WARNING
+    gui_layout: "warning_dialog"
+    approved: false
+
   # TEMPERATURE    xx2xx
 
   - code: "XX201"
