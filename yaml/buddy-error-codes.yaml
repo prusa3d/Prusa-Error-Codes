@@ -728,6 +728,16 @@ Errors:
     gui_layout: "warning_dialog"
     approved: true
 
+  - code: "XX324"
+    printers: [MK4, COREONE, iX, XL, MK3.5]
+    title: "DISPLAY PROBLEM DETECTED"
+    text: "Display issues detected. Reducing the refresh rate will possibly solve the problem. Proceed?"
+    id: "DISPLAY_PROBLEM_DETECTED"
+    gui_layout: "warning_dialog"
+    approved: false
+
+# CONNECTIVITY   xx4xx   # Connectivity - Wi - Fi, LAN, Prusa Connect Cloud
+
   - code: "XX401"
     title: "CONNECT REGISTRATION FAILED"
     text: "Registration to Prusa Connect failed due to:"
