@@ -226,7 +226,7 @@ Errors:
     id: "HOMING_CALIBRATION_NEEDED"
     type: WARNING
     gui_layout: "warning_dialog"
-    approved: false
+    approved: true
 
   - code: "XX119"
     title: "LOADING OBSTRUCTION"
@@ -235,7 +235,7 @@ Errors:
     id: "LOADING_OBSTRUCTION"
     type: WARNING
     gui_layout: "warning_dialog"
-    approved: false
+    approved: true
 
   # TEMPERATURE    xx2xx
 
@@ -734,7 +734,7 @@ Errors:
     text: "Display issues detected. Reducing the refresh rate will possibly solve the problem. Proceed?"
     id: "DISPLAY_PROBLEM_DETECTED"
     gui_layout: "warning_dialog"
-    approved: false
+    approved: true
 
 # CONNECTIVITY   xx4xx   # Connectivity - Wi - Fi, LAN, Prusa Connect Cloud
 
