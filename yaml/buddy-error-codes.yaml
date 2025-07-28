@@ -1039,10 +1039,10 @@ Errors:
 
   - code: "XX537"
     title: "SELFTEST NOT PASSED"
-    text: "Selftests required to perform this action have not been completed. The action cannot be executed."
+    text: "The previous tests must be completed before this one."
     id: "ACTION_SELFTEST_REQUIRED"
     gui_layout: "warning_dialog"
-    approved: false
+    approved: true
 
   - code: "XX538"
     title: "..." # Will be filled out with crash dump information
