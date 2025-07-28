@@ -44,7 +44,7 @@ Errors:
     text: "Failed to calibrate homing. Continuing can cause layer shifts after rehoming."
     id: "PRECISE_REFINEMENT_FAILED"
     gui_layout: "warning_dialog"
-    approved: false
+    approved: true
 
   - code: "XX102"
     printers: [XL]
@@ -52,7 +52,7 @@ Errors:
     text: "Failed to calibrate homing. Continuing can cause layer shifts after rehoming and toolchange issues."
     id: "PRECISE_REFINEMENT_FAILED"
     gui_layout: "warning_dialog"
-    approved: false
+    approved: true
 
   - code: "XX103"
     printers: [XL]
