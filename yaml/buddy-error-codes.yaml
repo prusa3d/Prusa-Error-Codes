@@ -1042,6 +1042,13 @@ Errors:
     gui_layout: "warning_dialog"
     approved: true
 
+  - code: "XX538"
+    title: "INTERNAL ERROR"
+    text: "We are actively working on resolving these issues. Please send the crash dump, saved upon reset, to our support team."
+    id: "INTERNAL_ERROR"
+    gui_layout: "red_screen"
+    approved: false
+
   - code: "XX601"
     title: "UNKNOWN ERROR"
     text: "This error code is not found\nin our database.\nContact the support."
