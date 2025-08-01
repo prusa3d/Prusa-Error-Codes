@@ -767,8 +767,6 @@ Errors:
     gui_layout: "warning_dialog"
     approved: true
 
-# SYSTEM    xx5xx
-
   - code: "XX501"
     printers: [iX, XL]
     title: "MODULAR BED ERROR"
@@ -1043,36 +1041,6 @@ Errors:
     id: "ACTION_SELFTEST_REQUIRED"
     gui_layout: "warning_dialog"
     approved: true
-
-  - code: "XX538"
-    title: "..." # Will be filled out with crash dump information
-    text: "..." # Will be filled out with crash dump information
-    id: "BSOD"
-    gui_layout: "red_screen"
-    approved: false
-
-  - code: "XX539"
-    title: "STACK OVERFLOW"
-    text: "..." # Will be filled out with crash dump information
-    id: "STACK_OVERFLOW"
-    gui_layout: "red_screen"
-    approved: false
-
-  - code: "XX540"
-    title: "WATCHDOG RESET"
-    text: "..." # Will be filled out with crash dump information
-    id: "WATCHDOG_RESET"
-    gui_layout: "red_screen"
-    approved: false
-
-  - code: "XX541"
-    title: "UNKNOWN ERROR"
-    text: "The printer has encountered an unrecognised error. Please contact the support."
-    id: "EMPTY_DUMP_ERROR"
-    gui_layout: "red_screen"
-    approved: false
-
-# BOOTLOADER    xx6xx
 
   - code: "XX601"
     title: "UNKNOWN ERROR"
