@@ -1609,7 +1609,7 @@ Errors:
     approved: true
 
   - code: "XX846"
-    printers: [XL, COREONE, MK4]
+    printers: [XL, COREONE, MK4, iX]
     title: "Nozzle cleaning failed"
     text: "The auto-retract feature is disabled, which might have caused the failure.\n\nDo you want to enable auto-retract?"
     id: "NOZZLE_CLEANING_FAILED_AUTORETRACT_ENABLE_ASK"
