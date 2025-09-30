@@ -1618,7 +1618,7 @@ Errors:
     approved: true
 
   - code: "XX847"
-    printers: [XL, COREONE, MK4]
+    printers: [XL, COREONE, MK4, iX]
     title: "Warning"
     text: "Are you sure you want to abort the print?\n\nThe current print will be cancelled and you will need to start over."
     id: "NOZZLE_CLEANING_FAILED_ABORT_ASK"
