@@ -769,7 +769,7 @@ Errors:
     approved: true
 
   - code: "XX324"
-    printers: [MK4, COREONE, COREONEL, iX, XL, MK3.5]
+    printers: [MK4, COREONE, COREONEL, XL, MK3.5]
     title: "DISPLAY PROBLEM DETECTED"
     text: "Display issues detected. Reducing the refresh rate will possibly solve the problem. Proceed?"
     id: "DISPLAY_PROBLEM_DETECTED"
