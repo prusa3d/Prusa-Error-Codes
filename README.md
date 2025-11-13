@@ -50,13 +50,15 @@ The `.yaml` format structure is as follows:
 
 * Root [dict]
    * `Errors` [list of dict]: Specific error codes
-      * `printers` (optional) [list of string]: same as root-level printer filter
       * `code` [string]: Error code in the format `XXYZZ`
          * Leave `XX` as `XX`, the code applies to multiple printers.
          * For example `XX101`
+      * `printers` (optional) [list of string]: same as root-level printer filter
       * `title` [string]: Error message title
       * `text` [string]: Error message string
       * `id` [string]: Error identifier used for referencing the error in the code
          * For example `BED_MINTEMP_ERROR`
+      * `gui_layout` [string]: For warning or error
+         * For example `"warning_dialog"` or `"red_screen"`
       * `approved` [bool]: Not really good for anything
       * `deprecated` (optional) [bool]: Errors that are no longer used in main development branches are marked deprecated
