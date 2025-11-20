@@ -1302,7 +1302,7 @@ Errors:
 
   - code: "XX802"
     printers: [MINI]
-    title: "Warning"
+    title: "Recommendation"
     text: "New FW available"
     id: "PRINT_PREVIEW_NEW_FW"
     type: "CONNECT"
@@ -1310,7 +1310,7 @@ Errors:
 
   - code: "XX802"
     printers: [MK4, COREONE, COREONEL, XL, MK3.5, iX]
-    title: "Warning"
+    title: "Recommendation"
     text: "New firmware available"
     id: "PRINT_PREVIEW_NEW_FW"
     type: "CONNECT"
