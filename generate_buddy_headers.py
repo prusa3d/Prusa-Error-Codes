@@ -103,12 +103,21 @@ inline constexpr ErrDesc error_list[] = {{{list_items}
 }};
 """
 
+
+def check_duplicates(err_list):
+    seen = set()
+    for err in err_list:
+        err_code = err['code']
+        assert err_code not in seen, f"Duplicate error code {err}."
+        seen.add(err_code)
+
+
 def generate_header_file(yaml_file_name, header_file_name, printer_id, printer_code, mmu, list, includes, ignore_printer_id):
     with open(yaml_file_name, "r") as yaml_file:
         parsed_file = yaml.safe_load(yaml_file)
 
         err_id_cache = set()
-        err_dict = {}
+        err_list = []
 
         for err in parsed_file["Errors"]:
             if ("deprecated" in err) and err["deprecated"] == True:
@@ -131,7 +140,6 @@ def generate_header_file(yaml_file_name, header_file_name, printer_id, printer_c
             err_id_cache.add(err_id)
 
             err_code = int(code)
-            assert ignore_printer_id or err_code not in err_dict, f"Duplicate error code {code}."
 
             btns = []
             if "action" in err:
@@ -163,24 +171,27 @@ def generate_header_file(yaml_file_name, header_file_name, printer_id, printer_c
             extra_text = f",\n        {{{', '.join(btns)}}}"
             extra_text += f",\n        ErrType::{err['type']}"
 
-            err_dict[err_code] = {
+            err_list.append({
                 "id": err_id,
                 "code": err_code,
                 "title": err["title"],
                 "text": err["text"].translate(str.maketrans({"\n": "\\n", "\"": "\\\""})),
                 "extra_text": extra_text
-            }
+            })
 
     os.makedirs(header_file_name.parent, exist_ok=True)
 
-    enum_items = ",\n    ".join(f"{err['id']} = {err['code']}" for err in err_dict.values())
+    if not ignore_printer_id:
+        check_duplicates(err_list)
+
+    enum_items = ",\n    ".join(f"{err['id']} = {err['code']}" for err in err_list)
 
     list_items = ",".join(f"""
     {{
         N_("{err['title']}"),
         N_("{err['text']}"),
         ErrCode::{err['id']}{err['extra_text']}
-    }}""" for err in err_dict.values())
+    }}""" for err in err_list)
 
     include_items = "\n".join([f"#include <{item}>" for item in includes])
 
