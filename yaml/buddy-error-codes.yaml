@@ -32,14 +32,14 @@ Errors:
     approved: true
 
   - code: "XX101"
-    printers: [XL]
+    printers: [XL, COREONE_INDX, COREONEL_INDX]
     title: "TOOLCHANGER ERROR"
     text: "Check all tools if they are properly parked or picked."
     id: "TOOLCHANGER"
     approved: true
 
   - code: "XX102"
-    printers: [iX, COREONE, COREONEL]
+    printers: [iX, COREONE, COREONE_INDX, COREONEL, COREONEL_INDX]
     title: "PRECISE HOMING FAILED"
     text: "Failed to calibrate homing. Continuing can cause layer shifts after rehoming."
     id: "PRECISE_REFINEMENT_FAILED"
@@ -55,7 +55,7 @@ Errors:
     approved: true
 
   - code: "XX103"
-    printers: [XL]
+    printers: [XL, COREONE_INDX, COREONEL_INDX]
     title: "DOCK POSITION OUT OF BOUNDS"
     text: "Dock %d position differs too much from expected values."
     id: "DOCK_POSITION_OUT_OF_BOUNDS"
@@ -63,7 +63,7 @@ Errors:
     approved: true
 
   - code: "XX104"
-    printers: [XL]
+    printers: [XL, COREONE_INDX, COREONEL_INDX]
     title: "TOOL OFFSET OUT OF BOUNDS"
     text: "Tool %d offset %c: %.3f is out of bounds [%.3f, %.3f]."
     id: "TOOL_OFFSET_OUT_OF_BOUNDS"
@@ -71,7 +71,7 @@ Errors:
     approved: true
 
   - code: "XX105"
-    printers: [XL]
+    printers: [XL, COREONE_INDX, COREONEL_INDX]
     title: "XY PROBE UNSTABLE"
     text: "XY probing failed due to the low measurement stability."
     id: "XY_PROBE_UNSTABLE"
@@ -79,7 +79,7 @@ Errors:
     approved: true
 
   - code: "XX106"
-    printers: [XL]
+    printers: [XL, COREONE_INDX, COREONEL_INDX]
     title: "XY POSITION INVALID"
     text: "Probed XY position is %.3f mm from expected. This is more than allowed difference of %.3f mm."
     id: "XY_POSITION_INVALID"
@@ -87,7 +87,7 @@ Errors:
     approved: true
 
   - code: "XX107"
-    printers: [XL]
+    printers: [XL, COREONE_INDX, COREONEL_INDX]
     title: "PIN NOT REACHED"
     text: "Calibration pin has not been reached. Please check the pin installation."
     id: "PIN_NOT_REACHED"
@@ -104,7 +104,7 @@ Errors:
     approved: true
 
   - code: "XX109"
-    printers: [iX, COREONE, COREONEL, MK4]
+    printers: [iX, COREONE, COREONE_INDX, COREONEL, COREONEL_INDX, MK4]
     title: "STEEL SHEEL NOT DETECTED"
     text: "Steel sheet was not detected. Please put the sheet on to prevent printer damage."
     action: [Retry, Skip]
@@ -113,7 +113,7 @@ Errors:
     approved: true
 
   - code: "XX110"
-    printers: [COREONE, COREONEL]
+    printers: [COREONE, COREONE_INDX, COREONEL, COREONEL_INDX]
     title: "DOOR OPEN"
     text: "Close the door to prevent air drafts, burns and other undesirable effects."
     action: []
@@ -122,7 +122,7 @@ Errors:
     approved: true
 
   - code: "XX111"
-    printers: [COREONE, COREONEL]
+    printers: [COREONE, COREONE_INDX, COREONEL, COREONEL_INDX]
     title: "UNEVEN BED"
     text: "The bed doesn't seem to be aligned properly. Run Z alignment procedure?"
     action: []
@@ -131,7 +131,7 @@ Errors:
     approved: true
 
   - code: "XX112"
-    printers: [COREONE, COREONEL]
+    printers: [COREONE, COREONE_INDX, COREONEL, COREONEL_INDX]
     title: "CEILING CLEARANCE WARNING"
     text: "A movement command risks causing the model to collide with the ceiling."
     action: []
@@ -140,7 +140,7 @@ Errors:
     approved: true
 
   - code: "XX113"
-    printers: [MK4, MK3.5, COREONE, COREONEL, XL, iX]
+    printers: [MK4, MK3.5, COREONE, COREONE_INDX, COREONEL, COREONEL_INDX, XL, iX]
     title: "Fil. Sensor Troubleshooting" # Shortened because "Filament Sensor Troubleshooting" was causing a hash conflict
     text: "If the filament sensor is unresponsive, clean it from debris. Alternatively, you can disable it."
     id: "FILAMENT_SENSOR_STUCK_HELP"
@@ -164,7 +164,7 @@ Errors:
     approved: true
 
   - code: "XX115"
-    printers: [MK4, MK3.5, COREONE, COREONEL, XL, iX]
+    printers: [MK4, MK3.5, COREONE, COREONE_INDX, COREONEL, COREONEL_INDX, XL, iX]
     title: "Filament Sensors Disabled"
     text: "Filament sensors are disabled. Enable them manually after printing."
     id: "FILAMENT_SENSORS_DISABLED"
@@ -221,7 +221,7 @@ Errors:
 
   - code: "XX118"
     title: "HOMING CALIBRATION NEEDED"
-    printers: [XL, COREONE, COREONEL, iX]
+    printers: [XL, COREONE, COREONE_INDX, COREONEL, COREONEL_INDX, iX]
     text: "Homing calibration is needed to ensure repeatable homing."
     id: "HOMING_CALIBRATION_NEEDED"
     type: WARNING
@@ -230,7 +230,7 @@ Errors:
 
   - code: "XX119"
     title: "LOADING OBSTRUCTION"
-    printers: [XL, COREONE, COREONEL, iX]
+    printers: [XL, COREONE, COREONE_INDX, COREONEL, COREONEL_INDX, iX]
     text: "Filament was detected in the extruder filament sensor. Please remove it manually before proceeding."
     id: "LOADING_OBSTRUCTION"
     type: WARNING
@@ -238,7 +238,7 @@ Errors:
     approved: true
 
   - code: "XX120"
-    printers: [iX, COREONE, COREONEL, XL]
+    printers: [iX, COREONE, COREONE_INDX, COREONEL, COREONEL_INDX, XL]
     title: "CALIBRATE HOMING FROM MENU"
     text: "Please run homing calibration from the Calibrations menu. Continuing can result in homing shifts and toolcrashes."
     id: "HOMING_CALIBRATION_FROM_MENU_NEEDED"
@@ -248,7 +248,7 @@ Errors:
   # TEMPERATURE    xx2xx
 
   - code: "XX201"
-    printers: [MINI, MK4, COREONE, COREONEL, iX, MK3.5]
+    printers: [MINI, MK4, COREONE, COREONE_INDX, COREONEL, COREONEL_INDX, iX, MK3.5]
     title: "PREHEAT ERROR"
     text: "Check the heatbed heater & thermistor wiring for possible damage."
     id: "BED_PREHEAT_ERROR"
@@ -256,7 +256,7 @@ Errors:
     approved: true
 
   - code: "XX202"
-    printers: [MINI, MK4, COREONE, COREONEL, iX, MK3.5]
+    printers: [MINI, MK4, COREONE, COREONE_INDX, COREONEL, COREONEL_INDX, iX, MK3.5]
     title: "PREHEAT ERROR"
     text: "Check the print head heater & thermistor wiring for possible damage."
     id: "HOTEND_PREHEAT_ERROR"
@@ -279,7 +279,7 @@ Errors:
     approved: true
 
   - code: "XX204"
-    printers: [MINI, MK4, COREONE, COREONEL, iX, MK3.5]
+    printers: [MINI, MK4, COREONE, COREONE_INDX, COREONEL, COREONEL_INDX, iX, MK3.5]
     title: "THERMAL RUNAWAY"
     text: "Check the print head thermistor wiring for possible damage."
     id: "HOTEND_THERMAL_RUNAWAY"
@@ -295,7 +295,7 @@ Errors:
     approved: true
 
   - code: "XX205"
-    printers: [MINI, MK4, COREONE, COREONEL, iX, MK3.5]
+    printers: [MINI, MK4, COREONE, COREONE_INDX, COREONEL, COREONEL_INDX, iX, MK3.5]
     title: "MAXTEMP ERROR"
     text: "Check the heatbed thermistor wiring for possible damage."
     id: "BED_MAXTEMP_ERROR"
@@ -303,7 +303,7 @@ Errors:
     approved: true
 
   - code: "XX206"
-    printers: [MINI, MK4, COREONE, COREONEL, iX, MK3.5]
+    printers: [MINI, MK4, COREONE, COREONE_INDX, COREONEL, COREONEL_INDX, iX, MK3.5]
     title: "MAXTEMP ERROR"
     text: "Check the print head thermistor wiring for possible damage."
     id: "HOTEND_MAXTEMP_ERROR"
@@ -319,7 +319,7 @@ Errors:
     approved: true
 
   - code: "XX207"
-    printers: [MINI, MK4, COREONE, COREONEL, iX, MK3.5]
+    printers: [MINI, MK4, COREONE, COREONE_INDX, COREONEL, COREONEL_INDX, iX, MK3.5]
     title: "MINTEMP ERROR"
     text: "Check the heatbed thermistor wiring for possible damage."
     id: "BED_MINTEMP_ERROR"
@@ -327,7 +327,7 @@ Errors:
     approved: true
 
   - code: "XX208"
-    printers: [MINI, MK4, COREONE, COREONEL, iX, MK3.5]
+    printers: [MINI, MK4, COREONE, COREONE_INDX, COREONEL, COREONEL_INDX, iX, MK3.5]
     title: "MINTEMP ERROR"
     text: "Check the print head thermistor wiring for possible damage."
     id: "HOTEND_MINTEMP_ERROR"
@@ -350,7 +350,7 @@ Errors:
     deprecated: true
 
   - code: "XX210"
-    printers: [MINI, MK4, COREONE, COREONEL, iX, MK3.5]
+    printers: [MINI, MK4, COREONE, COREONE_INDX, COREONEL, COREONEL_INDX, iX, MK3.5]
     title: "TEMP NOT MATCHING"
     text: "Measured temperature is not matching expected value. Check the thermistor is in contact with hotend. In case of damage, replace it."
     id: "HOTEND_TEMP_NOT_MATCHING"
@@ -387,7 +387,7 @@ Errors:
     approved: true
 
   - code: "XX214"
-    printers: [COREONE, COREONEL]
+    printers: [COREONE, COREONE_INDX, COREONEL, COREONEL_INDX]
     title: "CHAMBER MAXTEMP ERROR"
     text: "Check the chamber thermistor wiring for possible damage."
     id: "CHAMBER_MAXTEMP"
@@ -395,7 +395,7 @@ Errors:
     approved: true
 
   - code: "XX215"
-    printers: [COREONE, COREONEL]
+    printers: [COREONE, COREONE_INDX, COREONEL, COREONEL_INDX]
     title: "CHAMBER MINTEMP ERROR"
     text: "Check the chamber thermistor wiring for possible damage."
     id: "CHAMBER_MINTEMP"
@@ -483,7 +483,7 @@ Errors:
     approved: true
 
   - code: "XX259"
-    printers: [COREONE, COREONEL, XL]
+    printers: [COREONE, COREONE_INDX, COREONEL, COREONEL_INDX, XL]
     title: "CHAMBER WARMING UP"
     text: "Target temperature not yet reached. Continue waiting?"
     id: "CHAMBER_FAILED_TO_REACH_TEMP"
@@ -491,7 +491,7 @@ Errors:
     approved: true
 
   - code: "XX260"
-    printers: [COREONE, COREONEL, XL]
+    printers: [COREONE, COREONE_INDX, COREONEL, COREONEL_INDX, XL]
     title: "Chamber Overheating"
     text: "Chamber temperature above safety limit. Ensure better ventilation."
     id: "CHAMBER_OVERHEATING_TEMP"
@@ -499,7 +499,7 @@ Errors:
     approved: true
 
   - code: "XX261"
-    printers: [COREONE, COREONEL, XL]
+    printers: [COREONE, COREONE_INDX, COREONEL, COREONEL_INDX, XL]
     title: "Chamber Temperature Is Critical"
     text: "Chamber temperature critical. Aborting print to prevent printer damage."
     id: "CHAMBER_CRITICAL_TEMP"
@@ -507,7 +507,7 @@ Errors:
     approved: true
 
   - code: "XX270"
-    printers: [COREONEL]
+    printers: [COREONEL, COREONEL_INDX]
     title: "MCU OVERHEAT"
     text: "Microcontroller unit of %s is overheating."
     id: "PUBBY_MCU_OVERHEAT"
@@ -515,7 +515,7 @@ Errors:
     approved: true
 
   - code: "XX271"
-    printers: [COREONEL]
+    printers: [COREONEL, COREONEL_INDX]
     title: "PCB OVERHEAT"
     text: "Printed circuit board of %s is overheating."
     id: "PUBBY_PCB_OVERHEAT"
@@ -523,7 +523,7 @@ Errors:
     approved: true
 
   - code: "XX272"
-    printers: [COREONEL]
+    printers: [COREONEL, COREONEL_INDX]
     title: "AC CONTROLLER FAULT"
     text: "Temperature sensor of the heated bed is disconnected."
     id: "AC_CONTROLLER_BED_NTC_DISCONNECT"
@@ -531,7 +531,7 @@ Errors:
     approved: true
 
   - code: "XX273"
-    printers: [COREONEL]
+    printers: [COREONEL, COREONEL_INDX]
     title: "AC CONTROLLER FAULT"
     text: "Temperature sensor of the heated bed is shorted."
     id: "AC_CONTROLLER_BED_NTC_SHORT"
@@ -549,7 +549,7 @@ Errors:
     approved: true
 
   - code: "XX301"
-    printers: [MK4, COREONE, COREONEL, iX]
+    printers: [MK4, COREONE, COREONE_INDX, COREONEL, COREONEL_INDX, iX]
     title: "HOMING ERROR Z"
     text: "Failed to home the extruder in Z-axis, make sure the loadcell is working."
     id: "HOMING_ERROR_Z"
@@ -589,7 +589,7 @@ Errors:
     approved: true
 
   - code: "XX304"
-    printers: [MINI, MK4, COREONE, COREONEL, iX, MK3.5]
+    printers: [MINI, MK4, COREONE, COREONE_INDX, COREONEL, COREONEL_INDX, iX, MK3.5]
     title: "HOMING ERROR X"
     text: "Failed to home the extruder in X-axis, make sure there is no obstacle on X-axis."
     id: "HOMING_ERROR_X"
@@ -605,7 +605,7 @@ Errors:
     approved: true
 
   - code: "XX305"
-    printers: [MINI, MK4, COREONE, COREONEL, MK3.5]
+    printers: [MINI, MK4, COREONE, COREONE_INDX, COREONEL, COREONEL_INDX, MK3.5]
     title: "HOMING ERROR Y"
     text: "Failed to home the Y-axis, make sure there is no obstacle on Y-axis."
     id: "HOMING_ERROR_Y"
@@ -643,7 +643,7 @@ Errors:
     approved: true
 
   - code: "XX308"
-    printers: [MINI, MK4, COREONE, COREONEL, iX, MK3.5]
+    printers: [MINI, MK4, COREONE, COREONE_INDX, COREONEL, COREONEL_INDX, iX, MK3.5]
     title: "NOZZLE HEATER OVERCURRENT"
     text: "Overcurrent detected on nozzle heater."
     id: "NOZZLE_OVERCURRENT"
@@ -659,7 +659,7 @@ Errors:
     approved: true
 
   - code: "XX309"
-    printers: [MK4, COREONE, COREONEL, MK3.5, iX]
+    printers: [MK4, COREONE, COREONE_INDX, COREONEL, COREONEL_INDX, MK3.5, iX]
     title: "HEATBED PORT OVERCURRENT"
     text: "Overcurrent detected on xBuddy heatbed port, disconnect the device."
     id: "INPUT_OVERCURRENT"
@@ -746,7 +746,7 @@ Errors:
     approved: true
 
   - code: "XX321"
-    printers: [MK4, COREONE, COREONEL, iX, XL, MK3.5]
+    printers: [MK4, COREONE, COREONE_INDX, COREONEL, COREONEL_INDX, iX, XL, MK3.5]
     title: "POWER PANIC"
     text: "Power panic detected on startup. Check power panic cable."
     id: "ACF_AT_INIT"
@@ -769,7 +769,7 @@ Errors:
     approved: true
 
   - code: "XX324"
-    printers: [MK4, COREONE, COREONEL, XL, MK3.5]
+    printers: [MK4, COREONE, COREONE_INDX, COREONEL, COREONEL_INDX, XL, MK3.5]
     title: "DISPLAY PROBLEM DETECTED"
     text: "Display issues detected. Reducing the refresh rate will possibly solve the problem. Proceed?"
     id: "DISPLAY_PROBLEM_DETECTED"
@@ -777,7 +777,7 @@ Errors:
     approved: true
 
   - code: "XX330"
-    printers: [COREONEL]
+    printers: [COREONEL, COREONEL_INDX]
     title: "DATA TIMEOUT"
     text: "%s stopped receiving data."
     id: "PUBBY_DATA_TIMEOUT"
@@ -785,7 +785,7 @@ Errors:
     approved: true
 
   - code: "XX331"
-    printers: [COREONEL]
+    printers: [COREONEL, COREONEL_INDX]
     title: "LINK LOST"
     text: "%s lost a link to parent system."
     id: "PUBBY_HEARTBEAT_MISSING"
@@ -793,7 +793,7 @@ Errors:
     approved: true
 
   - code: "XX332"
-    printers: [COREONEL]
+    printers: [COREONEL, COREONEL_INDX]
     title: "AC CONTROLLER FAULT"
     text: "Residual-current device tripped."
     id: "AC_CONTROLLER_RCD_TRIPPED"
@@ -801,7 +801,7 @@ Errors:
     approved: true
 
   - code: "XX333"
-    printers: [COREONEL]
+    printers: [COREONEL, COREONEL_INDX]
     title: "AC CONTROLLER FAULT"
     text: "Power panic situation detected."
     id: "AC_CONTROLLER_POWERPANIC"
@@ -809,7 +809,7 @@ Errors:
     approved: true
 
   - code: "XX334"
-    printers: [COREONEL]
+    printers: [COREONEL, COREONEL_INDX]
     title: "AC CONTROLLER FAULT"
     text: "Cooling fan of the power supply unit is operating outside of specification."
     id: "AC_CONTROLLER_PSU_FAN_NOK"
@@ -817,7 +817,7 @@ Errors:
     approved: true
 
   - code: "XX335"
-    printers: [COREONEL]
+    printers: [COREONEL, COREONEL_INDX]
     title: "AC CONTROLLER FAULT"
     text: "Fan 0 of the heated bed is operating outside of specification."
     id: "AC_CONTROLLER_BED_FAN0_NOK"
@@ -825,7 +825,7 @@ Errors:
     approved: true
 
   - code: "XX336"
-    printers: [COREONEL]
+    printers: [COREONEL, COREONEL_INDX]
     title: "AC CONTROLLER FAULT"
     text: "Fan 1 of the heated bed is operating outside of specification."
     id: "AC_CONTROLLER_BED_FAN1_NOK"
@@ -833,7 +833,7 @@ Errors:
     approved: true
 
   - code: "XX337"
-    printers: [COREONEL]
+    printers: [COREONEL, COREONEL_INDX]
     title: "AC CONTROLLER FAULT"
     text: "Power grid is operating outside of specification."
     id: "AC_CONTROLLER_GRID_NOK"
@@ -841,7 +841,7 @@ Errors:
     approved: true
 
   - code: "XX338"
-    printers: [COREONEL]
+    printers: [COREONEL, COREONEL_INDX]
     title: "AC CONTROLLER FAULT"
     text: "Heated bed is operating outside of specification."
     id: "AC_CONTROLLER_BED_LOAD_NOK"
@@ -849,7 +849,7 @@ Errors:
     approved: true
 
   - code: "XX339"
-    printers: [COREONEL]
+    printers: [COREONEL, COREONEL_INDX]
     title: "AC CONTROLLER FAULT"
     text: "Power supply unit is operating outside of specification."
     id: "AC_CONTROLLER_PSU_NOK"
@@ -887,7 +887,7 @@ Errors:
     approved: true
 
   - code: "XX502"
-    printers: [XL]
+    printers: [XL, COREONE_INDX, COREONEL_INDX]
     title: "DWARF ERROR"
     text: "Dwarf board encountered the following problem: \n%s"
     id: "DWARF_UNKNOWN_ERR"
@@ -945,7 +945,7 @@ Errors:
     approved: true
 
   - code: "XX511"
-    printers: [iX, XL, COREONE, COREONEL]
+    printers: [iX, XL, COREONE, COREONE_INDX, COREONEL, COREONEL_INDX]
     title: "PUPPY ERROR"
     text: "Address assignment error"
     id: "PUPPY_ADDR_ASSIGN_ERR"
@@ -953,7 +953,7 @@ Errors:
     approved: true
 
   - code: "XX512"
-    printers: [iX, XL, COREONE, COREONEL]
+    printers: [iX, XL, COREONE, COREONE_INDX, COREONEL, COREONEL_INDX]
     title: "PUPPY ERROR"
     text: "Unassigned puppy found"
     id: "PUPPY_NO_ADDR"
@@ -961,7 +961,7 @@ Errors:
     approved: true
 
   - code: "XX513"
-    printers: [iX, XL, COREONE, COREONEL]
+    printers: [iX, XL, COREONE, COREONE_INDX, COREONEL, COREONEL_INDX]
     title: "PUPPY ERROR"
     text: "Puppy discovery error. No puppy found"
     id: "PUPPY_DISCOVER_ERR"
@@ -969,7 +969,7 @@ Errors:
     approved: true
 
   - code: "XX514"
-    printers: [iX, XL, COREONE, COREONEL]
+    printers: [iX, XL, COREONE, COREONE_INDX, COREONEL, COREONEL_INDX]
     title: "PUPPY ERROR"
     text: "Puppy %s not responding"
     id: "PUPPY_NOT_RESPONDING"
@@ -977,7 +977,7 @@ Errors:
     approved: true
 
   - code: "XX515"
-    printers: [iX, XL, COREONE, COREONEL]
+    printers: [iX, XL, COREONE, COREONE_INDX, COREONEL, COREONEL_INDX]
     title: "PUPPY ERROR"
     text: "Puppy uses incompatible bootloader protocol %04x, Buddy FW requires %04x"
     id: "PUPPY_INCOMPATIBLE_BOOTLODER"
@@ -985,7 +985,7 @@ Errors:
     approved: true
 
   - code: "XX516"
-    printers: [iX, XL, COREONE, COREONEL]
+    printers: [iX, XL, COREONE, COREONE_INDX, COREONEL, COREONEL_INDX]
     title: "PUPPY ERROR"
     text: "Unknown puppy type"
     id: "PUPPY_UNKNOWN_TYPE"
@@ -993,7 +993,7 @@ Errors:
     approved: true
 
   - code: "XX517"
-    printers: [iX, XL, COREONE, COREONEL]
+    printers: [iX, XL, COREONE, COREONE_INDX, COREONEL, COREONEL_INDX]
     title: "PUPPY ERROR"
     text: "Unable to start puppy application"
     id: "PUPPY_START_APP_ERR"
@@ -1001,7 +1001,7 @@ Errors:
     approved: true
 
   - code: "XX518"
-    printers: [iX, XL, COREONE, COREONEL]
+    printers: [iX, XL, COREONE, COREONE_INDX, COREONEL, COREONEL_INDX]
     title: "PUPPY ERROR"
     text: "Puppy %s firmware not found"
     id: "PUPPY_FW_NOT_FOUND"
@@ -1009,7 +1009,7 @@ Errors:
     approved: true
 
   - code: "XX519"
-    printers: [iX, XL, COREONE, COREONEL]
+    printers: [iX, XL, COREONE, COREONE_INDX, COREONEL, COREONEL_INDX]
     title: "PUPPY ERROR"
     text: "Puppy %s flash writing failed"
     id: "PUPPY_WRITE_FLASH_ERR"
@@ -1017,7 +1017,7 @@ Errors:
     approved: true
 
   - code: "XX520"
-    printers: [iX, XL, COREONE, COREONEL]
+    printers: [iX, XL, COREONE, COREONE_INDX, COREONEL, COREONEL_INDX]
     title: "PUPPY ERROR"
     text: "Puppy %s firmware fingerprint mismatch"
     id: "PUPPY_FINGERPRINT_MISMATCH"
@@ -1025,7 +1025,7 @@ Errors:
     approved: true
 
   - code: "XX521"
-    printers: [iX, XL, COREONE, COREONEL]
+    printers: [iX, XL, COREONE, COREONE_INDX, COREONEL, COREONEL_INDX]
     title: "PUPPY ERROR"
     text: "Waiting for fingerprint timed out"
     id: "PUPPY_FINGERPRINT_TIMEOUT"
@@ -1033,7 +1033,7 @@ Errors:
     approved: true
 
   - code: "XX522"
-    printers: [iX, XL, COREONE, COREONEL]
+    printers: [iX, XL, COREONE, COREONE_INDX, COREONEL, COREONEL_INDX]
     title: "PUPPY ERROR"
     text: "Waiting for puppies to start timed out"
     id: "PUPPY_RUN_TIMEOUT"
@@ -1041,7 +1041,7 @@ Errors:
     approved: true
 
   - code: "XX523"
-    printers: [MK4, COREONE, COREONEL, iX, XL, MK3.5]
+    printers: [MK4, COREONE, COREONE_INDX, COREONEL, COREONEL_INDX, iX, XL, MK3.5]
     title: "LOADCELL NOT CALIBRATED"
     text: "Loadcell calibration is incomplete. Restart the printer and calibrate loadcell."
     id: "LOADCELL_INCOMPLETE_CONFIGURATION_ERROR"
@@ -1049,7 +1049,7 @@ Errors:
     deprecated: true
 
   - code: "XX524"
-    printers: [MK4, COREONE, COREONEL, iX, XL]
+    printers: [MK4, COREONE, COREONE_INDX, COREONEL, COREONEL_INDX, iX, XL]
     title: "LOADCELL TARE ERROR"
     text: "There was an error requesting the tare for loadcell."
     id: "LOADCELL_TARE_ALREADY_REQUESTED"
@@ -1057,7 +1057,7 @@ Errors:
     deprecated: true
 
   - code: "XX525"
-    printers: [MK4, COREONE, COREONEL, iX, XL]
+    printers: [MK4, COREONE, COREONE_INDX, COREONEL, COREONEL_INDX, iX, XL]
     title: "LOADCELL TARE FAILED"
     text: "Setting the tare failed. Check the loadcell wiring and connection."
     id: "LOADCELL_TARE_FAILED"
@@ -1065,7 +1065,7 @@ Errors:
     deprecated: true
 
   - code: "XX526"
-    printers: [MK4, COREONE, COREONEL, iX, XL]
+    printers: [MK4, COREONE, COREONE_INDX, COREONEL, COREONEL_INDX, iX, XL]
     title: "LOADCELL MEASURE FAILED"
     text: "Loadcell measured an inifinite or undefined load value."
     id: "LOADCELL_INFINITE_LOAD"
@@ -1073,7 +1073,7 @@ Errors:
     approved: true
 
   - code: "XX527"
-    printers: [MK4, COREONE, COREONEL, iX, XL]
+    printers: [MK4, COREONE, COREONE_INDX, COREONEL, COREONEL_INDX, iX, XL]
     title: "LOADCELL BAD CONFIGURATION"
     text: "The loadcell configuration is incorrect."
     id: "LOADCELL_BAD_CONFIGURATION"
@@ -1081,7 +1081,7 @@ Errors:
     deprecated: true
 
   - code: "XX528"
-    printers: [MK4, COREONE, COREONEL, iX, XL]
+    printers: [MK4, COREONE, COREONE_INDX, COREONEL, COREONEL_INDX, iX, XL]
     title: "LOADCELL TIMEOUT"
     text: "There was a timeout while waiting for measurement sample, please repeat the action."
     id: "LOADCELL_TIMEOUT"
@@ -1089,7 +1089,7 @@ Errors:
     approved: true
 
   - code: "XX529"
-    printers: [MK4, COREONE, COREONEL, iX, XL, MK3.5]
+    printers: [MK4, COREONE, COREONE_INDX, COREONEL, COREONEL_INDX, iX, XL, MK3.5]
     title: "LED MEMORY ERROR"
     text: "Memory allocation failed for scheduled LED animation"
     id: "LED_ANIMATION_BAD_SPACE_MANAGEMENT"
@@ -1139,7 +1139,7 @@ Errors:
     approved: true
 
   - code: "XX536"
-    printers: [XL]
+    printers: [XL, COREONE_INDX, COREONEL_INDX]
     title: "EXTRUDER ERROR"
     text: "Extruder motor is not spinning on tool %d"
     id: "DWARF_TMC"
@@ -1216,7 +1216,7 @@ Errors:
     approved: true
 
   - code: "XX609"
-    printers: [MK4, COREONE, COREONEL, iX, XL, MK3.5]
+    printers: [MK4, COREONE, COREONE_INDX, COREONEL, COREONEL_INDX, iX, XL, MK3.5]
     title: "FIRMWARExPRINTER MISMATCH"
     text: "Firmware and hardware versions do\nnot match. Make sure you have\nthe right firmware file for\nyour printer."
     id: "HW_VERSION_ERR"
@@ -1259,7 +1259,7 @@ Errors:
     approved: true
 
   - code: "XX701"
-    printers: [COREONE, COREONEL]
+    printers: [COREONE, COREONE_INDX, COREONEL, COREONEL_INDX]
     title: "Firmware Update Required"
     text: "Insert the bundled USB drive, restart the printer and click the knob once during the boot. This will install the MK4 firmware."
     id: "DIFFERENT_FW_REQUIRED"
@@ -1309,7 +1309,7 @@ Errors:
     approved: true
 
   - code: "XX802"
-    printers: [MK4, COREONE, COREONEL, XL, MK3.5, iX]
+    printers: [MK4, COREONE, COREONE_INDX, COREONEL, COREONEL_INDX, XL, MK3.5, iX]
     title: "Recommendation"
     text: "New firmware available"
     id: "PRINT_PREVIEW_NEW_FW"
@@ -1339,7 +1339,7 @@ Errors:
     approved: true
 
   - code: "XX805"
-    printers: [MK4, COREONE, COREONEL, XL, MK3.5, iX]
+    printers: [MK4, COREONE, COREONE_INDX, COREONEL, COREONEL_INDX, XL, MK3.5, iX]
     title: "Warning"
     text: "A filament specified in the G-code is either not loaded or wrong type."
     id: "PRINT_PREVIEW_WRONG_FILAMENT"
@@ -1399,7 +1399,7 @@ Errors:
     approved: true
 
   - code: "XX813"
-    printers: [XL]
+    printers: [XL, COREONE_INDX, COREONEL_INDX]
     title: "CRASH DETECTED"
     text: "Toolchanger problem has been detected.\nPark all tools to docks\nand leave the carriage free."
     id: "CRASH_RECOVERY_TOOL_PICKUP"
@@ -1407,7 +1407,7 @@ Errors:
     approved: true
 
   - code: "XX814"
-    printers: [MK4, COREONE, COREONEL, XL, MK3.5]
+    printers: [MK4, COREONE, COREONE_INDX, COREONEL, COREONEL_INDX, XL, MK3.5]
     title: "Tool mapping"
     text: "Changes of mapping available only in the Printer UI. Select Print to start the print with defaults."
     id: "PRINT_PREVIEW_TOOLS_MAPPING"
@@ -1440,7 +1440,7 @@ Errors:
     approved: true
 
   - code: "XX817"
-    printers: [MINI, MK3.5, MK4, XL, COREONE, COREONEL]
+    printers: [MINI, MK3.5, MK4, XL, COREONE, COREONE_INDX, COREONEL_INDX, COREONEL]
     title: "Warning"
     text: "Heating disabled due to 30 minutes of inactivity."
     id: "HEATERS_TIMEOUT"
@@ -1466,7 +1466,7 @@ Errors:
     approved: true
 
   - code: "XX819"
-    printers: [MINI, MK3.5, MK4, XL, COREONE, COREONEL]
+    printers: [MINI, MK3.5, MK4, XL, COREONE, COREONE_INDX, COREONEL_INDX, COREONEL]
     title: "Warning"
     text: "Heating disabled due to 30 minutes of inactivity."
     id: "NOZZLE_TIMEOUT"
@@ -1499,7 +1499,7 @@ Errors:
     approved: true
 
   - code: "XX823"
-    printers: [XL, MK3.5]
+    printers: [XL, MK3.5, COREONE_INDX, COREONEL_INDX]
     title: "Warning"
     text: "Nozzle doesn't seem to have round cross section. Make sure it is clean and perpendicular to the bed."
     id: "NOZZLE_DOES_NOT_HAVE_ROUND_SECTION"
@@ -1524,7 +1524,7 @@ Errors:
     approved: true
 
   - code: "XX826"
-    printers: [XL]
+    printers: [XL, COREONE_INDX, COREONEL_INDX]
     title: "Warning"
     text: "MCU in Dwarf is overheated, likely due to exceeding the printer's operating temperature. Prevent overheating for optimal performance."
     id: "DWARF_MCU_MAX_TEMP"
@@ -1533,7 +1533,7 @@ Errors:
     approved: true
 
   - code: "XX827"
-    printers: [iX, XL, COREONEL]
+    printers: [iX, XL, COREONEL, COREONEL_INDX]
     title: "Warning"
     text: "MCU in Modular Bed is overheated, likely due to exceeding the printer's operating temperature. Prevent overheating for optimal performance."
     id: "MOD_BED_MCU_MAX_TEMP"
@@ -1579,7 +1579,7 @@ Errors:
     approved: true
 
   - code: "XX831"
-    printers: [COREONE, COREONEL]
+    printers: [COREONE, COREONE_INDX, COREONEL, COREONEL_INDX]
     title: "HEPA Filter Expiring"
     text: "The HEPA filter is nearing the end of its life span. We recommend purchasing a new one."
     id: "ENCLOSURE_FILTER_EXPIRATION_WARNING"
@@ -1597,7 +1597,7 @@ Errors:
     approved: true
 
   - code: "XX832"
-    printers: [COREONE, COREONEL]
+    printers: [COREONE, COREONE_INDX, COREONEL, COREONEL_INDX]
     title: "HEPA Filter Expired"
     text: "The HEPA filter has expired. Change the HEPA filter before your next print."
     id: "ENCLOSURE_FILTER_EXPIRATION"
@@ -1606,7 +1606,7 @@ Errors:
     approved: true
 
   - code: "XX833"
-    printers: [iX, MK4, COREONE, COREONEL, MK3.5, MINI, XL]
+    printers: [iX, MK4, COREONE, COREONE_INDX, COREONEL, COREONEL_INDX, MK3.5, MINI, XL]
     title: "Warning"
     text: "Bed leveling failed. Try again?"
     id: "PROBING_FAILED"
@@ -1615,7 +1615,7 @@ Errors:
     approved: true
 
   - code: "XX834"
-    printers: [iX, MK4, COREONE, COREONEL, XL]
+    printers: [iX, MK4, COREONE, COREONE_INDX, COREONEL, COREONEL_INDX, XL]
     title: "Warning"
     text: "Nozzle cleaning failed."
     id: "NOZZLE_CLEANING_FAILED"
@@ -1624,7 +1624,7 @@ Errors:
     approved: true
 
   - code: "XX835"
-    printers: [iX, MK4, COREONE, COREONEL, MK3.5, MINI, XL]
+    printers: [iX, MK4, COREONE, COREONE_INDX, COREONEL, COREONEL_INDX, MK3.5, MINI, XL]
     title: "Quick Pause"
     text: 'Waiting for the user. Press "Resume" once the printer is ready.'
     id: "QUICK_PAUSE"
@@ -1640,7 +1640,7 @@ Errors:
     approved: true
 
   - code: "XX837"
-    printers: [COREONE, COREONEL]
+    printers: [COREONE, COREONE_INDX, COREONEL, COREONEL_INDX]
     title: "Open Chamber Ventilation"
     text: "Ensure the top ventilation grille is open for proper airflow."
     id: "OPEN_CHAMBER_VENTS"
@@ -1649,7 +1649,7 @@ Errors:
     approved: true
 
   - code: "XX838"
-    printers: [COREONE, COREONEL]
+    printers: [COREONE, COREONE_INDX, COREONEL, COREONEL_INDX]
     title: "Close Chamber Ventilation"
     text: "Ensure the top ventilation grille is closed for optimal chamber temperature."
     id: "CLOSE_CHAMBER_VENTS"
@@ -1658,7 +1658,7 @@ Errors:
     approved: true
 
   - code: "XX839"
-    printers: [COREONE, COREONEL]
+    printers: [COREONE, COREONE_INDX, COREONEL, COREONEL_INDX]
     title: "Chamber Cooling Fan Error"
     text: "Chamber cooling fan is not spinning. Check it for possible debris, then inspect the wiring."
     id: "CHAMBER_COOLING_FAN_ERROR"
@@ -1667,7 +1667,7 @@ Errors:
     approved: true
 
   - code: "XX840"
-    printers: [XL, COREONE, COREONEL]
+    printers: [XL, COREONE, COREONE_INDX, COREONEL, COREONEL_INDX]
     title: "Chamber Filtration Fan Error"
     text: "Chamber filtration fan is not spinning. Check it for possible debris, then inspect the wiring."
     id: "CHAMBER_FILTRATION_FAN_ERROR"
@@ -1676,7 +1676,7 @@ Errors:
     approved: true
 
   - code: "XX841"
-    printers: [XL, COREONE, COREONEL, MK4]
+    printers: [XL, COREONE, COREONE_INDX, COREONEL, COREONEL_INDX, MK4]
     title: "Cleaning the nozzle"
     text: "Would you like to purge the filament?\n\nIt will then retract to prevent oozing. Be careful, the nozzle is hot!"
     id: "NOZZLE_CLEANING_FAILED_RECOMMEND_PURGE"
@@ -1685,7 +1685,7 @@ Errors:
     approved: true
 
   - code: "XX842"
-    printers: [XL, COREONE, COREONEL, MK4]
+    printers: [XL, COREONE, COREONE_INDX, COREONEL, COREONEL_INDX, MK4]
     title: "Cleaning the nozzle"
     text: "Waiting for nozzle temperature..."
     id: "NOZZLE_CLEANING_FAILED_WAIT_TEMP"
@@ -1694,7 +1694,7 @@ Errors:
     approved: true
 
   - code: "XX843"
-    printers: [XL, COREONE, COREONEL, MK4]
+    printers: [XL, COREONE, COREONE_INDX, COREONEL, COREONEL_INDX, MK4]
     title: "Cleaning the nozzle"
     text: "Purging the filament.\n\nPlease wait until the purge is complete."
     id: "NOZZLE_CLEANING_FAILED_PURGE"
@@ -1703,7 +1703,7 @@ Errors:
     approved: true
 
   - code: "XX844"
-    printers: [XL, COREONE, COREONEL, MK4]
+    printers: [XL, COREONE, COREONE_INDX, COREONEL, COREONEL_INDX, MK4]
     title: "Cleaning the nozzle"
     text: "The filament has been purged.\n\nThe nozzle will now retract the filament to prevent oozing."
     id: "NOZZLE_CLEANING_FAILED_AUTORETRACT"
@@ -1712,7 +1712,7 @@ Errors:
     approved: true
 
   - code: "XX845"
-    printers: [XL, COREONE, COREONEL, MK4]
+    printers: [XL, COREONE, COREONE_INDX, COREONEL, COREONEL_INDX, MK4]
     title: "Cleaning the nozzle"
     text: "Remove the purged filament and ensure the nozzle is clean and ready.\n\nBe careful, the nozzle is hot!"
     id: "NOZZLE_CLEANING_FAILED_REMOVE_FILAMENT"
@@ -1721,7 +1721,7 @@ Errors:
     approved: true
 
   - code: "XX846"
-    printers: [XL, COREONE, COREONEL, MK4, iX]
+    printers: [XL, COREONE, COREONE_INDX, COREONEL, COREONEL_INDX, MK4, iX]
     title: "Nozzle cleaning failed"
     text: "The auto-retract feature is disabled, which might have caused the failure.\n\nDo you want to enable auto-retract?"
     id: "NOZZLE_CLEANING_FAILED_AUTORETRACT_ENABLE_ASK"
@@ -1730,7 +1730,7 @@ Errors:
     approved: true
 
   - code: "XX847"
-    printers: [XL, COREONE, COREONEL, MK4, iX]
+    printers: [XL, COREONE, COREONE_INDX, COREONEL, COREONEL_INDX, MK4, iX]
     title: "Warning"
     text: "Are you sure you want to abort the print?\n\nThe current print will be cancelled and you will need to start over."
     id: "NOZZLE_CLEANING_FAILED_ABORT_ASK"
@@ -1739,7 +1739,7 @@ Errors:
     approved: true
 
   - code: "XX848"
-    printers: [iX, MK4, MK3.5, XL, COREONE, COREONEL]
+    printers: [iX, MK4, MK3.5, XL, COREONE, COREONE_INDX, COREONEL, COREONEL_INDX]
     title: "UNTRUSTED IDENTITY"
     text: "G-Code signed by an identity not trusted by this printer. Do you want to save identity as trusted?\n\nIdentity name: %s\nIdentity key hash: %s"
     id: "UNTRUSTED_IDENTITY"
