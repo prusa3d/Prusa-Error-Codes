@@ -180,9 +180,9 @@ Errors:
     approved: true
 
   - code: "XX116"
-    title: "MAINTENANCE FAILURE WARNING"
+    title: "FILAMENT LOADING WARNING"
     printers: [COREONE, COREONEL, MK4]
-    text: "Printer has detected multiple consecutive filament loading errors. We recommend checking Nextruder main-plate. Visit prusa.io/mmu-care"
+    text: "Printer recorded multiple loading errors. Run Nextruder Maintenance. Check and clean the Nextruder main-plate inside the unit. prusa.io/mmu-care"
     action: [Continue]
     id: "MAINTENANCE_WARNING_FAILS"
     type: WARNING
