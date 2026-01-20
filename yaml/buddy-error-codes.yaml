@@ -652,8 +652,8 @@ Errors:
 
   - code: "XX309"
     printers: [MK4, COREONE, COREONE_INDX, COREONEL, COREONEL_INDX, MK3.5, iX]
-    title: "HEATBED PORT OVERCURRENT"
-    text: "Overcurrent detected on xBuddy heatbed port, disconnect the device."
+    title: "INPUT PORT OVERCURRENT"
+    text: "Overcurrent detected on xBuddy input port, disconnect the device."
     id: "INPUT_OVERCURRENT"
     gui_layout: "red_screen"
     approved: true
