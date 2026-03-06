@@ -105,7 +105,7 @@ Errors:
 
   - code: "XX109"
     printers: [iX, COREONE, COREONE_INDX, COREONEL, COREONEL_INDX, MK4]
-    title: "STEEL SHEEL NOT DETECTED"
+    title: "STEEL SHEET NOT DETECTED"
     text: "Steel sheet was not detected. Please put the sheet on to prevent printer damage."
     action: [Retry, Skip]
     id: "STEEL_SHEET_NOT_DETECTED"
