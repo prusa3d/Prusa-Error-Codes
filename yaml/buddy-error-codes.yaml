@@ -55,7 +55,7 @@ Errors:
     approved: true
 
   - code: "XX103"
-    printers: [XL, COREONE_INDX, COREONEL_INDX]
+    printers: [XL]
     title: "DOCK POSITION OUT OF BOUNDS"
     text: "Dock %d position differs too much from expected values."
     id: "DOCK_POSITION_OUT_OF_BOUNDS"
@@ -63,7 +63,7 @@ Errors:
     approved: true
 
   - code: "XX104"
-    printers: [XL, COREONE_INDX, COREONEL_INDX]
+    printers: [XL]
     title: "TOOL OFFSET OUT OF BOUNDS"
     text: "Tool %d offset %c: %.3f is out of bounds [%.3f, %.3f]."
     id: "TOOL_OFFSET_OUT_OF_BOUNDS"
@@ -71,7 +71,7 @@ Errors:
     approved: true
 
   - code: "XX105"
-    printers: [XL, COREONE_INDX, COREONEL_INDX]
+    printers: [XL]
     title: "XY PROBE UNSTABLE"
     text: "XY probing failed due to the low measurement stability."
     id: "XY_PROBE_UNSTABLE"
@@ -79,7 +79,7 @@ Errors:
     approved: true
 
   - code: "XX106"
-    printers: [XL, COREONE_INDX, COREONEL_INDX]
+    printers: [XL]
     title: "XY POSITION INVALID"
     text: "Probed XY position is %.3f mm from expected. This is more than allowed difference of %.3f mm."
     id: "XY_POSITION_INVALID"
@@ -87,7 +87,7 @@ Errors:
     approved: true
 
   - code: "XX107"
-    printers: [XL, COREONE_INDX, COREONEL_INDX]
+    printers: [XL]
     title: "PIN NOT REACHED"
     text: "Calibration pin has not been reached. Please check the pin installation."
     id: "PIN_NOT_REACHED"
@@ -230,7 +230,7 @@ Errors:
 
   - code: "XX119"
     title: "LOADING OBSTRUCTION"
-    printers: [XL, COREONE, COREONE_INDX, COREONEL, COREONEL_INDX, iX]
+    printers: [XL, COREONE, COREONEL, iX]
     text: "Filament was detected in the extruder filament sensor. Please remove it manually before proceeding."
     id: "LOADING_OBSTRUCTION"
     type: WARNING
@@ -422,7 +422,7 @@ Errors:
     deprecated: true
 
   - code: "XX210"
-    printers: [MINI, MK4, COREONE, COREONE_INDX, COREONEL, COREONEL_INDX, iX, MK3.5]
+    printers: [MINI, MK4, COREONE, COREONEL, iX, MK3.5]
     title: "TEMP NOT MATCHING"
     text: "Measured temperature is not matching expected value. Check the thermistor is in contact with hotend. In case of damage, replace it."
     id: "HOTEND_TEMP_NOT_MATCHING"
@@ -951,7 +951,7 @@ Errors:
     approved: true
 
   - code: "XX502"
-    printers: [XL, COREONE_INDX, COREONEL_INDX]
+    printers: [XL]
     title: "DWARF ERROR"
     text: "Dwarf board encountered the following problem: \n%s"
     id: "DWARF_UNKNOWN_ERR"
@@ -1203,7 +1203,7 @@ Errors:
     approved: true
 
   - code: "XX536"
-    printers: [XL, COREONE_INDX, COREONEL_INDX]
+    printers: [XL]
     title: "EXTRUDER ERROR"
     text: "Extruder motor is not spinning on tool %d"
     id: "DWARF_TMC"
@@ -1463,7 +1463,7 @@ Errors:
     approved: true
 
   - code: "XX813"
-    printers: [XL, COREONE_INDX, COREONEL_INDX]
+    printers: [XL]
     title: "CRASH DETECTED"
     text: "Toolchanger problem has been detected.\nPark all tools to docks\nand leave the carriage free."
     id: "CRASH_RECOVERY_TOOL_PICKUP"
@@ -1563,7 +1563,7 @@ Errors:
     approved: true
 
   - code: "XX823"
-    printers: [XL, MK3.5, COREONE_INDX, COREONEL_INDX]
+    printers: [XL, MK3.5]
     title: "Warning"
     text: "Nozzle doesn't seem to have round cross section. Make sure it is clean and perpendicular to the bed."
     id: "NOZZLE_DOES_NOT_HAVE_ROUND_SECTION"
@@ -1588,7 +1588,7 @@ Errors:
     approved: true
 
   - code: "XX826"
-    printers: [XL, COREONE_INDX, COREONEL_INDX]
+    printers: [XL]
     title: "Warning"
     text: "MCU in Dwarf is overheated, likely due to exceeding the printer's operating temperature. Prevent overheating for optimal performance."
     id: "DWARF_MCU_MAX_TEMP"
