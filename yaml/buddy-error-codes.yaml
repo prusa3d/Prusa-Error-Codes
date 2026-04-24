@@ -317,6 +317,14 @@ Errors:
     gui_layout: "warning_dialog"
     approved: false
 
+  - code: "XX130"
+    printers: [COREONE_INDX, COREONEL_INDX]
+    title: "XY TOOL OFFSET FAILED"
+    text: "XY tool offset calibration failed. Make sure the nozzle is clean. Be careful it may be hot."
+    id: "TOOL_OFFSET_XY_CALIBRATION_FAILED"
+    gui_layout: "warning_dialog"
+    approved: false
+
   # TEMPERATURE    xx2xx
 
   - code: "XX201"
