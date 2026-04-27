@@ -618,6 +618,22 @@ Errors:
     gui_layout: "red_screen"
     approved: true
 
+  - code: "XX274"
+    printers: [COREONE_INDX, COREONEL_INDX]
+    title: "BOARD MINTEMP ERROR"
+    text: "Check the INDX head board thermistor wiring for possible damage."
+    id: "INDX_HEAD_BOARD_MINTEMP_ERR"
+    gui_layout: "red_screen"
+    approved: false
+
+  - code: "XX275"
+    printers: [COREONE_INDX, COREONEL_INDX]
+    title: "BOARD MAXTEMP ERROR"
+    text: "Check the INDX head board thermistor wiring for possible damage."
+    id: "INDX_HEAD_BOARD_MAXTEMP_ERR"
+    gui_layout: "red_screen"
+    approved: false
+
   # ELECTRICAL     xx3xx
 
   - code: "XX301"
