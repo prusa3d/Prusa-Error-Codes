@@ -247,16 +247,16 @@ Errors:
 
   - code: "XX121"
     printers: [COREONE_INDX, COREONEL_INDX]
-    title: "Unknown nozzle"
-    text: "A nozzle was detected but its identity is unknown. Please select the dock it belongs to."
+    title: "Unknown tool"
+    text: "A tool was detected, but its identity is unknown. Please select the corresponding dock."
     id: "NOZZLE_MISMATCH_UNKNOWN"
     gui_layout: "warning_dialog"
     approved: false
 
   - code: "XX122"
     printers: [COREONE_INDX, COREONEL_INDX]
-    title: "Unknown nozzle"
-    text: "Select the dock the nozzle belongs to."
+    title: "Unknown tool"
+    text: "Select the dock for this tool."
     id: "NOZZLE_MISMATCH_DOCK_SELECTION"
     gui_layout: "warning_dialog"
     approved: false
@@ -264,7 +264,7 @@ Errors:
   - code: "XX123"
     printers: [COREONE_INDX, COREONEL_INDX]
     title: "Occupied dock"
-    text: "The head hit something on the way to the dock. Make sure the correct dock is selected and empty, then retry."
+    text: "The head encountered an obstruction on the way to the dock. Make sure the correct dock is selected and empty, then try again."
     id: "NOZZLE_MISMATCH_DOCK_NOT_EMPTY"
     gui_layout: "warning_dialog"
     approved: false
@@ -280,7 +280,7 @@ Errors:
   - code: "XX125"
     printers: [COREONE_INDX, COREONEL_INDX]
     title: "Tool pickup failed"
-    text: "Nozzle was not detected after tool pickup."
+    text: "Tool was not detected after pickup."
     id: "NOZZLE_MISMATCH_PICKUP_FAILED"
     gui_layout: "warning_dialog"
     approved: false
@@ -296,14 +296,14 @@ Errors:
   - code: "XX127"
     printers: [COREONE_INDX, COREONEL_INDX]
     title: "Tool park failed"
-    text: "Nozzle was still detected after parking."
+    text: "Tool was still detected after parking."
     id: "NOZZLE_MISMATCH_PARK_FAILED"
     gui_layout: "warning_dialog"
     approved: false
 
   - code: "XX128"
     printers: [COREONE_INDX, COREONEL_INDX]
-    title: "Retry tool park"
+    title: "Retry parking"
     text: "Make sure the dock is accessible, then press Continue."
     id: "NOZZLE_MISMATCH_PARK_RETRY"
     gui_layout: "warning_dialog"
