@@ -642,6 +642,22 @@ Errors:
     gui_layout: "red_screen"
     approved: false
 
+  - code: "XX276"
+    printers: [COREONE_INDX, COREONEL_INDX]
+    title: "TPIS AMBIENT MINTEMP ERROR"
+    text: "INDX head TPiS ambient temperature is out of range. Let the printer cool down and try again. If the issue persists, contact support."
+    id: "INDX_HEAD_TPIS_AMBIENT_MINTEMP_ERR"
+    gui_layout: "red_screen"
+    approved: false
+
+  - code: "XX277"
+    printers: [COREONE_INDX, COREONEL_INDX]
+    title: "TPIS AMBIENT MAXTEMP ERROR"
+    text: "INDX head TPiS ambient temperature is out of range. Let the printer cool down and try again. If the issue persists, contact support."
+    id: "INDX_HEAD_TPIS_AMBIENT_MAXTEMP_ERR"
+    gui_layout: "red_screen"
+    approved: false
+
   # ELECTRICAL     xx3xx
 
   - code: "XX301"
