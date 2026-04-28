@@ -334,7 +334,7 @@ Errors:
     approved: false
 
   - code: "XX132"
-    printers: [COREONE_INDX]
+    printers: [COREONE_INDX, COREONEL_INDX]
     title: "UNEXPECTED_TOOL"
     text: "Unexpected obstruction present in vent control area."
     id: "UNEXPECTED_TOOL"
