@@ -974,6 +974,27 @@ Errors:
     gui_layout: "warning_dialog"
     approved: true
 
+  - code: "XX404"
+    title: "OPENPRINTTAG ASSIGNED"
+    text: "OpenPrintTag has been linked with the filament. Filament usage data will be stored on the tag."
+    id: "OPENPRINTTAG_ASSIGNED"
+    gui_layout: "warning_dialog"
+    approved: false
+
+  - code: "XX405"
+    title: "OPENPRINTTAG CANNOT TRACK"
+    text: "The OpenPrintTag does not allow filament usage tracking. Filament consumption will not be saved."
+    id: "OPENPRINTTAG_CANNOT_TRACK"
+    gui_layout: "warning_dialog"
+    approved: false
+
+  - code: "XX406"
+    title: "OPENPRINTTAG WRITE FAILED"
+    text: "Failed to write usage data to OpenPrintTag. Make sure it has not been removed from the reader."
+    id: "OPENPRINTTAG_USAGE_WRITE_FAILED"
+    gui_layout: "warning_dialog"
+    approved: false
+
   - code: "XX501"
     printers: [iX, XL]
     title: "MODULAR BED ERROR"
