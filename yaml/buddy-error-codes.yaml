@@ -325,6 +325,14 @@ Errors:
     gui_layout: "warning_dialog"
     approved: false
 
+  - code: "XX131"
+    printers: [COREONE_INDX, COREONEL_INDX]
+    title: "Unsafe Z tool offset deviation"
+    text: "Tool Z offsets differ above the safe threshold. The print has been aborted to prevent printer damage."
+    id: "TOOL_OFFSET_UNSAFE_Z_DEVIATION"
+    gui_layout: "warning_dialog"
+    approved: false
+
   # TEMPERATURE    xx2xx
 
   - code: "XX201"
