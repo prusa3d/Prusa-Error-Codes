@@ -333,6 +333,14 @@ Errors:
     gui_layout: "warning_dialog"
     approved: false
 
+  - code: "XX132"
+    printers: [COREONE_INDX]
+    title: "UNEXPECTED_TOOL"
+    text: "Unexpected obstruction present in vent control area."
+    id: "UNEXPECTED_TOOL"
+    gui_layout: "red_screen"
+    approved: false
+
   # TEMPERATURE    xx2xx
 
   - code: "XX201"
