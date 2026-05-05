@@ -1886,3 +1886,21 @@ Errors:
     id: "UNTRUSTED_IDENTITY"
     type: "CONNECT"
     approved: true
+
+  - code: "XX849"
+    printers: [COREONE_INDX, COREONEL_INDX]
+    title: "Warning"
+    text: "MCU in Indx Head is overheated, likely due to exceeding the printer's operating temperature. Prevent overheating for optimal performance."
+    id: "INDX_HEAD_MCU_MAX_TEMP"
+    type: "CONNECT"
+    gui_layout: "warning_dialog"
+    approved: true
+
+  - code: "XX850"
+    printers: [COREONE_INDX, COREONEL_INDX]
+    title: "Warning"
+    text: "Indx Head coil is overheated, likely due to exceeding the printer's operating temperature. Prevent overheating for optimal performance."
+    id: "INDX_HEAD_COIL_MAX_TEMP"
+    type: "CONNECT"
+    gui_layout: "warning_dialog"
+    approved: true
