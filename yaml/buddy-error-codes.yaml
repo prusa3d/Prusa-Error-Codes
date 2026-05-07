@@ -344,7 +344,7 @@ Errors:
   - code: "XX133"
     printers: [COREONE_INDX, COREONEL_INDX]
     title: "Unsafe XY tool offset"
-    text: "Tool XY offsets differ above the safe threshold. The print has been aborted to prevent printer damage."
+    text: "Measured XY tool offset exceeds the safe threshold. The print has been aborted to prevent printer damage."
     id: "TOOL_OFFSET_UNSAFE_XY"
     gui_layout: "warning_dialog"
     approved: false
@@ -1006,7 +1006,7 @@ Errors:
     id: "NEW_WIFI_CREDENTIALS"
     approved: true
     deprecated: true
-  
+
   - code: "XX403"
     title: "G-CODE METRICS CONFIG CHANGE"
     text: "Gcode is trying to change metrics configuration.\n\nAllow the changes?"
@@ -1058,7 +1058,7 @@ Errors:
     id: "DWARF_MARLIN_ERR"
     approved: true
     deprecated: true
-    
+
   - code: "XX504"
     title: "ESP ERROR"
     text: "Reading ESP firmware failed."
