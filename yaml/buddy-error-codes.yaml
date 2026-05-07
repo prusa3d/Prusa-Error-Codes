@@ -349,6 +349,14 @@ Errors:
     gui_layout: "warning_dialog"
     approved: false
 
+  - code: "XX134"
+    printers: [COREONE_INDX, COREONEL_INDX]
+    title: "Unsafe sensor position"
+    text: "Tool offset sensor XY position differ above the safe threshold. The print has been aborted to prevent printer damage."
+    id: "TOOL_OFFSET_UNSAFE_SENSOR_XY"
+    gui_layout: "warning_dialog"
+    approved: false
+
   # TEMPERATURE    xx2xx
 
   - code: "XX201"
