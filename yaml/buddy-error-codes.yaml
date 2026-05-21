@@ -311,9 +311,9 @@ Errors:
 
   - code: "XX130"
     printers: [COREONE_INDX, COREONEL_INDX]
-    title: "XY Tool Offset Failed"
-    text: "XY tool offset calibration failed. Make sure the nozzle is clean. Caution: the nozzle may be hot."
-    id: "TOOL_OFFSET_XY_CALIBRATION_FAILED"
+    title: "Tool Offset Failed"
+    text: "Tool offset calibration failed. Make sure the nozzle is clean. Caution: the nozzle may be hot."
+    id: "TOOL_OFFSET_CALIBRATION_FAILED"
     gui_layout: "warning_dialog"
     approved: true
 
