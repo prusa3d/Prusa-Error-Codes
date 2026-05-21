@@ -312,7 +312,7 @@ Errors:
   - code: "XX130"
     printers: [COREONE_INDX, COREONEL_INDX]
     title: "Tool Offset Failed"
-    text: "Tool offset calibration failed. Make sure the nozzle is clean. Caution: the nozzle may be hot."
+    text: "Tool offset calibration failed. Make sure the nozzle and the sensor are clean.\nCaution: the nozzle may be hot."
     id: "TOOL_OFFSET_CALIBRATION_FAILED"
     gui_layout: "warning_dialog"
     approved: true
@@ -320,7 +320,7 @@ Errors:
   - code: "XX131"
     printers: [COREONE_INDX, COREONEL_INDX]
     title: "Unsafe Z Tool Offset"
-    text: "The measured Z offset exceeds the safe limit. The print was aborted to prevent damage."
+    text: "The measured Z offset exceeds the safe limit. Make sure the nozzle and the sensor are clean.\nCaution: the nozzle may be hot."
     id: "TOOL_OFFSET_UNSAFE_Z_DEVIATION"
     gui_layout: "warning_dialog"
     approved: true
@@ -336,7 +336,7 @@ Errors:
   - code: "XX133"
     printers: [COREONE_INDX, COREONEL_INDX]
     title: "Unsafe XY Tool Offset"
-    text: "The measured XY offset exceeds the safe limit. The print was aborted to prevent damage."
+    text: "The measured XY offset exceeds the safe limit. Make sure the nozzle and the sensor are clean.\nCaution: the nozzle may be hot."
     id: "TOOL_OFFSET_UNSAFE_XY"
     gui_layout: "warning_dialog"
     approved: true
@@ -344,7 +344,7 @@ Errors:
   - code: "XX134"
     printers: [COREONE_INDX, COREONEL_INDX]
     title: "Unsafe Sensor Position"
-    text: "The tool offset sensor position exceeds the safe limit. The print was aborted to prevent damage."
+    text: "The tool offset sensor position exceeds the safe limit. Make sure the nozzle and the sensor are clean.\nCaution: the nozzle may be hot."
     id: "TOOL_OFFSET_UNSAFE_SENSOR_XY"
     gui_layout: "warning_dialog"
     approved: true
