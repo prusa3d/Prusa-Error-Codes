@@ -32,7 +32,7 @@ Errors:
     approved: true
 
   - code: "XX101"
-    printers: [XL, COREONE_INDX, COREONEL_INDX]
+    printers: [XL]
     title: "TOOLCHANGER ERROR"
     text: "Check all tools if they are properly parked or picked."
     id: "TOOLCHANGER"
@@ -383,9 +383,17 @@ Errors:
     approved: true
 
   - code: "XX204"
-    printers: [MINI, MK4, COREONE, COREONE_INDX, COREONEL, COREONEL_INDX, iX, MK3.5]
+    printers: [MINI, MK4, COREONE, COREONEL, iX, MK3.5]
     title: "THERMAL RUNAWAY"
     text: "Check the print head thermistor wiring for possible damage."
+    id: "HOTEND_THERMAL_RUNAWAY"
+    gui_layout: "red_screen"
+    approved: true
+
+  - code: "XX204"
+    printers: [COREONE_INDX, COREONEL_INDX]
+    title: "THERMAL RUNAWAY"
+    text: "Check the heat block (black rectangle) on the tool for dirt or debris."
     id: "HOTEND_THERMAL_RUNAWAY"
     gui_layout: "red_screen"
     approved: true
@@ -407,9 +415,17 @@ Errors:
     approved: true
 
   - code: "XX206"
-    printers: [MINI, MK4, COREONE, COREONE_INDX, COREONEL, COREONEL_INDX, iX, MK3.5]
+    printers: [MINI, MK4, COREONE, COREONEL, iX, MK3.5]
     title: "MAXTEMP ERROR"
     text: "Check the print head thermistor wiring for possible damage."
+    id: "HOTEND_MAXTEMP_ERROR"
+    gui_layout: "red_screen"
+    approved: true
+
+  - code: "XX206"
+    printers: [COREONE_INDX, COREONEL_INDX]
+    title: "MAXTEMP ERROR"
+    text: "Check the heat block (black rectangle) on the tool for dirt or debris."
     id: "HOTEND_MAXTEMP_ERROR"
     gui_layout: "red_screen"
     approved: true
@@ -433,7 +449,7 @@ Errors:
   - code: "XX208"
     printers: [MINI, MK4, COREONE, COREONE_INDX, COREONEL, COREONEL_INDX, iX, MK3.5]
     title: "MINTEMP ERROR"
-    text: "Check the print head thermistor wiring for possible damage."
+    text: "Check the heat block (black rectangle) on the tool for dirt or debris."
     id: "HOTEND_MINTEMP_ERROR"
     gui_layout: "red_screen"
     approved: true
