@@ -447,7 +447,15 @@ Errors:
     approved: true
 
   - code: "XX208"
-    printers: [MINI, MK4, COREONE, COREONE_INDX, COREONEL, COREONEL_INDX, iX, MK3.5]
+    printers: [MINI, MK4, COREONE, COREONEL, iX, MK3.5]
+    title: "MINTEMP ERROR"
+    text: "Check the print head thermistor wiring for possible damage."
+    id: "HOTEND_MINTEMP_ERROR"
+    gui_layout: "red_screen"
+    approved: true
+
+  - code: "XX208"
+    printers: [COREONE_INDX, COREONEL_INDX]
     title: "MINTEMP ERROR"
     text: "Check the heat block (black rectangle) on the tool for dirt or debris."
     id: "HOTEND_MINTEMP_ERROR"
