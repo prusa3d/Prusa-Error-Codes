@@ -1930,8 +1930,8 @@ Errors:
  
   - code: "XX850"
     printers: [COREONE_INDX, COREONEL_INDX]
-    title: "Wastebin Full"
-    text: "The nozzle cleaner wastebin is full. Empty it to avoid overflow."
+    title: "Nozzle Cleaner Full"
+    text: "Nozzle cleaner is full. Empty it to prevent overflow."
     id: "NOZZLE_CLEANER_FULL"
     type: "CONNECT"
     gui_layout: "warning_dialog"
@@ -1939,8 +1939,17 @@ Errors:
 
   - code: "XX851"
     printers: [COREONE_INDX, COREONEL_INDX]
-    title: "Wastebin May Overflow"
-    text: "This print may overfill the nozzle cleaner wastebin."
+    title: "Nozzle Cleaner May Overflow"
+    text: "This print may overfill the nozzle cleaner."
     id: "NOZZLE_CLEANER_MAY_OVERFILL"
     type: "CONNECT"
+    approved: false
+
+  - code: "XX852"
+    printers: [COREONE_INDX, COREONEL_INDX]
+    title: "Empty Nozzle Cleaner"
+    text: "Empty the nozzle cleaner and press Done."
+    id: "NOZZLE_CLEANER_EMPTY"
+    type: "CONNECT"
+    gui_layout: "warning_dialog"
     approved: false
