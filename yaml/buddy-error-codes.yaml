@@ -1922,34 +1922,34 @@ Errors:
   - code: "XX849"
     printers: [COREONE_INDX, COREONEL_INDX]
     title: "Warning"
-    text: "Dock fan not spinning. Check it for possible debris, then inspect the wiring."
+    text: "Dock fan is not spinning. Check for debris and inspect the wiring."
     id: "DOCK_FAN_ERROR"
     type: "CONNECT"
     gui_layout: "warning_dialog"
-    approved: false
+    approved: true
  
   - code: "XX850"
     printers: [COREONE_INDX, COREONEL_INDX]
     title: "Nozzle Cleaner Full"
-    text: "Nozzle cleaner is full. Empty it to prevent overflow.\n\nBe careful, the nozzle and bed are hot!"
+    text: "The nozzle cleaner is full. Empty it to prevent overflow. Caution: the nozzle and print bed may be hot."
     id: "NOZZLE_CLEANER_FULL"
     type: "CONNECT"
     gui_layout: "warning_dialog"
-    approved: false
+    approved: true
 
   - code: "XX851"
     printers: [COREONE_INDX, COREONEL_INDX]
     title: "Nozzle Cleaner May Overflow"
-    text: "This print may overfill the nozzle cleaner."
+    text: "The nozzle cleaner may overflow during this print."
     id: "NOZZLE_CLEANER_MAY_OVERFILL"
     type: "CONNECT"
-    approved: false
+    approved: true
 
   - code: "XX852"
     printers: [COREONE_INDX, COREONEL_INDX]
     title: "Empty Nozzle Cleaner"
-    text: "Empty the nozzle cleaner and press Done."
+    text: "Empty the nozzle cleaner, then press Done."
     id: "NOZZLE_CLEANER_EMPTY"
     type: "CONNECT"
     gui_layout: "warning_dialog"
-    approved: false
+    approved: true
