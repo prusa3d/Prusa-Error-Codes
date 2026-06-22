@@ -272,34 +272,18 @@ Errors:
   - code: "XX125"
     printers: [COREONE_INDX, COREONEL_INDX]
     title: "Tool pickup failed"
-    text: "The tool was not detected after pickup."
+    text: "The tool was not detected after pickup. Make sure the tool is properly seated in the dock, then press Retry."
     id: "NOZZLE_MISMATCH_PICKUP_FAILED"
     gui_layout: "warning_dialog"
-    approved: true
-
-  - code: "XX126"
-    printers: [COREONE_INDX, COREONEL_INDX]
-    title: "Retry pickup"
-    text: "Make sure the tool is properly seated in the dock, then press Continue."
-    id: "NOZZLE_MISMATCH_PICKUP_RETRY"
-    gui_layout: "warning_dialog"
-    approved: true
+    approved: false
 
   - code: "XX127"
     printers: [COREONE_INDX, COREONEL_INDX]
     title: "Tool park failed"
-    text: "The tool is still detected after parking."
+    text: "The tool is still detected after parking. Make sure the dock is accessible and empty, then press Retry."
     id: "NOZZLE_MISMATCH_PARK_FAILED"
     gui_layout: "warning_dialog"
-    approved: true
-
-  - code: "XX128"
-    printers: [COREONE_INDX, COREONEL_INDX]
-    title: "Retry parking"
-    text: "Make sure the dock is accessible and empty, then press Continue."
-    id: "NOZZLE_MISMATCH_PARK_RETRY"
-    gui_layout: "warning_dialog"
-    approved: true
+    approved: false
 
   - code: "XX129"
     printers: [COREONE_INDX, COREONEL_INDX]
