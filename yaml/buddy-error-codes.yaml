@@ -31,13 +31,6 @@ Errors:
     gui_layout: "warning_dialog"
     approved: true
 
-  - code: "XX101"
-    printers: [XL]
-    title: "TOOLCHANGER ERROR"
-    text: "Check all tools if they are properly parked or picked."
-    id: "TOOLCHANGER"
-    approved: true
-
   - code: "XX102"
     printers: [iX, COREONE, COREONE_INDX, COREONEL, COREONEL_INDX]
     title: "PRECISE HOMING FAILED"
@@ -347,6 +340,21 @@ Errors:
     text: "The tool offset sensor position exceeds the safe limit. Make sure the nozzle and the sensor are clean.\nCaution: the nozzle may be hot."
     id: "TOOL_OFFSET_UNSAFE_SENSOR_XY"
     gui_layout: "warning_dialog"
+    approved: true
+
+  - code: "XX135"
+    printers: [XL]
+    title: "TOOLCHANGER ERROR"
+    text: "Check all tools if they are properly parked or picked."
+    id: "TOOLCHANGER"
+    approved: true
+
+  - code: "XX136"
+    printers: [XL, COREONE_INDX, COREONEL_INDX]
+    title: "CALIBRATE DOCK FROM MENU"
+    text: "Please run Dock Position Calibration from the Calibrations menu. Continuing can result in homing shifts and toolcrashes."
+    id: "DOCK_CALIBRATION_FROM_MENU_NEEDED"
+    gui_layout: "red_screen"
     approved: true
 
   # TEMPERATURE    xx2xx
@@ -1927,7 +1935,7 @@ Errors:
     type: "CONNECT"
     gui_layout: "warning_dialog"
     approved: true
- 
+
   - code: "XX850"
     printers: [COREONE_INDX, COREONEL_INDX]
     title: "Nozzle Cleaner Full"
