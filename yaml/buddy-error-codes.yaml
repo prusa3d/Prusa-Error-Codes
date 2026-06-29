@@ -1008,6 +1008,14 @@ Errors:
     gui_layout: "red_screen"
     approved: true
 
+  - code: "XX340"
+    printers: [COREONE_INDX, COREONEL_INDX]
+    title: "HEATER COIL FAULT"
+    text: "A problem with the heater coil has been detected. Visually inspect the coil on the INDX Head. If it appears damaged, please contact support."
+    id: "INDX_HEAD_COIL_FAULTY"
+    gui_layout: "red_screen"
+    approved: true
+
 # CONNECTIVITY   xx4xx   # Connectivity - Wi - Fi, LAN, Prusa Connect Cloud
 
   - code: "XX401"
