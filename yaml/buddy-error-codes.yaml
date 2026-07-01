@@ -258,41 +258,46 @@ Errors:
     printers: [COREONE_INDX, COREONEL_INDX]
     title: "Tool lost"
     text: "The tool was not detected during operation. The printer must rehome before continuing."
-    id: "NOZZLE_MISMATCH_TOOL_LOST"
+    id: "NOZZLE_MISMATCH_TOOL_LOST_OLD"
     gui_layout: "warning_dialog"
     approved: true
+    deprecated: true
 
   - code: "XX125"
     printers: [COREONE_INDX, COREONEL_INDX]
     title: "Tool pickup failed"
     text: "The tool was not detected after pickup."
-    id: "NOZZLE_MISMATCH_PICKUP_FAILED"
+    id: "NOZZLE_MISMATCH_PICKUP_FAILED_OLD"
     gui_layout: "warning_dialog"
     approved: true
+    deprecated: true
 
   - code: "XX126"
     printers: [COREONE_INDX, COREONEL_INDX]
     title: "Retry pickup"
     text: "Make sure the tool is properly seated in the dock, then press Continue."
-    id: "NOZZLE_MISMATCH_PICKUP_RETRY"
+    id: "NOZZLE_MISMATCH_PICKUP_RETRY_OLD"
     gui_layout: "warning_dialog"
     approved: true
+    deprecated: true
 
   - code: "XX127"
     printers: [COREONE_INDX, COREONEL_INDX]
     title: "Tool park failed"
     text: "The tool is still detected after parking."
-    id: "NOZZLE_MISMATCH_PARK_FAILED"
+    id: "NOZZLE_MISMATCH_PARK_FAILED_OLD"
     gui_layout: "warning_dialog"
     approved: true
+    deprecated: true
 
   - code: "XX128"
     printers: [COREONE_INDX, COREONEL_INDX]
     title: "Retry parking"
     text: "Make sure the dock is accessible and empty, then press Continue."
-    id: "NOZZLE_MISMATCH_PARK_RETRY"
+    id: "NOZZLE_MISMATCH_PARK_RETRY_OLD"
     gui_layout: "warning_dialog"
     approved: true
+    deprecated: true
 
   - code: "XX129"
     printers: [COREONE_INDX, COREONEL_INDX]
@@ -1967,5 +1972,29 @@ Errors:
     text: "Empty the nozzle cleaner, then press Done."
     id: "NOZZLE_CLEANER_EMPTY"
     type: "CONNECT"
+    gui_layout: "warning_dialog"
+    approved: true
+
+  - code: "XX853"
+    printers: [COREONE_INDX, COREONEL_INDX]
+    title: "Tool lost"
+    text: "The tool was not detected during operation. Motors are disabled. Put the tool back to its dock, then press Continue."
+    id: "NOZZLE_MISMATCH_TOOL_LOST"
+    gui_layout: "warning_dialog"
+    approved: true
+
+  - code: "XX854"
+    printers: [COREONE_INDX, COREONEL_INDX]
+    title: "Tool pickup failed"
+    text: "The tool was not detected after pickup. Motors are disabled. Make sure the tool is in its dock, then press Retry."
+    id: "NOZZLE_MISMATCH_PICKUP_FAILED"
+    gui_layout: "warning_dialog"
+    approved: true
+
+  - code: "XX855"
+    printers: [COREONE_INDX, COREONEL_INDX]
+    title: "Tool park failed"
+    text: "The tool is still detected after parking. Motors are disabled. Make sure the dock is empty, then press Retry."
+    id: "NOZZLE_MISMATCH_PARK_FAILED"
     gui_layout: "warning_dialog"
     approved: true
