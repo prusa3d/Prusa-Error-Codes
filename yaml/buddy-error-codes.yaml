@@ -348,10 +348,11 @@ Errors:
     approved: true
 
   - code: "XX135"
-    printers: [XL]
+    printers: [XL, COREONE_INDX, COREONEL_INDX]
     title: "TOOLCHANGER ERROR"
     text: "Check all tools if they are properly parked or picked."
     id: "TOOLCHANGER"
+    gui_layout: "red_screen"
     approved: true
 
   - code: "XX136"
