@@ -1112,12 +1112,7 @@ Errors:
     gui_layout: "warning_dialog"
     approved: true
 
-  - code: "XX404"
-    title: "OPENPRINTTAG ASSIGNED"
-    text: "OpenPrintTag has been linked with the filament. Filament usage data will be stored on the tag."
-    id: "OPENPRINTTAG_ASSIGNED"
-    gui_layout: "warning_dialog"
-    approved: true
+    # - code: "XX404" REMOVED
 
   - code: "XX405"
     title: "OPENPRINTTAG CANNOT TRACK"
