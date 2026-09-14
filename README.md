@@ -27,9 +27,9 @@ Example: 12201
 * 29 `M1` - Original Medical One
 * 31 `COREONE` - Prusa Core One
 * 35 `COREONEL` - Prusa Core One L
-* 36 `COREONE_INDX` - Prusa Core One with INDX
-* 37 `COREONEL_INDX` - Prusa Core One L with INDX
-* 38 `COREONE_OAK` - Prusa Core One Oak
+* 36 `COREONE_INDX` - Prusa Core One INDX
+* 37 `COREONEL_INDX` - Prusa Core One L INDX
+* 38 `COREONE_OAK` - Prusa Signature Oak
 * 41 `XLP` - Prusa XL+
 
 ## Error categories
