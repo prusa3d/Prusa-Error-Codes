@@ -424,7 +424,7 @@ Errors:
     approved: true
 
   - code: "XX144"
-    printers: [COREONE_INDX, COREONEL_INDX]
+    printers: [COREONE_INDX, COREONEL_INDX, XL]
     title: "Sensor Not Found"
     text: "The tool offset sensor was not detected at the expected height. Make sure it is installed and properly seated, then retry."
     id: "TOOL_OFFSET_SENSOR_NOT_FOUND"
@@ -432,7 +432,7 @@ Errors:
     approved: false
 
   - code: "XX145"
-    printers: [COREONE_INDX, COREONEL_INDX]
+    printers: [COREONE_INDX, COREONEL_INDX, XL]
     title: "Sensor Failure"
     text: "The tool offset sensor stopped responding during the measurement. Retry, and if this repeats the sensor or its cable needs service."
     id: "TOOL_OFFSET_SENSOR_MEASUREMENT_FAILED"
