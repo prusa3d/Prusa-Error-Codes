@@ -439,6 +439,14 @@ Errors:
     gui_layout: "warning_dialog"
     approved: true
 
+  - code: "XX146"
+    printers: [COREONE_INDX, COREONEL_INDX, XL]
+    title: "Tool Not Picked"
+    text: "The tool is not picked up. Make sure it is seated in its dock, then retry."
+    id: "TOOL_NOT_PICKED_RETRY"
+    gui_layout: "warning_dialog"
+    approved: false
+
   # TEMPERATURE    xx2xx
 
   - code: "XX201"
