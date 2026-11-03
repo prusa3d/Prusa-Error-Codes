@@ -1460,6 +1460,15 @@ Errors:
     gui_layout: "red_screen"
     approved: true
 
+  - code: "XX539"
+    printers: [XL]
+    title: "Chamber Heater Not Responding"
+    text: "The chamber heater controller is not responding. Chamber heating is off until it answers again. Check its cable and power supply."
+    id: "HTCONTROLLER_NOT_RESPONDING"
+    type: WARNING
+    gui_layout: "warning_dialog"
+    approved: true
+
   - code: "XX601"
     title: "UNKNOWN ERROR"
     text: "This error code is not found\nin our database.\nContact the support."
@@ -2087,6 +2096,24 @@ Errors:
     title: "Incompatible filament"
     text: "The filament is not compatible with the current printer hardware setup."
     id: "FILAMENT_INCOMPATIBLE"
+    type: "CONNECT"
+    gui_layout: "warning_dialog"
+    approved: true
+
+  - code: "XX855"
+    printers: [XL]
+    title: "Chamber Heater Fault"
+    text: "Chamber heater controller cut the heater: temperature, current, no heating, stopped fan, failed switch test or lost commands. The print continues without chamber heating."
+    id: "HTCONTROLLER_HEATER_FAULT"
+    type: "CONNECT"
+    gui_layout: "warning_dialog"
+    approved: true
+
+  - code: "XX856"
+    printers: [XL]
+    title: "Chamber Heater Measurement Error"
+    text: "Chamber heater controller cannot trust a measurement: a thermistor reads open or shorted, or its ADC reference is off. Heating is off while it lasts."
+    id: "HTCONTROLLER_SENSOR_FAULT"
     type: "CONNECT"
     gui_layout: "warning_dialog"
     approved: true
