@@ -1024,7 +1024,7 @@ Errors:
     text: "The accelerometer is not responding. Check the wiring and retry."
     id: "ACCELEROMETER_COMMUNICATION_FAILED"
     gui_layout: "warning_dialog"
-    approved: false
+    approved: true
 
   - code: "XX324"
     printers: [MK4, COREONE, COREONE_INDX, COREONEL, COREONEL_INDX, XL, MK3.5]
