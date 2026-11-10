@@ -1463,7 +1463,7 @@ Errors:
   - code: "XX539"
     printers: [XL]
     title: "Chamber Heater Not Responding"
-    text: "The chamber heater controller is not responding. Chamber heating is off until it answers again. Check its cable and power supply."
+    text: "The chamber heater controller is not responding. Chamber heating will remain off until communication is restored. Check the controller's cable connections and power supply."
     id: "HTCONTROLLER_NOT_RESPONDING"
     type: WARNING
     gui_layout: "warning_dialog"
@@ -2103,7 +2103,7 @@ Errors:
   - code: "XX855"
     printers: [XL]
     title: "Chamber Heater Fault"
-    text: "Chamber heater controller cut the heater: temperature, current, no heating, stopped fan, failed switch test or lost commands. The print continues without chamber heating."
+    text: "Chamber heating stopped because the heater controller detected a problem: abnormal temperature or current, no heating, a stopped fan, a failed safety check or a lost connection. The print continues without chamber heating."
     id: "HTCONTROLLER_HEATER_FAULT"
     type: "CONNECT"
     gui_layout: "warning_dialog"
@@ -2111,8 +2111,8 @@ Errors:
 
   - code: "XX856"
     printers: [XL]
-    title: "Chamber Heater Measurement Error"
-    text: "Chamber heater controller cannot trust a measurement: a thermistor reads open or shorted, or its ADC reference is off. Heating is off while it lasts."
+    title: "Chamber Heater Sensor Error"
+    text: "The chamber heater controller detected an unreliable sensor reading. A temperature sensor may be disconnected or shorted, or the measurement electronics may be faulty. Chamber heating stays off until the issue is resolved."
     id: "HTCONTROLLER_SENSOR_FAULT"
     type: "CONNECT"
     gui_layout: "warning_dialog"
