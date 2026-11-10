@@ -462,7 +462,7 @@ Errors:
     id: "MANUAL_PRINTER_TYPE_XL_MISMATCH"
     type: WARNING
     gui_layout: "warning_dialog"
-    approved: false
+    approved: true
 
   - code: "XX149"
     printers: [XL]
@@ -471,7 +471,7 @@ Errors:
     id: "MANUAL_PRINTER_TYPE_XLS_MISMATCH"
     type: WARNING
     gui_layout: "warning_dialog"
-    approved: false
+    approved: true
 
   # TEMPERATURE    xx2xx
 
