@@ -473,6 +473,14 @@ Errors:
     gui_layout: "warning_dialog"
     approved: true
 
+  - code: "XX150"
+    printers: [COREONE_INDX, COREONEL_INDX]
+    title: "Tool Change Failed"
+    text: "The tool could not be changed. Make sure all tools are in their docks, then insert the filament again."
+    id: "TOOL_CHANGE_FAILED"
+    gui_layout: "warning_dialog"
+    approved: false
+
   # TEMPERATURE    xx2xx
 
   - code: "XX201"
