@@ -110,6 +110,14 @@ class TestErrors(unittest.TestCase):
         code = PrinterCodes.get(f"{Printer.COREONE_OAK:02d}801")
         assert code.printer == Printer.COREONE_OAK
 
+    def test_INDX(self):
+        """INDX printers get the codes common for all buddy printers."""
+        for printer in (Printer.COREONE_INDX, Printer.COREONEL_INDX):
+            # XX203 has no printers list, so it is valid for all buddy
+            code = PrinterCodes.get(f"{printer:02d}203")
+            assert code.printer == printer
+            assert code.id == "BED_THERMAL_RUNAWAY"
+
     def test_no_MK35S(self):
         """MK35S doesn't have puppies."""
         code = PrinterCodes.get("28512")
