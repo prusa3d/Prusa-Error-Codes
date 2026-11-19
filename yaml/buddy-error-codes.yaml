@@ -441,11 +441,11 @@ Errors:
 
   - code: "XX146"
     printers: [COREONE_INDX, COREONEL_INDX, XL]
-    title: "Tool Not Picked"
-    text: "The tool is not picked up. Make sure it is seated in its dock, then retry."
+    title: "Tool Not Picked Up"
+    text: "The tool was not picked up. Make sure it is seated in the dock and retry."
     id: "TOOL_NOT_PICKED_RETRY"
     gui_layout: "warning_dialog"
-    approved: false
+    approved: true
 
   - code: "XX147"
     printers: [iX, XL, COREONE, COREONEL, COREONE_INDX, COREONEL_INDX]
