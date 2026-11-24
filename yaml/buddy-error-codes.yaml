@@ -479,7 +479,7 @@ Errors:
     text: "The tool could not be changed. Make sure all tools are in their docks, then try again."
     id: "TOOL_CHANGE_FAILED"
     gui_layout: "warning_dialog"
-    approved: false
+    approved: true
 
   # TEMPERATURE    xx2xx
 
