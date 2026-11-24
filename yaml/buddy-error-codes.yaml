@@ -1186,6 +1186,22 @@ Errors:
     gui_layout: "warning_dialog"
     approved: true
 
+  - code: "XX407"
+    printers: [iX]
+    title: "OPENPRINTTAG READ FAILED"
+    text: "Failed to read filament data from the OpenPrintTag. The tag or its data may be damaged. Select the filament type manually."
+    id: "OPENPRINTTAG_READ_FAILED"
+    gui_layout: "warning_dialog"
+    approved: false
+
+  - code: "XX408"
+    printers: [iX]
+    title: "OPENPRINTTAG FILAMENT INCOMPATIBLE"
+    text: "The filament from the OpenPrintTag can't be loaded automatically on this printer. Select the filament type manually or remove the filament."
+    id: "OPENPRINTTAG_FILAMENT_INCOMPATIBLE"
+    gui_layout: "warning_dialog"
+    approved: false
+
   - code: "XX501"
     printers: [iX, XL]
     title: "MODULAR BED ERROR"
