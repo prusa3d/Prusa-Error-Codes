@@ -476,7 +476,7 @@ Errors:
   - code: "XX150"
     printers: [COREONE_INDX, COREONEL_INDX]
     title: "Tool Change Failed"
-    text: "The tool could not be changed. Make sure all tools are in their docks, then insert the filament again."
+    text: "The tool could not be changed. Make sure all tools are in their docks, then try again."
     id: "TOOL_CHANGE_FAILED"
     gui_layout: "warning_dialog"
     approved: false
